@@ -1,0 +1,11 @@
+E:\_SistemaCarnes\SvrDatosNet\bin\Debug\SvrDatosNet.dll.config
+E:\_SistemaCarnes\SvrDatosNet\bin\Debug\SvrDatosNet.dll
+E:\_SistemaCarnes\SvrDatosNet\bin\Debug\SvrDatosNet.pdb
+E:\_SistemaCarnes\SvrDatosNet\bin\Debug\SvrDatosNet.xml
+E:\_SistemaCarnes\SvrDatosNet\obj\Debug\SvrDatosNet.vbprojAssemblyReference.cache
+E:\_SistemaCarnes\SvrDatosNet\obj\Debug\SvrDatosNet.Resources.resources
+E:\_SistemaCarnes\SvrDatosNet\obj\Debug\SvrDatosNet.vbproj.GenerateResource.cache
+E:\_SistemaCarnes\SvrDatosNet\obj\Debug\SvrDatosNet.vbproj.CoreCompileInputs.cache
+E:\_SistemaCarnes\SvrDatosNet\obj\Debug\SvrDatosNet.dll
+E:\_SistemaCarnes\SvrDatosNet\obj\Debug\SvrDatosNet.xml
+E:\_SistemaCarnes\SvrDatosNet\obj\Debug\SvrDatosNet.pdb
