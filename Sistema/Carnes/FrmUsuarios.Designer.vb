@@ -39,30 +39,30 @@ Partial Class FrmUsuarios
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DgUsuarios = New System.Windows.Forms.DataGridView()
         Me.CmbIdSuperior = New System.Windows.Forms.ComboBox()
         Me.CmbIdFrigorifico = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CheckActivo = New System.Windows.Forms.CheckBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DgModuloAsignado = New System.Windows.Forms.DataGridView()
+        Me.ChkCodigo_1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DgModulo = New System.Windows.Forms.DataGridView()
         Me.CmbJerarquia = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.CheckMarcarTodos = New System.Windows.Forms.CheckBox()
-        Me.CheckSeleccionarTodos = New System.Windows.Forms.CheckBox()
-        Me.ChkCodigo = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.ChkCodigo_1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.chkMUtodo = New System.Windows.Forms.CheckBox()
+        Me.LblModulo = New System.Windows.Forms.Label()
+        CType(Me.DgUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgModuloAsignado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgModulo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(465, 33)
+        Me.Label1.Location = New System.Drawing.Point(697, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 0
@@ -115,7 +115,7 @@ Partial Class FrmUsuarios
         'TxtCodigo
         '
         Me.TxtCodigo.BackColor = System.Drawing.Color.Bisque
-        Me.TxtCodigo.Location = New System.Drawing.Point(529, 33)
+        Me.TxtCodigo.Location = New System.Drawing.Point(760, 33)
         Me.TxtCodigo.Name = "TxtCodigo"
         Me.TxtCodigo.ReadOnly = True
         Me.TxtCodigo.Size = New System.Drawing.Size(100, 20)
@@ -208,13 +208,13 @@ Partial Class FrmUsuarios
         Me.Label10.TabIndex = 22
         Me.Label10.Text = "Frigorifico"
         '
-        'DataGridView1
+        'DgUsuarios
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 38)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(413, 150)
-        Me.DataGridView1.TabIndex = 27
+        Me.DgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgUsuarios.Location = New System.Drawing.Point(12, 38)
+        Me.DgUsuarios.Name = "DgUsuarios"
+        Me.DgUsuarios.Size = New System.Drawing.Size(447, 150)
+        Me.DgUsuarios.TabIndex = 27
         '
         'CmbIdSuperior
         '
@@ -244,26 +244,31 @@ Partial Class FrmUsuarios
         'CheckActivo
         '
         Me.CheckActivo.AutoSize = True
-        Me.CheckActivo.Location = New System.Drawing.Point(760, 36)
+        Me.CheckActivo.Location = New System.Drawing.Point(468, 169)
         Me.CheckActivo.Name = "CheckActivo"
         Me.CheckActivo.Size = New System.Drawing.Size(56, 17)
         Me.CheckActivo.TabIndex = 253
         Me.CheckActivo.Text = "Activo"
         Me.CheckActivo.UseVisualStyleBackColor = True
         '
-        'DataGridView2
+        'DgModuloAsignado
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ChkCodigo_1})
-        Me.DataGridView2.Location = New System.Drawing.Point(529, 252)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(397, 150)
-        Me.DataGridView2.TabIndex = 254
+        Me.DgModuloAsignado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgModuloAsignado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ChkCodigo_1})
+        Me.DgModuloAsignado.Location = New System.Drawing.Point(529, 252)
+        Me.DgModuloAsignado.Name = "DgModuloAsignado"
+        Me.DgModuloAsignado.Size = New System.Drawing.Size(397, 150)
+        Me.DgModuloAsignado.TabIndex = 254
+        '
+        'ChkCodigo_1
+        '
+        Me.ChkCodigo_1.HeaderText = ""
+        Me.ChkCodigo_1.Name = "ChkCodigo_1"
+        Me.ChkCodigo_1.Width = 20
         '
         'DgModulo
         '
         Me.DgModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgModulo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ChkCodigo})
         Me.DgModulo.Location = New System.Drawing.Point(12, 252)
         Me.DgModulo.Name = "DgModulo"
         Me.DgModulo.Size = New System.Drawing.Size(265, 150)
@@ -290,7 +295,7 @@ Partial Class FrmUsuarios
         '
         Me.Button1.Image = Global.Carnes.My.Resources.Resources.aceptar
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(372, 314)
+        Me.Button1.Location = New System.Drawing.Point(374, 301)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 23)
         Me.Button1.TabIndex = 258
@@ -301,7 +306,7 @@ Partial Class FrmUsuarios
         '
         Me.Button2.Image = Global.Carnes.My.Resources.Resources.eliminar
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(372, 359)
+        Me.Button2.Location = New System.Drawing.Point(374, 347)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(107, 23)
         Me.Button2.TabIndex = 259
@@ -318,42 +323,44 @@ Partial Class FrmUsuarios
         Me.CheckMarcarTodos.Text = "Marca Todos"
         Me.CheckMarcarTodos.UseVisualStyleBackColor = True
         '
-        'CheckSeleccionarTodos
+        'chkMUtodo
         '
-        Me.CheckSeleccionarTodos.AutoSize = True
-        Me.CheckSeleccionarTodos.Location = New System.Drawing.Point(529, 421)
-        Me.CheckSeleccionarTodos.Name = "CheckSeleccionarTodos"
-        Me.CheckSeleccionarTodos.Size = New System.Drawing.Size(92, 17)
-        Me.CheckSeleccionarTodos.TabIndex = 261
-        Me.CheckSeleccionarTodos.Text = "Marcar Todos"
-        Me.CheckSeleccionarTodos.UseVisualStyleBackColor = True
+        Me.chkMUtodo.AutoSize = True
+        Me.chkMUtodo.Location = New System.Drawing.Point(529, 421)
+        Me.chkMUtodo.Name = "chkMUtodo"
+        Me.chkMUtodo.Size = New System.Drawing.Size(92, 17)
+        Me.chkMUtodo.TabIndex = 261
+        Me.chkMUtodo.Text = "Marcar Todos"
+        Me.chkMUtodo.UseVisualStyleBackColor = True
         '
-        'ChkCodigo
+        'LblModulo
         '
-        Me.ChkCodigo.HeaderText = ""
-        Me.ChkCodigo.Name = "ChkCodigo"
-        '
-        'ChkCodigo_1
-        '
-        Me.ChkCodigo_1.HeaderText = ""
-        Me.ChkCodigo_1.Name = "ChkCodigo_1"
+        Me.LblModulo.AutoSize = True
+        Me.LblModulo.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.LblModulo.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblModulo.Location = New System.Drawing.Point(526, 226)
+        Me.LblModulo.Name = "LblModulo"
+        Me.LblModulo.Size = New System.Drawing.Size(68, 19)
+        Me.LblModulo.TabIndex = 262
+        Me.LblModulo.Text = "Modulos"
         '
         'FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(949, 450)
-        Me.Controls.Add(Me.CheckSeleccionarTodos)
+        Me.Controls.Add(Me.LblModulo)
+        Me.Controls.Add(Me.chkMUtodo)
         Me.Controls.Add(Me.CheckMarcarTodos)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.CmbJerarquia)
         Me.Controls.Add(Me.DgModulo)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.DgModuloAsignado)
         Me.Controls.Add(Me.CheckActivo)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.DgUsuarios)
         Me.Controls.Add(Me.CmbIdFrigorifico)
         Me.Controls.Add(Me.CmbIdSuperior)
         Me.Controls.Add(Me.Label10)
@@ -377,8 +384,8 @@ Partial Class FrmUsuarios
         Me.Name = "FrmUsuarios"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Usuarios"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgModuloAsignado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgModulo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -400,19 +407,19 @@ Partial Class FrmUsuarios
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DgUsuarios As System.Windows.Forms.DataGridView
     Friend WithEvents CmbIdSuperior As ComboBox
     Friend WithEvents CmbIdFrigorifico As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents CheckActivo As CheckBox
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents DgModuloAsignado As DataGridView
     Friend WithEvents DgModulo As DataGridView
     Friend WithEvents CmbJerarquia As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents CheckMarcarTodos As CheckBox
-    Friend WithEvents CheckSeleccionarTodos As CheckBox
-    Friend WithEvents ChkCodigo As DataGridViewCheckBoxColumn
+    Friend WithEvents chkMUtodo As CheckBox
+    Friend WithEvents LblModulo As Label
     Friend WithEvents ChkCodigo_1 As DataGridViewCheckBoxColumn
 End Class

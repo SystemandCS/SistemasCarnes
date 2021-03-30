@@ -11,21 +11,7 @@
         txtusuario.Focus()
     End Sub
 
-    Private Sub RellenarLista(Valor As Integer)
-        Try
-            Dim CUsuario As New ClsUsuario
-            Dim DT As New DataTable
-            DT = CUsuario.EjecutarSp("of_lista", Valor).Tables(0)
-            DataGridView1.DataSource = DT
-            DataGridView1.ReadOnly = True
-            DataGridView1.Columns("idUsuario").Visible = False
-            DataGridView1.Columns("idfrigorifico").Visible = False
-            DataGridView1.Columns("idSuperior").Visible = False
 
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
 
     Private Sub BuscaRegistro(Codigo As Integer)
         Try
@@ -40,11 +26,11 @@
                 TxtPassword.Text = DT.Rows(0).Item("Password").ToString()
                 CmbIdSuperior.SelectedValue = DT.Rows(0).Item("idsuperior").ToString()
                 CmbIdFrigorifico.SelectedValue = DT.Rows(0).Item("idfrigorifico").ToString()
-                '  txtdireccion.Text = DT.Rows(0).Item("USUDIRECCION").ToString()
-                'txttelefono.Text = DT.Rows(0).Item("USUTELEFONO").ToString()
-                'txtcelular.Text = DT.Rows(0).Item("USUCELULAR").ToString()
-                ' txtemail.Text = DT.Rows(0).Item("USUEMAIL").ToString()
-                ' txtdocidentidad.Text = DT.Rows(0).Item("USUDOCIDEN").ToString()
+
+                LblModulo.Text = "Modulos para " & txtnombres.Text & " " & txtapellidos.Text
+
+
+
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -134,6 +120,8 @@
         RellenarModulo()
         RellenarComboJerarquica()
 
+        LblModulo.Text = "Modulos"
+
         Call BtnNuevo_Click(sender, e)
 
     End Sub
@@ -141,12 +129,16 @@
 
 
 
-    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgUsuarios.CellDoubleClick
         On Error GoTo ErrLinea
         Dim Fila As Integer
-        If DataGridView1.Rows(DataGridView1.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
-            Fila = DataGridView1.CurrentRow.Index
-            BuscaRegistro(DataGridView1.Rows(Fila).Cells(0).Value.ToString())
+        If DgUsuarios.Rows(DgUsuarios.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
+            Fila = DgUsuarios.CurrentRow.Index
+            BuscaRegistro(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
+
+            BuscaModulosAsigados(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
+
+
         End If
         Return
 ErrLinea:
@@ -161,6 +153,45 @@ ErrLinea:
         If e.KeyCode = Keys.Escape Then
             Me.Close()
         End If
+    End Sub
+
+
+
+#Region "Funciones "
+
+    Private Sub RellenarLista(Valor As Integer)
+        Try
+            Dim CUsuario As New ClsUsuario
+            Dim DT As New DataTable
+            DT = CUsuario.EjecutarSp("of_lista", Valor).Tables(0)
+            DgUsuarios.DataSource = DT
+            DgUsuarios.ReadOnly = True
+            DgUsuarios.Columns("idUsuario").Visible = False
+            DgUsuarios.Columns("idfrigorifico").Visible = False
+            DgUsuarios.Columns("idSuperior").Visible = False
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+    Private Sub BuscaModulosAsigados(Codigo As Integer)
+        Try
+            Dim CUsuario As New ClsGenerica
+            Dim DT As New DataTable
+            DT = CUsuario.TraerDatos("UL_spC_ModuloXUsuario", Codigo).Tables(0)
+
+            DgModuloAsignado.DataSource = DT
+
+            DgModuloAsignado.Columns("idUsuario").Visible = False
+            DgModuloAsignado.Columns("jerarquia").Visible = False
+
+
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
     End Sub
 
 
@@ -185,7 +216,14 @@ ErrLinea:
             Dim DT As New DataTable
             DT = CUsuario.ObtenerTodos().Tables(0)
             DgModulo.DataSource = DT
-            DgModulo.ReadOnly = True
+
+            'Add a CheckBox Column to the DataGridView at the first position.
+            Dim checkBoxColumn As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
+            checkBoxColumn.HeaderText = ""
+            checkBoxColumn.Width = 30
+            checkBoxColumn.Name = "checkBoxColumn"
+            DgModulo.Columns.Insert(0, checkBoxColumn)
+
 
 
         Catch ex As Exception
@@ -239,4 +277,52 @@ ErrLinea:
     End Sub
 
 
+
+
+
+
+
+    Private Sub DgModuloAsignado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgModuloAsignado.CellContentClick
+
+        ' Private Sub DgModuloAsignado_CellClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs)
+        'Check to ensure that the row CheckBox is clicked.
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 0 Then
+
+            'Reference the GridView Row.
+            Dim row As DataGridViewRow = DgModuloAsignado.Rows(e.RowIndex)
+
+            'Set the CheckBox selection.
+            row.Cells("ChkCodigo_1").Value = Convert.ToBoolean(row.Cells("ChkCodigo_1").EditedFormattedValue)
+
+            'If CheckBox is checked, display Message Box.
+            If Convert.ToBoolean(row.Cells("checkBoxColumn").Value) Then
+                MessageBox.Show(("Selected ID: " & row.Cells(1).Value))
+            End If
+        End If
+    End Sub
+
+    Private Sub DgModulo_CellClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs)
+        'Check to ensure that the row CheckBox is clicked.
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 0 Then
+
+            'Reference the GridView Row.
+            Dim row As DataGridViewRow = DgModulo.Rows(e.RowIndex)
+
+            'Set the CheckBox selection.
+            row.Cells("ChkCodigo").Value = Convert.ToBoolean(row.Cells("ChkCodigo").EditedFormattedValue)
+
+            'If CheckBox is checked, display Message Box.
+            If Convert.ToBoolean(row.Cells("checkBoxColumn").Value) Then
+                MessageBox.Show(("Selected ID: " & row.Cells(1).Value))
+            End If
+        End If
+    End Sub
+
+
+
+
+
+
+
+#End Region
 End Class

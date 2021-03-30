@@ -49,6 +49,7 @@ Partial Class FrmSesion
         Me.txtusuario.Name = "txtusuario"
         Me.txtusuario.Size = New System.Drawing.Size(100, 20)
         Me.txtusuario.TabIndex = 1
+        Me.txtusuario.Text = "EURIEN"
         '
         'txtclave
         '
@@ -58,6 +59,7 @@ Partial Class FrmSesion
         Me.txtclave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtclave.Size = New System.Drawing.Size(100, 20)
         Me.txtclave.TabIndex = 2
+        Me.txtclave.Text = "0303"
         '
         'Label2
         '
