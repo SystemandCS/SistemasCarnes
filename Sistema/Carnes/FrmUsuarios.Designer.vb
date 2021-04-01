@@ -45,24 +45,25 @@ Partial Class FrmUsuarios
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CheckActivo = New System.Windows.Forms.CheckBox()
         Me.DgModuloAsignado = New System.Windows.Forms.DataGridView()
-        Me.ChkCodigo_1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.DgModulo = New System.Windows.Forms.DataGridView()
         Me.CmbJerarquia = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.CheckMarcarTodos = New System.Windows.Forms.CheckBox()
-        Me.chkMUtodo = New System.Windows.Forms.CheckBox()
+        Me.BtnModuloAgregar = New System.Windows.Forms.Button()
+        Me.BtnModuloEliminar = New System.Windows.Forms.Button()
+        Me.ChkDgModuloAsignado = New System.Windows.Forms.CheckBox()
+        Me.chkDgModulo = New System.Windows.Forms.CheckBox()
         Me.LblModulo = New System.Windows.Forms.Label()
+        Me.PanelModulo = New System.Windows.Forms.Panel()
         CType(Me.DgUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgModuloAsignado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgModulo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelModulo.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(697, 33)
+        Me.Label1.Location = New System.Drawing.Point(721, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 0
@@ -70,44 +71,48 @@ Partial Class FrmUsuarios
         '
         'BtnNuevo
         '
+        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.Carnes.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevo.Location = New System.Drawing.Point(598, 165)
+        Me.BtnNuevo.Location = New System.Drawing.Point(581, 165)
         Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(75, 23)
+        Me.BtnNuevo.Size = New System.Drawing.Size(92, 32)
         Me.BtnNuevo.TabIndex = 12
         Me.BtnNuevo.Text = "&Nuevo"
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'BtnGrabar
         '
+        Me.BtnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGrabar.Image = Global.Carnes.My.Resources.Resources.grabar
         Me.BtnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGrabar.Location = New System.Drawing.Point(679, 165)
+        Me.BtnGrabar.Location = New System.Drawing.Point(675, 165)
         Me.BtnGrabar.Name = "BtnGrabar"
-        Me.BtnGrabar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnGrabar.Size = New System.Drawing.Size(94, 32)
         Me.BtnGrabar.TabIndex = 13
         Me.BtnGrabar.Text = "&Grabar"
         Me.BtnGrabar.UseVisualStyleBackColor = True
         '
         'BtnEliminar
         '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminar.Image = Global.Carnes.My.Resources.Resources.eliminar
         Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(760, 165)
+        Me.BtnEliminar.Location = New System.Drawing.Point(770, 165)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEliminar.Size = New System.Drawing.Size(94, 32)
         Me.BtnEliminar.TabIndex = 14
         Me.BtnEliminar.Text = "&Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
         'BtnSalir
         '
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.Image = Global.Carnes.My.Resources.Resources.salir
         Me.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnSalir.Location = New System.Drawing.Point(851, 165)
+        Me.BtnSalir.Location = New System.Drawing.Point(870, 165)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSalir.Size = New System.Drawing.Size(80, 32)
         Me.BtnSalir.TabIndex = 15
         Me.BtnSalir.Text = "&Salir"
         Me.BtnSalir.UseVisualStyleBackColor = True
@@ -115,7 +120,7 @@ Partial Class FrmUsuarios
         'TxtCodigo
         '
         Me.TxtCodigo.BackColor = System.Drawing.Color.Bisque
-        Me.TxtCodigo.Location = New System.Drawing.Point(760, 33)
+        Me.TxtCodigo.Location = New System.Drawing.Point(784, 33)
         Me.TxtCodigo.Name = "TxtCodigo"
         Me.TxtCodigo.ReadOnly = True
         Me.TxtCodigo.Size = New System.Drawing.Size(100, 20)
@@ -131,7 +136,7 @@ Partial Class FrmUsuarios
         '
         'TxtPassword
         '
-        Me.TxtPassword.Location = New System.Drawing.Point(760, 59)
+        Me.TxtPassword.Location = New System.Drawing.Point(784, 59)
         Me.TxtPassword.MaxLength = 30
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
@@ -141,7 +146,7 @@ Partial Class FrmUsuarios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(696, 59)
+        Me.Label3.Location = New System.Drawing.Point(720, 59)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(53, 13)
         Me.Label3.TabIndex = 8
@@ -175,7 +180,7 @@ Partial Class FrmUsuarios
         '
         'txtapellidos
         '
-        Me.txtapellidos.Location = New System.Drawing.Point(760, 85)
+        Me.txtapellidos.Location = New System.Drawing.Point(784, 85)
         Me.txtapellidos.MaxLength = 100
         Me.txtapellidos.Name = "txtapellidos"
         Me.txtapellidos.Size = New System.Drawing.Size(166, 20)
@@ -184,7 +189,7 @@ Partial Class FrmUsuarios
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(696, 85)
+        Me.Label6.Location = New System.Drawing.Point(720, 85)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(49, 13)
         Me.Label6.TabIndex = 14
@@ -202,7 +207,7 @@ Partial Class FrmUsuarios
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(697, 119)
+        Me.Label10.Location = New System.Drawing.Point(721, 119)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(52, 13)
         Me.Label10.TabIndex = 22
@@ -210,6 +215,8 @@ Partial Class FrmUsuarios
         '
         'DgUsuarios
         '
+        Me.DgUsuarios.AllowUserToAddRows = False
+        Me.DgUsuarios.AllowUserToDeleteRows = False
         Me.DgUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgUsuarios.Location = New System.Drawing.Point(12, 38)
         Me.DgUsuarios.Name = "DgUsuarios"
@@ -227,7 +234,7 @@ Partial Class FrmUsuarios
         'CmbIdFrigorifico
         '
         Me.CmbIdFrigorifico.FormattingEnabled = True
-        Me.CmbIdFrigorifico.Location = New System.Drawing.Point(760, 111)
+        Me.CmbIdFrigorifico.Location = New System.Drawing.Point(784, 111)
         Me.CmbIdFrigorifico.Name = "CmbIdFrigorifico"
         Me.CmbIdFrigorifico.Size = New System.Drawing.Size(166, 21)
         Me.CmbIdFrigorifico.TabIndex = 251
@@ -253,31 +260,28 @@ Partial Class FrmUsuarios
         '
         'DgModuloAsignado
         '
+        Me.DgModuloAsignado.AllowUserToAddRows = False
+        Me.DgModuloAsignado.AllowUserToDeleteRows = False
         Me.DgModuloAsignado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgModuloAsignado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ChkCodigo_1})
-        Me.DgModuloAsignado.Location = New System.Drawing.Point(529, 252)
+        Me.DgModuloAsignado.Location = New System.Drawing.Point(9, 22)
         Me.DgModuloAsignado.Name = "DgModuloAsignado"
-        Me.DgModuloAsignado.Size = New System.Drawing.Size(397, 150)
+        Me.DgModuloAsignado.Size = New System.Drawing.Size(367, 160)
         Me.DgModuloAsignado.TabIndex = 254
-        '
-        'ChkCodigo_1
-        '
-        Me.ChkCodigo_1.HeaderText = ""
-        Me.ChkCodigo_1.Name = "ChkCodigo_1"
-        Me.ChkCodigo_1.Width = 20
         '
         'DgModulo
         '
+        Me.DgModulo.AllowUserToAddRows = False
+        Me.DgModulo.AllowUserToDeleteRows = False
         Me.DgModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgModulo.Location = New System.Drawing.Point(12, 252)
+        Me.DgModulo.Location = New System.Drawing.Point(517, 22)
         Me.DgModulo.Name = "DgModulo"
-        Me.DgModulo.Size = New System.Drawing.Size(265, 150)
+        Me.DgModulo.Size = New System.Drawing.Size(270, 160)
         Me.DgModulo.TabIndex = 255
         '
         'CmbJerarquia
         '
         Me.CmbJerarquia.FormattingEnabled = True
-        Me.CmbJerarquia.Location = New System.Drawing.Point(339, 252)
+        Me.CmbJerarquia.Location = New System.Drawing.Point(796, 57)
         Me.CmbJerarquia.Name = "CmbJerarquia"
         Me.CmbJerarquia.Size = New System.Drawing.Size(142, 21)
         Me.CmbJerarquia.TabIndex = 256
@@ -285,79 +289,89 @@ Partial Class FrmUsuarios
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(283, 252)
+        Me.Label8.Location = New System.Drawing.Point(793, 22)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(50, 13)
         Me.Label8.TabIndex = 257
         Me.Label8.Text = "Jerarquia"
         '
-        'Button1
+        'BtnModuloAgregar
         '
-        Me.Button1.Image = Global.Carnes.My.Resources.Resources.aceptar
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(374, 301)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 23)
-        Me.Button1.TabIndex = 258
-        Me.Button1.Text = "Agregar >>"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnModuloAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModuloAgregar.Image = Global.Carnes.My.Resources.Resources.aceptar
+        Me.BtnModuloAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnModuloAgregar.Location = New System.Drawing.Point(395, 57)
+        Me.BtnModuloAgregar.Name = "BtnModuloAgregar"
+        Me.BtnModuloAgregar.Size = New System.Drawing.Size(107, 39)
+        Me.BtnModuloAgregar.TabIndex = 258
+        Me.BtnModuloAgregar.Text = " << Agregar"
+        Me.BtnModuloAgregar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BtnModuloEliminar
         '
-        Me.Button2.Image = Global.Carnes.My.Resources.Resources.eliminar
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(374, 347)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(107, 23)
-        Me.Button2.TabIndex = 259
-        Me.Button2.Text = "<< Quitar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnModuloEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModuloEliminar.Image = Global.Carnes.My.Resources.Resources.eliminar
+        Me.BtnModuloEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnModuloEliminar.Location = New System.Drawing.Point(395, 124)
+        Me.BtnModuloEliminar.Name = "BtnModuloEliminar"
+        Me.BtnModuloEliminar.Size = New System.Drawing.Size(107, 35)
+        Me.BtnModuloEliminar.TabIndex = 259
+        Me.BtnModuloEliminar.Text = "Quitar >>"
+        Me.BtnModuloEliminar.UseVisualStyleBackColor = True
         '
-        'CheckMarcarTodos
+        'ChkDgModuloAsignado
         '
-        Me.CheckMarcarTodos.AutoSize = True
-        Me.CheckMarcarTodos.Location = New System.Drawing.Point(12, 421)
-        Me.CheckMarcarTodos.Name = "CheckMarcarTodos"
-        Me.CheckMarcarTodos.Size = New System.Drawing.Size(89, 17)
-        Me.CheckMarcarTodos.TabIndex = 260
-        Me.CheckMarcarTodos.Text = "Marca Todos"
-        Me.CheckMarcarTodos.UseVisualStyleBackColor = True
+        Me.ChkDgModuloAsignado.AutoSize = True
+        Me.ChkDgModuloAsignado.Location = New System.Drawing.Point(9, 194)
+        Me.ChkDgModuloAsignado.Name = "ChkDgModuloAsignado"
+        Me.ChkDgModuloAsignado.Size = New System.Drawing.Size(89, 17)
+        Me.ChkDgModuloAsignado.TabIndex = 260
+        Me.ChkDgModuloAsignado.Text = "Marca Todos"
+        Me.ChkDgModuloAsignado.UseVisualStyleBackColor = True
         '
-        'chkMUtodo
+        'chkDgModulo
         '
-        Me.chkMUtodo.AutoSize = True
-        Me.chkMUtodo.Location = New System.Drawing.Point(529, 421)
-        Me.chkMUtodo.Name = "chkMUtodo"
-        Me.chkMUtodo.Size = New System.Drawing.Size(92, 17)
-        Me.chkMUtodo.TabIndex = 261
-        Me.chkMUtodo.Text = "Marcar Todos"
-        Me.chkMUtodo.UseVisualStyleBackColor = True
+        Me.chkDgModulo.AutoSize = True
+        Me.chkDgModulo.Location = New System.Drawing.Point(517, 197)
+        Me.chkDgModulo.Name = "chkDgModulo"
+        Me.chkDgModulo.Size = New System.Drawing.Size(92, 17)
+        Me.chkDgModulo.TabIndex = 261
+        Me.chkDgModulo.Text = "Marcar Todos"
+        Me.chkDgModulo.UseVisualStyleBackColor = True
         '
         'LblModulo
         '
         Me.LblModulo.AutoSize = True
         Me.LblModulo.BackColor = System.Drawing.SystemColors.ControlDark
         Me.LblModulo.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblModulo.Location = New System.Drawing.Point(526, 226)
+        Me.LblModulo.Location = New System.Drawing.Point(5, 0)
         Me.LblModulo.Name = "LblModulo"
         Me.LblModulo.Size = New System.Drawing.Size(68, 19)
         Me.LblModulo.TabIndex = 262
         Me.LblModulo.Text = "Modulos"
         '
+        'PanelModulo
+        '
+        Me.PanelModulo.Controls.Add(Me.DgModuloAsignado)
+        Me.PanelModulo.Controls.Add(Me.LblModulo)
+        Me.PanelModulo.Controls.Add(Me.ChkDgModuloAsignado)
+        Me.PanelModulo.Controls.Add(Me.chkDgModulo)
+        Me.PanelModulo.Controls.Add(Me.DgModulo)
+        Me.PanelModulo.Controls.Add(Me.BtnModuloEliminar)
+        Me.PanelModulo.Controls.Add(Me.CmbJerarquia)
+        Me.PanelModulo.Controls.Add(Me.BtnModuloAgregar)
+        Me.PanelModulo.Controls.Add(Me.Label8)
+        Me.PanelModulo.Location = New System.Drawing.Point(12, 221)
+        Me.PanelModulo.Name = "PanelModulo"
+        Me.PanelModulo.Size = New System.Drawing.Size(955, 214)
+        Me.PanelModulo.TabIndex = 263
+        '
         'FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(949, 450)
-        Me.Controls.Add(Me.LblModulo)
-        Me.Controls.Add(Me.chkMUtodo)
-        Me.Controls.Add(Me.CheckMarcarTodos)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.CmbJerarquia)
-        Me.Controls.Add(Me.DgModulo)
-        Me.Controls.Add(Me.DgModuloAsignado)
+        Me.ClientSize = New System.Drawing.Size(1038, 518)
+        Me.Controls.Add(Me.PanelModulo)
         Me.Controls.Add(Me.CheckActivo)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.DgUsuarios)
@@ -387,6 +401,8 @@ Partial Class FrmUsuarios
         CType(Me.DgUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgModuloAsignado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DgModulo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.PanelModulo.ResumeLayout(False)
+        Me.PanelModulo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -416,10 +432,10 @@ Partial Class FrmUsuarios
     Friend WithEvents DgModulo As DataGridView
     Friend WithEvents CmbJerarquia As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents CheckMarcarTodos As CheckBox
-    Friend WithEvents chkMUtodo As CheckBox
+    Friend WithEvents BtnModuloAgregar As Button
+    Friend WithEvents BtnModuloEliminar As Button
+    Friend WithEvents ChkDgModuloAsignado As CheckBox
+    Friend WithEvents chkDgModulo As CheckBox
     Friend WithEvents LblModulo As Label
-    Friend WithEvents ChkCodigo_1 As DataGridViewCheckBoxColumn
+    Friend WithEvents PanelModulo As Panel
 End Class

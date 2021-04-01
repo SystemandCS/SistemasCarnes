@@ -33,9 +33,9 @@ Public Class ClsGenerica
 
             cant = srv.EjecutarSP(Nombre, Parametros)
 
-            If cant <> 1 Then
-                Throw New ApplicationException("No se encontro el Registro buscado")
-            End If
+            ''If cant <> 1 Then
+            ''Throw New ApplicationException("No se encontro el Registro buscado")
+            ''End If
 
             Return Parametros(0)
 

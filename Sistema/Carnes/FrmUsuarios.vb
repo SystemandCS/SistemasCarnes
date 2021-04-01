@@ -29,6 +29,7 @@
 
                 LblModulo.Text = "Modulos para " & txtnombres.Text & " " & txtapellidos.Text
 
+                PanelModulo.Visible = True
 
 
             End If
@@ -59,10 +60,15 @@
 
         Dim Retorno As Integer
         Dim CUsuarios As New ClsUsuario
+        Dim CVendedor As New ClsVendedor
         Try
             If TxtCodigo.Text.Trim = "" Then
                 Retorno = CUsuarios.Insertar(0, txtnombres.Text, txtapellidos.Text, txtusuario.Text, TxtPassword.Text.Trim, 0,
                                      CmbIdSuperior.SelectedValue, 0, USULOGIN.Trim, CmbIdFrigorifico.SelectedValue)
+
+
+
+
                 If Val(Retorno) > 0 Then
                     MessageBox.Show("Registro Agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Call BtnNuevo_Click(sender, e)
@@ -122,6 +128,8 @@
 
         LblModulo.Text = "Modulos"
 
+        PanelModulo.Visible = False
+
         Call BtnNuevo_Click(sender, e)
 
     End Sub
@@ -136,7 +144,7 @@
             Fila = DgUsuarios.CurrentRow.Index
             BuscaRegistro(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
 
-            BuscaModulosAsigados(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
+            RellenarModuloAsigados(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
 
 
         End If
@@ -175,7 +183,7 @@ ErrLinea:
         End Try
     End Sub
 
-    Private Sub BuscaModulosAsigados(Codigo As Integer)
+    Private Sub RellenarModuloAsigados(Codigo As Integer)
         Try
             Dim CUsuario As New ClsGenerica
             Dim DT As New DataTable
@@ -185,6 +193,8 @@ ErrLinea:
 
             DgModuloAsignado.Columns("idUsuario").Visible = False
             DgModuloAsignado.Columns("jerarquia").Visible = False
+
+
 
 
 
@@ -210,6 +220,8 @@ ErrLinea:
         End Try
     End Sub
 
+
+    ' traer todos los modulos asignados
     Private Sub RellenarModulo()
         Try
             Dim CUsuario As New ClsGrlModulo
@@ -221,10 +233,8 @@ ErrLinea:
             Dim checkBoxColumn As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
             checkBoxColumn.HeaderText = ""
             checkBoxColumn.Width = 30
-            checkBoxColumn.Name = "checkBoxColumn"
+            checkBoxColumn.Name = "ChkCodigoModulo"
             DgModulo.Columns.Insert(0, checkBoxColumn)
-
-
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -247,19 +257,7 @@ ErrLinea:
     End Sub
 
 
-    Private Sub RellenarModuloAgregado()
-        Try
-            Dim CUsuario As New ClsGrlModulo
-            Dim DT As New DataTable
-            DT = CUsuario.ObtenerUno().Tables(0)
-            DgModulo.DataSource = DT
-            DgModulo.ReadOnly = True
 
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
 
     Private Sub RellenarComboJerarquica()
         Try
@@ -278,45 +276,137 @@ ErrLinea:
 
 
 
+    Private Sub chkDgModulo_CheckedChanged(sender As Object, e As EventArgs) Handles chkDgModulo.CheckedChanged
+
+        If chkDgModulo.Checked Then
+
+            For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
+                DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = True
+            Next
+
+        Else
+
+            For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
+                DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = False
+            Next
 
 
-
-
-    Private Sub DgModuloAsignado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgModuloAsignado.CellContentClick
-
-        ' Private Sub DgModuloAsignado_CellClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs)
-        'Check to ensure that the row CheckBox is clicked.
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 0 Then
-
-            'Reference the GridView Row.
-            Dim row As DataGridViewRow = DgModuloAsignado.Rows(e.RowIndex)
-
-            'Set the CheckBox selection.
-            row.Cells("ChkCodigo_1").Value = Convert.ToBoolean(row.Cells("ChkCodigo_1").EditedFormattedValue)
-
-            'If CheckBox is checked, display Message Box.
-            If Convert.ToBoolean(row.Cells("checkBoxColumn").Value) Then
-                MessageBox.Show(("Selected ID: " & row.Cells(1).Value))
-            End If
         End If
+
+
     End Sub
 
-    Private Sub DgModulo_CellClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs)
-        'Check to ensure that the row CheckBox is clicked.
-        If e.RowIndex >= 0 AndAlso e.ColumnIndex = 0 Then
+    Private Sub ChkDgModuloAsignado_CheckedChanged(sender As Object, e As EventArgs) Handles ChkDgModuloAsignado.CheckedChanged
 
-            'Reference the GridView Row.
-            Dim row As DataGridViewRow = DgModulo.Rows(e.RowIndex)
 
-            'Set the CheckBox selection.
-            row.Cells("ChkCodigo").Value = Convert.ToBoolean(row.Cells("ChkCodigo").EditedFormattedValue)
+        If ChkDgModuloAsignado.Checked Then
 
-            'If CheckBox is checked, display Message Box.
-            If Convert.ToBoolean(row.Cells("checkBoxColumn").Value) Then
-                MessageBox.Show(("Selected ID: " & row.Cells(1).Value))
-            End If
+
+            For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
+                DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = True
+            Next
+        Else
+
+            For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
+                DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = False
+            Next
+
         End If
+
+
     End Sub
+
+    Private Sub BtnModuloAgregar_Click(sender As Object, e As EventArgs) Handles BtnModuloAgregar.Click
+
+        Try
+
+            Dim Omodulo As New ClsGenerica
+            Dim ObjModulo(5) As Object
+
+            ObjModulo(0) = Convert.ToInt32(TxtCodigo.Text)
+            ObjModulo(1) = ""
+            ObjModulo(2) = 0
+            ObjModulo(3) = USULOGIN.Trim
+            ObjModulo(4) = CmbJerarquia.SelectedValue
+            ObjModulo(5) = "A"
+
+
+            For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
+                If DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = True Then
+
+                    'Agregar Modulos al usuario
+                    ObjModulo(1) = Convert.ToInt32(DgModulo.Rows(i).Cells("codigo").Value)
+
+                    Omodulo.EjecutarSP("UL_spIUD_Usuariomodulo", ObjModulo)
+
+                End If
+            Next
+
+            RellenarModuloAsigados(TxtCodigo.Text)
+
+            MessageBox.Show("Se Agregó el Modulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+
+    End Sub
+
+    Private Sub BtnModuloEliminar_Click(sender As Object, e As EventArgs) Handles BtnModuloEliminar.Click
+
+
+        Try
+            Dim Omodulo As New ClsGenerica
+            Dim ObjModulo(5) As Object
+
+            ObjModulo(0) = Convert.ToInt32(TxtCodigo.Text)
+            ObjModulo(1) = ""
+            ObjModulo(2) = 0
+            ObjModulo(3) = USULOGIN.Trim
+            ObjModulo(4) = CmbJerarquia.SelectedValue
+            ObjModulo(5) = "D"
+
+
+
+
+
+            For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
+                If DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = True Then
+
+                    'Agregar Modulos al usuario
+                    ObjModulo(1) = Convert.ToInt32(DgModuloAsignado.Rows(i).Cells("codigo").Value)
+                    Omodulo.EjecutarSP("UL_spIUD_Usuariomodulo", ObjModulo)
+
+
+                End If
+            Next
+
+            RellenarModuloAsigados(TxtCodigo.Text)
+            MessageBox.Show("Se Quitó el Modulo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+
+    End Sub
+
+    Private Sub ChkDgModuloAsignado_VisibleChanged(sender As Object, e As EventArgs) Handles ChkDgModuloAsignado.VisibleChanged
+
+        'Add a CheckBox Column to the DataGridView at the first position.
+        Dim checkBoxColumn As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
+        checkBoxColumn.HeaderText = ""
+        checkBoxColumn.Width = 30
+        checkBoxColumn.Name = "ChkCodigoModuloAsignado"
+        DgModuloAsignado.Columns.Insert(0, checkBoxColumn)
+
+
+    End Sub
+
+
+
 
 
 

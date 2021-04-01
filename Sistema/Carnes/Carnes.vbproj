@@ -117,6 +117,7 @@
     <Compile Include="ClsSubFamilias.vb" />
     <Compile Include="ClsGenerica.vb" />
     <Compile Include="ClsGrl_Modulo.vb" />
+    <Compile Include="ClsVendedor.vb" />
     <Compile Include="ClsUsuarios.vb" />
     <Compile Include="ClsUsuario.vb" />
     <Compile Include="DstDATOS.Designer.vb">
