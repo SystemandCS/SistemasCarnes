@@ -31,7 +31,7 @@ Public MustInherit Class ServidorNET
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
 
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -58,7 +58,7 @@ Public MustInherit Class ServidorNET
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -84,7 +84,7 @@ Public MustInherit Class ServidorNET
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -109,7 +109,7 @@ Public MustInherit Class ServidorNET
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -126,7 +126,7 @@ Public MustInherit Class ServidorNET
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -144,7 +144,7 @@ Public MustInherit Class ServidorNET
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -161,7 +161,7 @@ Public MustInherit Class ServidorNET
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -181,7 +181,7 @@ Public MustInherit Class ServidorNET
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If

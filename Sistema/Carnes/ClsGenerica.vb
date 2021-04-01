@@ -1,8 +1,6 @@
 Imports SvrDatosNet
 Public Class ClsGenerica
 
-    Public Tabla As String
-    Public FuenteDatos As String
     Public App As String
 
     Protected m_Servidor As Servidor
@@ -26,7 +24,7 @@ Public Class ClsGenerica
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
 
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If
@@ -50,7 +48,7 @@ Public Class ClsGenerica
         Try
             Dim srv As Servidor
             If m_Servidor Is Nothing Then
-                srv = Servidor.AbrirConexion(FuenteDatos, App)
+                srv = Servidor.AbrirConexion(App)
             Else
                 srv = m_Servidor
             End If

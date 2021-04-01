@@ -11,7 +11,7 @@ Public MustInherit Class Servidor
     Protected m_Conexion As String
 
     'Public Shared Function Crear(ByVal FuenteDatos As String, ByVal App As String) As Servidor
-    Public Shared Function AbrirConexion(ByVal FuenteDatos As String, ByVal App As String) As Servidor
+    Public Shared Function AbrirConexion(ByVal App As String) As Servidor
 
         Dim str As String = modConexion.ObtenerStringConexion(App)
         Dim Tipo As String = "SQLSERVER"
@@ -28,7 +28,7 @@ Public MustInherit Class Servidor
         End Select
 
 
-        srv.m_FuenteDatos = FuenteDatos
+        srv.m_FuenteDatos = ""
         srv.m_Conexion = Conexion
         Return srv
     End Function

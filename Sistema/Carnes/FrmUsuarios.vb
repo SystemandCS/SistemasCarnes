@@ -121,6 +121,7 @@
     End Sub
 
     Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         RellenarComboSuperior()
         RellenarComboFrigorifico()
         RellenarModulo()

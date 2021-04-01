@@ -206,6 +206,12 @@
     <Compile Include="FrmImpuesto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmProveedores.Designer.vb">
+      <DependentUpon>FrmProveedores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProveedores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmRptKardex.Designer.vb">
       <DependentUpon>FrmRptKardex.vb</DependentUpon>
     </Compile>
@@ -230,10 +236,10 @@
     <Compile Include="FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmProveedores.Designer.vb">
-      <DependentUpon>FrmProveedores.vb</DependentUpon>
+    <Compile Include="FrmProveedores_bak.Designer.vb">
+      <DependentUpon>FrmProveedores_bak.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmProveedores.vb">
+    <Compile Include="FrmProveedores_bak.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReportes.Designer.vb">
@@ -337,6 +343,9 @@
     <EmbeddedResource Include="FrmImpuesto.resx">
       <DependentUpon>FrmImpuesto.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProveedores.resx">
+      <DependentUpon>FrmProveedores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRptKardex.resx">
       <DependentUpon>FrmRptKardex.vb</DependentUpon>
     </EmbeddedResource>
@@ -349,8 +358,8 @@
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmProveedores.resx">
-      <DependentUpon>FrmProveedores.vb</DependentUpon>
+    <EmbeddedResource Include="FrmProveedores_bak.resx">
+      <DependentUpon>FrmProveedores_bak.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportes.resx">
       <DependentUpon>FrmReportes.vb</DependentUpon>
