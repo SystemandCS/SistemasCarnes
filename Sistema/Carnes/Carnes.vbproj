@@ -286,6 +286,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Module1.vb" />
+    <Compile Include="Modulos\ThemeColor.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -532,6 +533,19 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuevo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Buscador.jpg" />
+    <Content Include="Resources\empleados.png" />
+    <Content Include="Resources\excel.png" />
+    <Content Include="Resources\ICONO.ICO" />
+    <Content Include="Resources\igv.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

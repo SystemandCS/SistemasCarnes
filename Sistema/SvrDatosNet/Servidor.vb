@@ -36,8 +36,12 @@ Public MustInherit Class Servidor
     Public MustOverride Function EjecutarSP(ByVal Nombre As String, _
        ByVal ParamArray Parametros() As Object) As Integer
 
-    Public MustOverride Function TraerDatos(ByVal Nombre As String, _
+    Public MustOverride Function TraerDatos(ByVal Nombre As String,
        ByVal ParamArray Parametros() As Object) As System.Data.DataSet
+
+    Public MustOverride Function EjecutarSql(ByVal StrSql As String) As System.Data.DataSet
+
+
 
     Public MustOverride Sub IniciarTransaccion()
     Public MustOverride Sub Commit()

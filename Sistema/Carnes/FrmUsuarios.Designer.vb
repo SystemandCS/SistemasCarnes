@@ -72,7 +72,6 @@ Partial Class FrmUsuarios
         'BtnNuevo
         '
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNuevo.Image = Global.Carnes.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnNuevo.Location = New System.Drawing.Point(581, 165)
         Me.BtnNuevo.Name = "BtnNuevo"
@@ -84,7 +83,6 @@ Partial Class FrmUsuarios
         'BtnGrabar
         '
         Me.BtnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGrabar.Image = Global.Carnes.My.Resources.Resources.grabar
         Me.BtnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnGrabar.Location = New System.Drawing.Point(675, 165)
         Me.BtnGrabar.Name = "BtnGrabar"
@@ -96,7 +94,6 @@ Partial Class FrmUsuarios
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Image = Global.Carnes.My.Resources.Resources.eliminar
         Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnEliminar.Location = New System.Drawing.Point(770, 165)
         Me.BtnEliminar.Name = "BtnEliminar"
@@ -108,7 +105,6 @@ Partial Class FrmUsuarios
         'BtnSalir
         '
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSalir.Image = Global.Carnes.My.Resources.Resources.salir
         Me.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnSalir.Location = New System.Drawing.Point(870, 165)
         Me.BtnSalir.Name = "BtnSalir"
@@ -298,7 +294,6 @@ Partial Class FrmUsuarios
         'BtnModuloAgregar
         '
         Me.BtnModuloAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModuloAgregar.Image = Global.Carnes.My.Resources.Resources.aceptar
         Me.BtnModuloAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnModuloAgregar.Location = New System.Drawing.Point(395, 57)
         Me.BtnModuloAgregar.Name = "BtnModuloAgregar"
@@ -310,7 +305,6 @@ Partial Class FrmUsuarios
         'BtnModuloEliminar
         '
         Me.BtnModuloEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModuloEliminar.Image = Global.Carnes.My.Resources.Resources.eliminar
         Me.BtnModuloEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnModuloEliminar.Location = New System.Drawing.Point(395, 124)
         Me.BtnModuloEliminar.Name = "BtnModuloEliminar"

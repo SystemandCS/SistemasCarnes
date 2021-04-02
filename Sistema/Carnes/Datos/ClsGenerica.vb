@@ -59,6 +59,23 @@ Public Class ClsGenerica
         Return ds
     End Function
 
+    Public Overridable Function EjecutarSql(ByVal StrSql As String) As System.Data.DataSet
+        Dim ds As Data.DataSet
+        Try
+            Dim srv As Servidor
+            If m_Servidor Is Nothing Then
+                srv = Servidor.AbrirConexion(App)
+            Else
+                srv = m_Servidor
+            End If
+            ds = srv.EjecutarSql(StrSql)
+        Catch ex As Exception
+            Throw ex
+        End Try
+        Return ds
+    End Function
+
+
 
 
 End Class

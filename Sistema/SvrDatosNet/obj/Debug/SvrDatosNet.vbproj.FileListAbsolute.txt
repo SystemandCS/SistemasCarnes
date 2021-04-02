@@ -13,6 +13,7 @@ C:\SistemasCarnes\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.dll.config
 C:\SistemasCarnes\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.dll
 C:\SistemasCarnes\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.pdb
 C:\SistemasCarnes\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.xml
+C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.vbprojAssemblyReference.cache
 C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.Resources.resources
 C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.vbproj.GenerateResource.cache
 C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.vbproj.CoreCompileInputs.cache

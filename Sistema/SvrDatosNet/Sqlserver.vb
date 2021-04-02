@@ -146,7 +146,60 @@ Public Class SQLServer
    End Function
 
 
-   Public Overrides Function EnTransaccion() As Boolean
+    Public Overrides Function EjecutarSql(ByVal StrSql As String) As System.Data.DataSet
+        'Dim cant As Integer
+        Dim ds As New Data.DataSet()
+        Dim oConTemp As SqlConnection
+
+
+        Try
+
+
+            oConTemp = New SqlConnection(m_Conexion)
+
+            'Creo el objeto comando
+            Dim oCmd As New SqlCommand(StrSql, oConTemp)
+            oCmd.CommandType = Data.CommandType.Text
+            'Traigo los parametros de la base
+            oConTemp.Open()
+
+
+            'veo si estoy en una transaccion
+            If EnTransaccion() Then
+                oConTemp.Close()
+                oCmd.Connection = oCon
+                oCmd.Transaction = oTrx
+            End If
+
+
+
+
+            'Armo el DataAdapter
+            Dim DA As New SqlDataAdapter(oCmd)
+
+            'Obtengo el DataSet
+            DA.Fill(ds)
+
+
+        Catch ex As Exception
+            'Throw ex
+            Throw New ApplicationException("Error en la ejecucion de la Sentencia Sql: " + StrSql & " -" & ex.Message)
+
+        Finally
+            If Not EnTransaccion() Then
+                'If oConTemp.State = Data.ConnectionState.Open Then
+                '    oConTemp.Close()
+                'End If
+            End If
+        End Try
+
+        Return ds
+    End Function
+
+
+
+
+    Public Overrides Function EnTransaccion() As Boolean
       Return Not (oTrx Is Nothing)
    End Function
 

@@ -27,6 +27,11 @@ Carnes
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Carnes.My.Resources.Resources.aceptar1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Carnes.My.Resources.Resources.anular">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -133,6 +138,11 @@ Carnes
 </summary>
 </member>
 <member name="P:Carnes.My.Resources.Resources.nuevo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Carnes.My.Resources.Resources.nuevo1">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
