@@ -99,27 +99,27 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClsArticulos.vb" />
-    <Compile Include="ClsClientes.vb" />
-    <Compile Include="ClsCotizacionCab.vb" />
-    <Compile Include="ClsCotizacionDet.vb" />
-    <Compile Include="ClsFacturacionCab.vb" />
-    <Compile Include="ClsFacturacionDet.vb" />
-    <Compile Include="ClsFamilias.vb" />
-    <Compile Include="ClsFormadePago.vb" />
-    <Compile Include="ClsImpuestos.vb" />
-    <Compile Include="ClsMarcas.vb" />
-    <Compile Include="ClsMonedaALetras.vb" />
-    <Compile Include="ClsOrdendeIngreso.vb" />
-    <Compile Include="ClsOrdendeIngresoDet.vb" />
-    <Compile Include="ClsProveedores.vb" />
-    <Compile Include="ClsSeries.vb" />
-    <Compile Include="ClsSubFamilias.vb" />
-    <Compile Include="ClsGenerica.vb" />
-    <Compile Include="ClsGrl_Modulo.vb" />
-    <Compile Include="ClsVendedor.vb" />
-    <Compile Include="ClsUsuarios.vb" />
-    <Compile Include="ClsUsuario.vb" />
+    <Compile Include="Datos\ClsArticulos.vb" />
+    <Compile Include="Datos\ClsClientes.vb" />
+    <Compile Include="Datos\ClsCotizacionCab.vb" />
+    <Compile Include="Datos\ClsCotizacionDet.vb" />
+    <Compile Include="Datos\ClsFacturacionCab.vb" />
+    <Compile Include="Datos\ClsFacturacionDet.vb" />
+    <Compile Include="Datos\ClsFamilias.vb" />
+    <Compile Include="Datos\ClsFormadePago.vb" />
+    <Compile Include="Datos\ClsImpuestos.vb" />
+    <Compile Include="Datos\ClsMarcas.vb" />
+    <Compile Include="Datos\ClsMonedaALetras.vb" />
+    <Compile Include="Datos\ClsOrdendeIngreso.vb" />
+    <Compile Include="Datos\ClsOrdendeIngresoDet.vb" />
+    <Compile Include="Datos\ClsProveedores.vb" />
+    <Compile Include="Datos\ClsSeries.vb" />
+    <Compile Include="Datos\ClsSubFamilias.vb" />
+    <Compile Include="Datos\ClsGenerica.vb" />
+    <Compile Include="Datos\ClsGrl_Modulo.vb" />
+    <Compile Include="Datos\ClsVendedor.vb" />
+    <Compile Include="Datos\ClsUsuarios.vb" />
+    <Compile Include="Datos\ClsUsuario.vb" />
     <Compile Include="DstDATOS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -285,7 +285,7 @@
     <Compile Include="FrmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Module1.vb" />
+    <Compile Include="Modulos\Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -384,22 +384,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RptArticulos.rdlc" />
-    <EmbeddedResource Include="RptClientes.rdlc" />
-    <EmbeddedResource Include="RptCotizacion.rdlc" />
-    <EmbeddedResource Include="RptFacturacion.rdlc" />
-    <EmbeddedResource Include="RptFamilias.rdlc" />
-    <EmbeddedResource Include="RptIngresos.rdlc" />
-    <EmbeddedResource Include="RptKardex.rdlc" />
-    <EmbeddedResource Include="RptMarcas.rdlc" />
-    <EmbeddedResource Include="RptOrdendeIngreso.rdlc" />
-    <EmbeddedResource Include="RptProveedores.rdlc" />
-    <EmbeddedResource Include="RptSubFamilias.rdlc" />
-    <EmbeddedResource Include="RptVentas.rdlc" />
+    <EmbeddedResource Include="Reportes\RptArticulos.rdlc" />
+    <EmbeddedResource Include="Reportes\RptClientes.rdlc" />
+    <EmbeddedResource Include="Reportes\RptCotizacion.rdlc" />
+    <EmbeddedResource Include="Reportes\RptFacturacion.rdlc" />
+    <EmbeddedResource Include="Reportes\RptFamilias.rdlc" />
+    <EmbeddedResource Include="Reportes\RptIngresos.rdlc" />
+    <EmbeddedResource Include="Reportes\RptKardex.rdlc" />
+    <EmbeddedResource Include="Reportes\RptMarcas.rdlc" />
+    <EmbeddedResource Include="Reportes\RptOrdendeIngreso.rdlc" />
+    <EmbeddedResource Include="Reportes\RptProveedores.rdlc" />
+    <EmbeddedResource Include="Reportes\RptSubFamilias.rdlc" />
+    <EmbeddedResource Include="Reportes\RptVentas.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DstDATOS.xsc">
@@ -422,97 +422,97 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config">
+    <None Include="Resources\App.config">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="FONDO.jpg" />
+    <None Include="Resources\FONDO.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="sesion.gif" />
+    <None Include="Resources\sesion.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="nuevo.png" />
+    <None Include="Resources\nuevo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="grabar.png" />
+    <None Include="Resources\grabar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="eliminar.png" />
+    <None Include="Resources\eliminar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="salir.png" />
+    <None Include="Resources\salir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="buscar.png" />
+    <None Include="Resources\buscar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="aceptar.png" />
+    <None Include="Resources\aceptar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="enviar.png" />
+    <None Include="Resources\enviar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="imprimir.png" />
+    <None Include="Resources\imprimir.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="anular.png" />
+    <None Include="Resources\anular.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cerrar.png" />
+    <None Include="Resources\cerrar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LOGOBUSQUEDA.jpg" />
+    <None Include="Resources\LOGOBUSQUEDA.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LOGOTIPO.jpg" />
+    <None Include="Resources\LOGOTIPO.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="busquedarapida.png" />
+    <None Include="Resources\busquedarapida.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="clientes.png" />
+    <None Include="Resources\clientes.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="proveedor.png" />
+    <None Include="Resources\proveedor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="familias.png" />
+    <None Include="Resources\familias.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="subfamilias.png" />
+    <None Include="Resources\subfamilias.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="marcas.png" />
+    <None Include="Resources\marcas.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="articulos.png" />
+    <None Include="Resources\articulos.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="monedas.png" />
+    <None Include="Resources\monedas.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="series.png" />
+    <None Include="Resources\series.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ingresos.png" />
+    <None Include="Resources\ingresos.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="cotizacion.png" />
+    <None Include="Resources\cotizacion.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="factura.png" />
+    <None Include="Resources\factura.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="reporte.png" />
+    <None Include="Resources\reporte.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="llave.png" />
+    <None Include="Resources\llave.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="usuario.png" />
+    <None Include="Resources\usuario.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SvrDatosNet\SvrDatosNet.vbproj">
