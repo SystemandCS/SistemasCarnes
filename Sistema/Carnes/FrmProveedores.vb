@@ -119,6 +119,8 @@ ErrLinea:
                 CmbProvincia.SelectedValue = DT.Rows(0).Item("IdProvincia").ToString()
 
                 CmbLocalidad.SelectedValue = DT.Rows(0).Item("idlocalidad").ToString()
+
+
                 '            isnull(idLocalidad, 0) idLocalidad,
                 'isnull(idprovincia, 0) idprovincia,
                 'isnull(idPais, 0) idPais,
@@ -194,6 +196,8 @@ ErrLinea:
             MessageBox.Show(ex.Message, "Aviso- Pais", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
     End Sub
+
+
 
 #End Region
 

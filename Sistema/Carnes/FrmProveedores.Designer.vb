@@ -30,6 +30,7 @@ Partial Class FrmProveedores
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PnlDetalle = New System.Windows.Forms.Panel()
+        Me.TxtCuit = New System.Windows.Forms.TextBox()
         Me.CmbcondIva = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -45,6 +46,7 @@ Partial Class FrmProveedores
         Me.Label22 = New System.Windows.Forms.Label()
         Me.TabDomicilio = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.CmbLocalidad = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TxtCPostal = New System.Windows.Forms.TextBox()
@@ -79,8 +81,6 @@ Partial Class FrmProveedores
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
-        Me.TxtCuit = New System.Windows.Forms.TextBox()
-        Me.CmbLocalidad = New System.Windows.Forms.ComboBox()
         CType(Me.DgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlDetalle.SuspendLayout()
         Me.TabDomicilio.SuspendLayout()
@@ -181,6 +181,14 @@ Partial Class FrmProveedores
         Me.PnlDetalle.Name = "PnlDetalle"
         Me.PnlDetalle.Size = New System.Drawing.Size(407, 249)
         Me.PnlDetalle.TabIndex = 272
+        '
+        'TxtCuit
+        '
+        Me.TxtCuit.Location = New System.Drawing.Point(82, 83)
+        Me.TxtCuit.MaxLength = 100
+        Me.TxtCuit.Name = "TxtCuit"
+        Me.TxtCuit.Size = New System.Drawing.Size(200, 20)
+        Me.TxtCuit.TabIndex = 318
         '
         'CmbcondIva
         '
@@ -337,6 +345,14 @@ Partial Class FrmProveedores
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'CmbLocalidad
+        '
+        Me.CmbLocalidad.FormattingEnabled = True
+        Me.CmbLocalidad.Location = New System.Drawing.Point(84, 51)
+        Me.CmbLocalidad.Name = "CmbLocalidad"
+        Me.CmbLocalidad.Size = New System.Drawing.Size(200, 21)
+        Me.CmbLocalidad.TabIndex = 306
         '
         'Label6
         '
@@ -629,22 +645,6 @@ Partial Class FrmProveedores
         Me.Label16.Size = New System.Drawing.Size(27, 13)
         Me.Label16.TabIndex = 299
         Me.Label16.Text = "Rec"
-        '
-        'TxtCuit
-        '
-        Me.TxtCuit.Location = New System.Drawing.Point(82, 83)
-        Me.TxtCuit.MaxLength = 100
-        Me.TxtCuit.Name = "TxtCuit"
-        Me.TxtCuit.Size = New System.Drawing.Size(200, 20)
-        Me.TxtCuit.TabIndex = 318
-        '
-        'CmbLocalidad
-        '
-        Me.CmbLocalidad.FormattingEnabled = True
-        Me.CmbLocalidad.Location = New System.Drawing.Point(84, 51)
-        Me.CmbLocalidad.Name = "CmbLocalidad"
-        Me.CmbLocalidad.Size = New System.Drawing.Size(200, 21)
-        Me.CmbLocalidad.TabIndex = 306
         '
         'FrmProveedores
         '
