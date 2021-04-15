@@ -24,10 +24,6 @@ Partial Class FrmUsuarios
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmUsuarios))
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
-        Me.BtnGrabar = New System.Windows.Forms.Button()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
-        Me.BtnSalir = New System.Windows.Forms.Button()
         Me.TxtCodigo = New System.Windows.Forms.TextBox()
         Me.txtusuario = New System.Windows.Forms.TextBox()
         Me.TxtPassword = New System.Windows.Forms.TextBox()
@@ -54,6 +50,10 @@ Partial Class FrmUsuarios
         Me.chkDgModulo = New System.Windows.Forms.CheckBox()
         Me.LblModulo = New System.Windows.Forms.Label()
         Me.PanelModulo = New System.Windows.Forms.Panel()
+        Me.BtnSalir = New System.Windows.Forms.Button()
+        Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.BtnGrabar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
         CType(Me.DgUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgModuloAsignado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgModulo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,50 +68,6 @@ Partial Class FrmUsuarios
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Codigo"
-        '
-        'BtnNuevo
-        '
-        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevo.Location = New System.Drawing.Point(581, 165)
-        Me.BtnNuevo.Name = "BtnNuevo"
-        Me.BtnNuevo.Size = New System.Drawing.Size(92, 32)
-        Me.BtnNuevo.TabIndex = 12
-        Me.BtnNuevo.Text = "&Nuevo"
-        Me.BtnNuevo.UseVisualStyleBackColor = True
-        '
-        'BtnGrabar
-        '
-        Me.BtnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGrabar.Location = New System.Drawing.Point(675, 165)
-        Me.BtnGrabar.Name = "BtnGrabar"
-        Me.BtnGrabar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnGrabar.TabIndex = 13
-        Me.BtnGrabar.Text = "&Grabar"
-        Me.BtnGrabar.UseVisualStyleBackColor = True
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(770, 165)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnEliminar.TabIndex = 14
-        Me.BtnEliminar.Text = "&Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
-        '
-        'BtnSalir
-        '
-        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnSalir.Location = New System.Drawing.Point(870, 165)
-        Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(80, 32)
-        Me.BtnSalir.TabIndex = 15
-        Me.BtnSalir.Text = "&Salir"
-        Me.BtnSalir.UseVisualStyleBackColor = True
         '
         'TxtCodigo
         '
@@ -359,6 +315,54 @@ Partial Class FrmUsuarios
         Me.PanelModulo.Name = "PanelModulo"
         Me.PanelModulo.Size = New System.Drawing.Size(955, 214)
         Me.PanelModulo.TabIndex = 263
+        '
+        'BtnSalir
+        '
+        Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSalir.Image = Global.Carnes.My.Resources.Resources.salir
+        Me.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnSalir.Location = New System.Drawing.Point(870, 165)
+        Me.BtnSalir.Name = "BtnSalir"
+        Me.BtnSalir.Size = New System.Drawing.Size(80, 32)
+        Me.BtnSalir.TabIndex = 15
+        Me.BtnSalir.Text = "&Salir"
+        Me.BtnSalir.UseVisualStyleBackColor = True
+        '
+        'BtnEliminar
+        '
+        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminar.Image = Global.Carnes.My.Resources.Resources.eliminar
+        Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminar.Location = New System.Drawing.Point(770, 165)
+        Me.BtnEliminar.Name = "BtnEliminar"
+        Me.BtnEliminar.Size = New System.Drawing.Size(94, 32)
+        Me.BtnEliminar.TabIndex = 14
+        Me.BtnEliminar.Text = "&Eliminar"
+        Me.BtnEliminar.UseVisualStyleBackColor = True
+        '
+        'BtnGrabar
+        '
+        Me.BtnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGrabar.Image = Global.Carnes.My.Resources.Resources.grabar
+        Me.BtnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGrabar.Location = New System.Drawing.Point(675, 165)
+        Me.BtnGrabar.Name = "BtnGrabar"
+        Me.BtnGrabar.Size = New System.Drawing.Size(94, 32)
+        Me.BtnGrabar.TabIndex = 13
+        Me.BtnGrabar.Text = "&Grabar"
+        Me.BtnGrabar.UseVisualStyleBackColor = True
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevo.Image = Global.Carnes.My.Resources.Resources.nuevo
+        Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnNuevo.Location = New System.Drawing.Point(581, 165)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(92, 32)
+        Me.BtnNuevo.TabIndex = 12
+        Me.BtnNuevo.Text = "&Nuevo"
+        Me.BtnNuevo.UseVisualStyleBackColor = True
         '
         'FrmUsuarios
         '

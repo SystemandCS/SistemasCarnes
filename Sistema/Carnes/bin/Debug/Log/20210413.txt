@@ -1,0 +1,16 @@
+
+----------MENSAJE  REF:406901978----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210413 23:04:35
+Formulario:Carnes.FrmProveedores
+Metodo:ComboPais
+Mensaje:Error en la ejecucion de la Sentencia Sql: select idPais, nombre From grl_pais_ -El nombre de objeto 'grl_pais_' no es válido.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSql(String StrSql) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 73
+   en Carnes.FrmProveedores.ComboPais() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 237
+TargetSite:System.Data.DataSet EjecutarSql(System.String)
+Informacion Extra
+----------FIN MENSAJE-------------
+

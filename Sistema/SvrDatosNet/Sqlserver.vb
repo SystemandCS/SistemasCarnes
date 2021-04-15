@@ -54,14 +54,20 @@ Public Class SQLServer
          Next
 
             'Ejecucion
-            cant = oCmd.ExecuteScalar
+            'cant = oCmd.ExecuteScalar
 
-            'Devuelvo los parametros
-            For i = 0 To Parametros.Length - 1
-                Parametros(i) = oCmd.Parameters(i + 1).Value
-            Next
+            ''Devuelvo los parametros
+            'For i = 0 To Parametros.Length - 1
 
-      Catch ex As Exception
+            '    Parametros(i) = oCmd.Parameters(i + 1).Value
+            'Next
+
+            Parametros(0) = oCmd.ExecuteScalar
+            cant = Parametros(0)
+
+
+
+        Catch ex As Exception
             'Throw ex
             Throw New ApplicationException("Error en la ejecucion del SP: " + Nombre & " - " & ex.Message)
 

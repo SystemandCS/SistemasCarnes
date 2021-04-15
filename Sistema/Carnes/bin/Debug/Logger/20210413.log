@@ -1,0 +1,40 @@
+----------MENSAJE  REF:2135229588----------
+Fecha:13/4/2021 23:04:35
+Tipo:LERROR
+Usuario:EURIEN
+Equipo:urien
+Error con excepción
+	Error en la ejecucion de la Sentencia Sql: select idPais, nombre From grl_pais_ -El nombre de objeto 'grl_pais_' no es válido.
+	System.ApplicationException: Error en la ejecucion de la Sentencia Sql: select idPais, nombre From grl_pais_ -El nombre de objeto 'grl_pais_' no es válido.
+   en Carnes.ClsGenerica.EjecutarSql(String StrSql) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 73
+   en Carnes.FrmProveedores.ComboPais() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 237
+----------FIN MENSAJE-------------
+
+----------MENSAJE  REF:1783857697----------
+Fecha:13/4/2021 23:04:35
+Tipo:DEBUG
+Usuario:EURIEN
+Equipo:urien
+FrmProveedores.vb::247 - Debug con traza
+----------FIN MENSAJE-------------
+
+----------MENSAJE  REF:1783857697----------
+Fecha:13/4/2021 23:04:35
+Tipo:INFO
+Usuario:EURIEN
+Equipo:urien
+FrmProveedores.vb::248 - Info sin traza
+----------FIN MENSAJE-------------
+
+----------MENSAJE  REF:1783857697----------
+Fecha:13/4/2021 23:04:35
+Tipo:LERROR
+Usuario:EURIEN
+Equipo:urien
+FrmProveedores.vb::249 - Error con excepción y traza
+	Error en la ejecucion de la Sentencia Sql: select idPais, nombre From grl_pais_ -El nombre de objeto 'grl_pais_' no es válido.
+	System.ApplicationException: Error en la ejecucion de la Sentencia Sql: select idPais, nombre From grl_pais_ -El nombre de objeto 'grl_pais_' no es válido.
+   en Carnes.ClsGenerica.EjecutarSql(String StrSql) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 73
+   en Carnes.FrmProveedores.ComboPais() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 237
+----------FIN MENSAJE-------------
+

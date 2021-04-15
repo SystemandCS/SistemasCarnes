@@ -99,6 +99,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\ClsGrl_Proveedor .vb" />
+    <Compile Include="Datos\Logger.vb" />
     <Compile Include="Datos\ClsArticulos.vb" />
     <Compile Include="Datos\ClsClientes.vb" />
     <Compile Include="Datos\ClsCotizacionCab.vb" />
@@ -120,6 +122,7 @@
     <Compile Include="Datos\ClsVendedor.vb" />
     <Compile Include="Datos\ClsUsuarios.vb" />
     <Compile Include="Datos\ClsUsuario.vb" />
+    <Compile Include="Datos\Elog.vb" />
     <Compile Include="DstDATOS.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,6 +207,12 @@
       <DependentUpon>FrmImpuesto.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmImpuesto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLocalidades.Designer.vb">
+      <DependentUpon>FrmLocalidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLocalidades.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmProveedores.Designer.vb">
@@ -343,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmImpuesto.resx">
       <DependentUpon>FrmImpuesto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLocalidades.resx">
+      <DependentUpon>FrmLocalidades.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>

@@ -291,4 +291,12 @@ Public Class FrmPrincipal
         FRM.Show()
 
     End Sub
+
+    Private Sub LocalidadesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LocalidadesToolStripMenuItem.Click
+
+        Dim FRM As New FrmLocalidades
+        FRM.MdiParent = Me
+        FRM.Show()
+
+    End Sub
 End Class

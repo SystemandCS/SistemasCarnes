@@ -40,16 +40,18 @@ usuario: estesor2000@gmail.com
 clave:
 
 
+Abrir el Git Bahs
+en la carpeta donde queres bajar el repositorio
+y escribir los siguiente comandos
 
+$ git clone https://github.com/SystemandCS/SistemasCarnes
 
-$ cd E:\_SistemaCarnes
-$ git clone https://github.com/ESTESOR2019/Carnes.git
-$ cd basicoding
 $ git status
 $ git add "prueba.txt"
 $ git commit -m "Enviando el archivo de prueba"
 $ git remote -v
 $ git push origin master
+
 
 
 

@@ -38,6 +38,10 @@
         End Try
     End Sub
 
+
+#Region "Botones"
+
+
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         Limpiar()
         RellenarLista(USUCOD)
@@ -119,7 +123,7 @@
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
         Me.Close()
     End Sub
-
+#End Region
     Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         RellenarComboSuperior()
@@ -205,6 +209,8 @@ ErrLinea:
         End Try
     End Sub
 
+#Region "Cargar Combos"
+
 
     Private Sub RellenarComboSuperior()
         Try
@@ -275,47 +281,10 @@ ErrLinea:
         End Try
     End Sub
 
+#End Region
 
+#Region "Botones"
 
-    Private Sub chkDgModulo_CheckedChanged(sender As Object, e As EventArgs) Handles chkDgModulo.CheckedChanged
-
-        If chkDgModulo.Checked Then
-
-            For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
-                DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = True
-            Next
-
-        Else
-
-            For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
-                DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = False
-            Next
-
-
-        End If
-
-
-    End Sub
-
-    Private Sub ChkDgModuloAsignado_CheckedChanged(sender As Object, e As EventArgs) Handles ChkDgModuloAsignado.CheckedChanged
-
-
-        If ChkDgModuloAsignado.Checked Then
-
-
-            For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
-                DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = True
-            Next
-        Else
-
-            For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
-                DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = False
-            Next
-
-        End If
-
-
-    End Sub
 
     Private Sub BtnModuloAgregar_Click(sender As Object, e As EventArgs) Handles BtnModuloAgregar.Click
 
@@ -394,6 +363,49 @@ ErrLinea:
 
     End Sub
 
+
+#End Region
+
+    Private Sub chkDgModulo_CheckedChanged(sender As Object, e As EventArgs) Handles chkDgModulo.CheckedChanged
+
+        If chkDgModulo.Checked Then
+
+            For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
+                DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = True
+            Next
+
+        Else
+
+            For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
+                DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = False
+            Next
+
+
+        End If
+
+
+    End Sub
+
+    Private Sub ChkDgModuloAsignado_CheckedChanged(sender As Object, e As EventArgs) Handles ChkDgModuloAsignado.CheckedChanged
+
+
+        If ChkDgModuloAsignado.Checked Then
+
+
+            For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
+                DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = True
+            Next
+        Else
+
+            For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
+                DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = False
+            Next
+
+        End If
+
+
+    End Sub
+
     Private Sub ChkDgModuloAsignado_VisibleChanged(sender As Object, e As EventArgs) Handles ChkDgModuloAsignado.VisibleChanged
 
         'Add a CheckBox Column to the DataGridView at the first position.
@@ -405,6 +417,9 @@ ErrLinea:
 
 
     End Sub
+
+
+
 
 
 
