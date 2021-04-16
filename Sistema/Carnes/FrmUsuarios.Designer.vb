@@ -63,7 +63,7 @@ Partial Class FrmUsuarios
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(721, 33)
+        Me.Label1.Location = New System.Drawing.Point(781, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(40, 13)
         Me.Label1.TabIndex = 0
@@ -72,7 +72,7 @@ Partial Class FrmUsuarios
         'TxtCodigo
         '
         Me.TxtCodigo.BackColor = System.Drawing.Color.Bisque
-        Me.TxtCodigo.Location = New System.Drawing.Point(784, 33)
+        Me.TxtCodigo.Location = New System.Drawing.Point(871, 33)
         Me.TxtCodigo.Name = "TxtCodigo"
         Me.TxtCodigo.ReadOnly = True
         Me.TxtCodigo.Size = New System.Drawing.Size(100, 20)
@@ -84,7 +84,7 @@ Partial Class FrmUsuarios
         Me.txtusuario.MaxLength = 30
         Me.txtusuario.Name = "txtusuario"
         Me.txtusuario.Size = New System.Drawing.Size(166, 20)
-        Me.txtusuario.TabIndex = 3
+        Me.txtusuario.TabIndex = 2
         '
         'TxtPassword
         '
@@ -92,8 +92,8 @@ Partial Class FrmUsuarios
         Me.TxtPassword.MaxLength = 30
         Me.TxtPassword.Name = "TxtPassword"
         Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(166, 20)
-        Me.TxtPassword.TabIndex = 4
+        Me.TxtPassword.Size = New System.Drawing.Size(187, 20)
+        Me.TxtPassword.TabIndex = 3
         '
         'Label3
         '
@@ -119,7 +119,7 @@ Partial Class FrmUsuarios
         Me.txtnombres.MaxLength = 100
         Me.txtnombres.Name = "txtnombres"
         Me.txtnombres.Size = New System.Drawing.Size(166, 20)
-        Me.txtnombres.TabIndex = 5
+        Me.txtnombres.TabIndex = 4
         '
         'Label5
         '
@@ -135,8 +135,8 @@ Partial Class FrmUsuarios
         Me.txtapellidos.Location = New System.Drawing.Point(784, 85)
         Me.txtapellidos.MaxLength = 100
         Me.txtapellidos.Name = "txtapellidos"
-        Me.txtapellidos.Size = New System.Drawing.Size(166, 20)
-        Me.txtapellidos.TabIndex = 6
+        Me.txtapellidos.Size = New System.Drawing.Size(187, 20)
+        Me.txtapellidos.TabIndex = 5
         '
         'Label6
         '
@@ -181,15 +181,15 @@ Partial Class FrmUsuarios
         Me.CmbIdSuperior.Location = New System.Drawing.Point(529, 111)
         Me.CmbIdSuperior.Name = "CmbIdSuperior"
         Me.CmbIdSuperior.Size = New System.Drawing.Size(166, 21)
-        Me.CmbIdSuperior.TabIndex = 250
+        Me.CmbIdSuperior.TabIndex = 6
         '
         'CmbIdFrigorifico
         '
         Me.CmbIdFrigorifico.FormattingEnabled = True
         Me.CmbIdFrigorifico.Location = New System.Drawing.Point(784, 111)
         Me.CmbIdFrigorifico.Name = "CmbIdFrigorifico"
-        Me.CmbIdFrigorifico.Size = New System.Drawing.Size(166, 21)
-        Me.CmbIdFrigorifico.TabIndex = 251
+        Me.CmbIdFrigorifico.Size = New System.Drawing.Size(187, 21)
+        Me.CmbIdFrigorifico.TabIndex = 6
         '
         'Label4
         '
@@ -206,7 +206,7 @@ Partial Class FrmUsuarios
         Me.CheckActivo.Location = New System.Drawing.Point(468, 169)
         Me.CheckActivo.Name = "CheckActivo"
         Me.CheckActivo.Size = New System.Drawing.Size(56, 17)
-        Me.CheckActivo.TabIndex = 253
+        Me.CheckActivo.TabIndex = 7
         Me.CheckActivo.Text = "Activo"
         Me.CheckActivo.UseVisualStyleBackColor = True
         '
@@ -227,21 +227,21 @@ Partial Class FrmUsuarios
         Me.DgModulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgModulo.Location = New System.Drawing.Point(517, 22)
         Me.DgModulo.Name = "DgModulo"
-        Me.DgModulo.Size = New System.Drawing.Size(270, 160)
+        Me.DgModulo.Size = New System.Drawing.Size(280, 160)
         Me.DgModulo.TabIndex = 255
         '
         'CmbJerarquia
         '
         Me.CmbJerarquia.FormattingEnabled = True
-        Me.CmbJerarquia.Location = New System.Drawing.Point(796, 57)
+        Me.CmbJerarquia.Location = New System.Drawing.Point(803, 57)
         Me.CmbJerarquia.Name = "CmbJerarquia"
         Me.CmbJerarquia.Size = New System.Drawing.Size(142, 21)
-        Me.CmbJerarquia.TabIndex = 256
+        Me.CmbJerarquia.TabIndex = 16
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(793, 22)
+        Me.Label8.Location = New System.Drawing.Point(803, 41)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(50, 13)
         Me.Label8.TabIndex = 257
@@ -251,10 +251,10 @@ Partial Class FrmUsuarios
         '
         Me.BtnModuloAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModuloAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnModuloAgregar.Location = New System.Drawing.Point(395, 57)
+        Me.BtnModuloAgregar.Location = New System.Drawing.Point(395, 27)
         Me.BtnModuloAgregar.Name = "BtnModuloAgregar"
-        Me.BtnModuloAgregar.Size = New System.Drawing.Size(107, 39)
-        Me.BtnModuloAgregar.TabIndex = 258
+        Me.BtnModuloAgregar.Size = New System.Drawing.Size(107, 37)
+        Me.BtnModuloAgregar.TabIndex = 13
         Me.BtnModuloAgregar.Text = " << Agregar"
         Me.BtnModuloAgregar.UseVisualStyleBackColor = True
         '
@@ -262,10 +262,10 @@ Partial Class FrmUsuarios
         '
         Me.BtnModuloEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnModuloEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnModuloEliminar.Location = New System.Drawing.Point(395, 124)
+        Me.BtnModuloEliminar.Location = New System.Drawing.Point(395, 153)
         Me.BtnModuloEliminar.Name = "BtnModuloEliminar"
-        Me.BtnModuloEliminar.Size = New System.Drawing.Size(107, 35)
-        Me.BtnModuloEliminar.TabIndex = 259
+        Me.BtnModuloEliminar.Size = New System.Drawing.Size(107, 29)
+        Me.BtnModuloEliminar.TabIndex = 14
         Me.BtnModuloEliminar.Text = "Quitar >>"
         Me.BtnModuloEliminar.UseVisualStyleBackColor = True
         '
@@ -275,7 +275,7 @@ Partial Class FrmUsuarios
         Me.ChkDgModuloAsignado.Location = New System.Drawing.Point(9, 194)
         Me.ChkDgModuloAsignado.Name = "ChkDgModuloAsignado"
         Me.ChkDgModuloAsignado.Size = New System.Drawing.Size(89, 17)
-        Me.ChkDgModuloAsignado.TabIndex = 260
+        Me.ChkDgModuloAsignado.TabIndex = 12
         Me.ChkDgModuloAsignado.Text = "Marca Todos"
         Me.ChkDgModuloAsignado.UseVisualStyleBackColor = True
         '
@@ -285,7 +285,7 @@ Partial Class FrmUsuarios
         Me.chkDgModulo.Location = New System.Drawing.Point(517, 197)
         Me.chkDgModulo.Name = "chkDgModulo"
         Me.chkDgModulo.Size = New System.Drawing.Size(92, 17)
-        Me.chkDgModulo.TabIndex = 261
+        Me.chkDgModulo.TabIndex = 15
         Me.chkDgModulo.Text = "Marcar Todos"
         Me.chkDgModulo.UseVisualStyleBackColor = True
         '
@@ -311,9 +311,9 @@ Partial Class FrmUsuarios
         Me.PanelModulo.Controls.Add(Me.CmbJerarquia)
         Me.PanelModulo.Controls.Add(Me.BtnModuloAgregar)
         Me.PanelModulo.Controls.Add(Me.Label8)
-        Me.PanelModulo.Location = New System.Drawing.Point(12, 221)
+        Me.PanelModulo.Location = New System.Drawing.Point(16, 207)
         Me.PanelModulo.Name = "PanelModulo"
-        Me.PanelModulo.Size = New System.Drawing.Size(955, 214)
+        Me.PanelModulo.Size = New System.Drawing.Size(955, 225)
         Me.PanelModulo.TabIndex = 263
         '
         'BtnSalir
@@ -321,10 +321,10 @@ Partial Class FrmUsuarios
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.Image = Global.Carnes.My.Resources.Resources.salir
         Me.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnSalir.Location = New System.Drawing.Point(870, 165)
+        Me.BtnSalir.Location = New System.Drawing.Point(884, 154)
         Me.BtnSalir.Name = "BtnSalir"
-        Me.BtnSalir.Size = New System.Drawing.Size(80, 32)
-        Me.BtnSalir.TabIndex = 15
+        Me.BtnSalir.Size = New System.Drawing.Size(87, 32)
+        Me.BtnSalir.TabIndex = 11
         Me.BtnSalir.Text = "&Salir"
         Me.BtnSalir.UseVisualStyleBackColor = True
         '
@@ -333,10 +333,10 @@ Partial Class FrmUsuarios
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminar.Image = Global.Carnes.My.Resources.Resources.eliminar
         Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(770, 165)
+        Me.BtnEliminar.Location = New System.Drawing.Point(784, 154)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnEliminar.TabIndex = 14
+        Me.BtnEliminar.TabIndex = 10
         Me.BtnEliminar.Text = "&Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
@@ -345,10 +345,10 @@ Partial Class FrmUsuarios
         Me.BtnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGrabar.Image = Global.Carnes.My.Resources.Resources.grabar
         Me.BtnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGrabar.Location = New System.Drawing.Point(675, 165)
+        Me.BtnGrabar.Location = New System.Drawing.Point(689, 154)
         Me.BtnGrabar.Name = "BtnGrabar"
         Me.BtnGrabar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnGrabar.TabIndex = 13
+        Me.BtnGrabar.TabIndex = 9
         Me.BtnGrabar.Text = "&Grabar"
         Me.BtnGrabar.UseVisualStyleBackColor = True
         '
@@ -357,10 +357,10 @@ Partial Class FrmUsuarios
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.Carnes.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevo.Location = New System.Drawing.Point(581, 165)
+        Me.BtnNuevo.Location = New System.Drawing.Point(595, 154)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(92, 32)
-        Me.BtnNuevo.TabIndex = 12
+        Me.BtnNuevo.TabIndex = 8
         Me.BtnNuevo.Text = "&Nuevo"
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
@@ -368,7 +368,7 @@ Partial Class FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1038, 518)
+        Me.ClientSize = New System.Drawing.Size(995, 456)
         Me.Controls.Add(Me.PanelModulo)
         Me.Controls.Add(Me.CheckActivo)
         Me.Controls.Add(Me.Label4)

@@ -1,17 +1,74 @@
 ﻿Public Class FrmUsuarios
 
+
+
+
+
+    Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        RellenarComboSuperior()
+        RellenarComboFrigorifico()
+        RellenarModulo()
+        RellenarComboJerarquica()
+
+        LblModulo.Text = "Modulos"
+
+        PanelModulo.Visible = False
+
+        Call BtnNuevo_Click(sender, e)
+
+    End Sub
+
+
+#Region "Rutinas de la Grillas"
+
+
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgUsuarios.CellDoubleClick
+        On Error GoTo ErrLinea
+        Dim Fila As Integer
+        If DgUsuarios.Rows(DgUsuarios.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
+            Fila = DgUsuarios.CurrentRow.Index
+            BuscaRegistro(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
+
+            RellenarModuloAsigados(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
+
+
+        End If
+        Return
+ErrLinea:
+        MessageBox.Show("No hay registros en la lista de busqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+    End Sub
+
+
+#End Region
+
+#Region "Rutinas del Formulario"
+
     Private Sub Limpiar()
         txtusuario.Clear()
         TxtPassword.Clear()
         TxtCodigo.Clear()
         txtnombres.Clear()
         txtapellidos.Clear()
-
-
         txtusuario.Focus()
     End Sub
 
 
+    Private Sub FrmUsuarios_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
+        ENVIAR_ENTER(e.KeyChar)
+    End Sub
+
+    Private Sub FrmUsuarios_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Escape Then
+            Me.Close()
+        End If
+    End Sub
+
+#End Region
+
+
+#Region "Rutinas de Carga Datos "
 
     Private Sub BuscaRegistro(Codigo As Integer)
         Try
@@ -38,6 +95,116 @@
         End Try
     End Sub
 
+    Private Sub RellenarLista(Valor As Integer)
+        Try
+            Dim CUsuario As New ClsUsuario
+            Dim DT As New DataTable
+            DT = CUsuario.EjecutarSp("of_lista", Valor).Tables(0)
+            DgUsuarios.DataSource = DT
+            DgUsuarios.ReadOnly = True
+            DgUsuarios.Columns("idUsuario").Visible = False
+            DgUsuarios.Columns("idfrigorifico").Visible = False
+            DgUsuarios.Columns("idSuperior").Visible = False
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+    Private Sub RellenarModuloAsigados(Codigo As Integer)
+        Try
+            Dim CUsuario As New ClsGenerica
+            Dim DT As New DataTable
+            DT = CUsuario.TraerDatos("UL_spC_ModuloXUsuario", Codigo).Tables(0)
+
+
+            DgModuloAsignado.DataSource = DT
+
+            DgModuloAsignado.Columns("idUsuario").Visible = False
+            DgModuloAsignado.Columns("jerarquia").Visible = False
+
+
+
+
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+#End Region
+
+#Region "Rutinas de Carga de Combos"
+
+
+    Private Sub RellenarComboSuperior()
+        Try
+            Dim CFacCab As New ClsUsuario
+            Dim DT As New DataTable
+            DT = CFacCab.ObtenerTodos.Tables(0)
+            With CmbIdSuperior
+                .DataSource = DT
+                .DisplayMember = "Usuario"
+                .ValueMember = "idUsuario"
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+
+    ' traer todos los modulos asignados
+    Private Sub RellenarModulo()
+        Try
+            Dim CUsuario As New ClsGrlModulo
+            Dim DT As New DataTable
+            DT = CUsuario.ObtenerTodos().Tables(0)
+            DgModulo.DataSource = DT
+
+            'Add a CheckBox Column to the DataGridView at the first position.
+            Dim checkBoxColumn As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
+            checkBoxColumn.HeaderText = ""
+            checkBoxColumn.Width = 30
+            checkBoxColumn.Name = "ChkCodigoModulo"
+            DgModulo.Columns.Insert(0, checkBoxColumn)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+    Private Sub RellenarComboFrigorifico()
+        Try
+            Dim CFacCab As New ClsGenerica
+            Dim DT As New DataTable
+            DT = CFacCab.TraerDatos("GRL_TIPO_OF_TIPO", 1).Tables(0)
+            With CmbIdFrigorifico
+                .DataSource = DT
+                .DisplayMember = "Nombre"
+                .ValueMember = "idtipo"
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+
+    Private Sub RellenarComboJerarquica()
+        Try
+            Dim CFacCab As New ClsGenerica
+            Dim DT As New DataTable
+            DT = CFacCab.TraerDatos("GRL_TIPODATO_OF_CODIGO", "jera").Tables(0)
+            With CmbJerarquia
+                .DataSource = DT
+                .DisplayMember = "descripcion"
+                .ValueMember = "idtipoDato"
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+#End Region
 
 #Region "Botones"
 
@@ -123,168 +290,6 @@
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
         Me.Close()
     End Sub
-#End Region
-    Private Sub FrmUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        RellenarComboSuperior()
-        RellenarComboFrigorifico()
-        RellenarModulo()
-        RellenarComboJerarquica()
-
-        LblModulo.Text = "Modulos"
-
-        PanelModulo.Visible = False
-
-        Call BtnNuevo_Click(sender, e)
-
-    End Sub
-
-
-
-
-    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgUsuarios.CellDoubleClick
-        On Error GoTo ErrLinea
-        Dim Fila As Integer
-        If DgUsuarios.Rows(DgUsuarios.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
-            Fila = DgUsuarios.CurrentRow.Index
-            BuscaRegistro(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
-
-            RellenarModuloAsigados(DgUsuarios.Rows(Fila).Cells(0).Value.ToString())
-
-
-        End If
-        Return
-ErrLinea:
-        MessageBox.Show("No hay registros en la lista de busqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
-    End Sub
-
-    Private Sub FrmUsuarios_KeyPress(sender As Object, e As KeyPressEventArgs) Handles MyBase.KeyPress
-        ENVIAR_ENTER(e.KeyChar)
-    End Sub
-
-    Private Sub FrmUsuarios_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
-        If e.KeyCode = Keys.Escape Then
-            Me.Close()
-        End If
-    End Sub
-
-
-
-#Region "Funciones "
-
-    Private Sub RellenarLista(Valor As Integer)
-        Try
-            Dim CUsuario As New ClsUsuario
-            Dim DT As New DataTable
-            DT = CUsuario.EjecutarSp("of_lista", Valor).Tables(0)
-            DgUsuarios.DataSource = DT
-            DgUsuarios.ReadOnly = True
-            DgUsuarios.Columns("idUsuario").Visible = False
-            DgUsuarios.Columns("idfrigorifico").Visible = False
-            DgUsuarios.Columns("idSuperior").Visible = False
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
-
-    Private Sub RellenarModuloAsigados(Codigo As Integer)
-        Try
-            Dim CUsuario As New ClsGenerica
-            Dim DT As New DataTable
-            DT = CUsuario.TraerDatos("UL_spC_ModuloXUsuario", Codigo).Tables(0)
-
-            DgModuloAsignado.DataSource = DT
-
-            DgModuloAsignado.Columns("idUsuario").Visible = False
-            DgModuloAsignado.Columns("jerarquia").Visible = False
-
-
-
-
-
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
-
-#Region "Cargar Combos"
-
-
-    Private Sub RellenarComboSuperior()
-        Try
-            Dim CFacCab As New ClsUsuario
-            Dim DT As New DataTable
-            DT = CFacCab.ObtenerTodos.Tables(0)
-            With CmbIdSuperior
-                .DataSource = DT
-                .DisplayMember = "Usuario"
-                .ValueMember = "idUsuario"
-            End With
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
-
-
-    ' traer todos los modulos asignados
-    Private Sub RellenarModulo()
-        Try
-            Dim CUsuario As New ClsGrlModulo
-            Dim DT As New DataTable
-            DT = CUsuario.ObtenerTodos().Tables(0)
-            DgModulo.DataSource = DT
-
-            'Add a CheckBox Column to the DataGridView at the first position.
-            Dim checkBoxColumn As DataGridViewCheckBoxColumn = New DataGridViewCheckBoxColumn()
-            checkBoxColumn.HeaderText = ""
-            checkBoxColumn.Width = 30
-            checkBoxColumn.Name = "ChkCodigoModulo"
-            DgModulo.Columns.Insert(0, checkBoxColumn)
-
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
-
-    Private Sub RellenarComboFrigorifico()
-        Try
-            Dim CFacCab As New ClsGenerica
-            Dim DT As New DataTable
-            DT = CFacCab.TraerDatos("GRL_TIPO_OF_TIPO", 1).Tables(0)
-            With CmbIdFrigorifico
-                .DataSource = DT
-                .DisplayMember = "Nombre"
-                .ValueMember = "idtipo"
-            End With
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
-
-
-
-
-    Private Sub RellenarComboJerarquica()
-        Try
-            Dim CFacCab As New ClsGenerica
-            Dim DT As New DataTable
-            DT = CFacCab.TraerDatos("GRL_TIPODATO_OF_CODIGO", "jera").Tables(0)
-            With CmbJerarquia
-                .DataSource = DT
-                .DisplayMember = "descripcion"
-                .ValueMember = "idtipoDato"
-            End With
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End Try
-    End Sub
-
-#End Region
-
-#Region "Botones"
-
 
     Private Sub BtnModuloAgregar_Click(sender As Object, e As EventArgs) Handles BtnModuloAgregar.Click
 
@@ -293,7 +298,7 @@ ErrLinea:
             Dim Omodulo As New ClsGenerica
             Dim ObjModulo(5) As Object
 
-            ObjModulo(0) = Convert.ToInt32(TxtCodigo.Text)
+
             ObjModulo(1) = ""
             ObjModulo(2) = 0
             ObjModulo(3) = USULOGIN.Trim
@@ -303,7 +308,7 @@ ErrLinea:
 
             For i As Integer = 0 To Me.DgModulo.Rows.Count - 1
                 If DgModulo.Rows(i).Cells("ChkCodigoModulo").Value = True Then
-
+                    ObjModulo(0) = Convert.ToInt32(TxtCodigo.Text)
                     'Agregar Modulos al usuario
                     ObjModulo(1) = Convert.ToInt32(DgModulo.Rows(i).Cells("codigo").Value)
 
@@ -331,7 +336,7 @@ ErrLinea:
             Dim Omodulo As New ClsGenerica
             Dim ObjModulo(5) As Object
 
-            ObjModulo(0) = Convert.ToInt32(TxtCodigo.Text)
+
             ObjModulo(1) = ""
             ObjModulo(2) = 0
             ObjModulo(3) = USULOGIN.Trim
@@ -339,12 +344,10 @@ ErrLinea:
             ObjModulo(5) = "D"
 
 
-
-
-
             For i As Integer = 0 To Me.DgModuloAsignado.Rows.Count - 1
-                If DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = True Then
 
+                If DgModuloAsignado.Rows(i).Cells("ChkCodigoModuloAsignado").Value = True Then
+                    ObjModulo(0) = Convert.ToInt32(TxtCodigo.Text)
                     'Agregar Modulos al usuario
                     ObjModulo(1) = Convert.ToInt32(DgModuloAsignado.Rows(i).Cells("codigo").Value)
                     Omodulo.EjecutarSP("UL_spIUD_Usuariomodulo", ObjModulo)
@@ -418,19 +421,9 @@ ErrLinea:
 
     End Sub
 
+    Private Sub CmbIdFrigorifico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbIdFrigorifico.SelectedIndexChanged
+
+    End Sub
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-#End Region
 End Class
