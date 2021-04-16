@@ -57,6 +57,7 @@ Partial Class FrmPrincipal
         Me.TablasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LocalidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogueoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -239,7 +240,7 @@ Partial Class FrmPrincipal
         '
         'SeguridadToolStripMenuItem
         '
-        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CambiarPasswordToolStripMenuItem, Me.RegistroDeUsuariosToolStripMenuItem, Me.RolesToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TablasToolStripMenuItem1, Me.ClientesToolStripMenuItem, Me.LocalidadesToolStripMenuItem})
+        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CambiarPasswordToolStripMenuItem, Me.RegistroDeUsuariosToolStripMenuItem, Me.RolesToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TablasToolStripMenuItem1, Me.ClientesToolStripMenuItem, Me.LocalidadesToolStripMenuItem, Me.LogueoToolStripMenuItem})
         Me.SeguridadToolStripMenuItem.Name = "SeguridadToolStripMenuItem"
         Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
         Me.SeguridadToolStripMenuItem.Text = "Administracion"
@@ -296,6 +297,12 @@ Partial Class FrmPrincipal
         Me.LocalidadesToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
         Me.LocalidadesToolStripMenuItem.Text = "Localidades"
         '
+        'LogueoToolStripMenuItem
+        '
+        Me.LogueoToolStripMenuItem.Name = "LogueoToolStripMenuItem"
+        Me.LogueoToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
+        Me.LogueoToolStripMenuItem.Text = "Logueo"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -351,4 +358,5 @@ Partial Class FrmPrincipal
     Friend WithEvents TablasToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LocalidadesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogueoToolStripMenuItem As ToolStripMenuItem
 End Class

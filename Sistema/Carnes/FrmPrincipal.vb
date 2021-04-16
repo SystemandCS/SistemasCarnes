@@ -307,4 +307,12 @@ Public Class FrmPrincipal
         FRM.Show()
 
     End Sub
+
+    Private Sub LogueoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogueoToolStripMenuItem.Click
+
+        Dim FRM As New FrmLogueo
+        FRM.MdiParent = Me
+        FRM.Show()
+
+    End Sub
 End Class

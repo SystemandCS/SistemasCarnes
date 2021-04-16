@@ -12,6 +12,8 @@ Imports System.Diagnostics
 
 Public Class ELog
 
+    Public FilePath As String
+
 
 
 
@@ -75,7 +77,14 @@ Public Class ELog
 
     End Sub
 
+    Public Shared Function ObtenerUbicacion() As String
+        Dim FilePath As String
+        'FilePath = server.MapPath("/Precursores2010")
+        FilePath = System.AppDomain.CurrentDomain.BaseDirectory
 
+        Return (FilePath & ("log\"))
+
+    End Function
 
 
 
