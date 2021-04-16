@@ -44,11 +44,7 @@ Public Class FrmPrincipal
 
 
 
-    Private Sub RegistroDeMarcasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroDeMarcasToolStripMenuItem.Click
-        Dim FRM As New FrmMarcas
-        FRM.MdiParent = Me
-        FRM.Show()
-    End Sub
+
 
 
 
@@ -239,11 +235,7 @@ Public Class FrmPrincipal
         FRM.Show()
     End Sub
 
-    Private Sub ReporteDeKardexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeKardexToolStripMenuItem.Click
-        Dim FRM As New FrmRptKardex
-        FRM.MdiParent = Me
-        FRM.Show()
-    End Sub
+
 
     Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
 

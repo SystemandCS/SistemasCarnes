@@ -146,7 +146,6 @@ C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.vbprojAssemblyReference.c
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmCambiarPassword.resources
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmLocalidades.resources
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmProveedores.resources
-C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmMarcas.resources
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmPrincipal.resources
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmReportes.resources
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmRptIngresos.resources
@@ -162,3 +161,16 @@ C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.vbproj.CoreCompileInputs.
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.exe
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.xml
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.pdb
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Carnes.exe.config
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Carnes.exe
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Carnes.pdb
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Carnes.xml
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\SvrDatosNet.dll
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\SvrDatosNet.pdb
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\SvrDatosNet.xml
+C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\SvrDatosNet.dll.config
+C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.vbproj.CopyComplete

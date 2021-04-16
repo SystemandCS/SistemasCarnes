@@ -100,6 +100,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\ClsGrl_Proveedor .vb" />
+    <Compile Include="Datos\ClsOrdendeIngreso.vb" />
+    <Compile Include="Datos\ClsUsuarios.vb" />
     <Compile Include="Datos\Logger.vb" />
     <Compile Include="Datos\ClsMonedaALetras.vb" />
     <Compile Include="Datos\ClsGenerica.vb" />
@@ -131,12 +133,6 @@
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmProveedores.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMarcas.Designer.vb">
-      <DependentUpon>FrmMarcas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMarcas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.vb">
@@ -209,9 +205,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMarcas.resx">
-      <DependentUpon>FrmMarcas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
