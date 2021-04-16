@@ -141,3 +141,4 @@ C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.exe
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.xml
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.pdb
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmLocalidades.resources
+C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmTipo.resources

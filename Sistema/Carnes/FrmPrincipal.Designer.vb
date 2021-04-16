@@ -281,7 +281,7 @@ Partial Class FrmPrincipal
         '
         Me.TablasToolStripMenuItem1.Name = "TablasToolStripMenuItem1"
         Me.TablasToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
-        Me.TablasToolStripMenuItem1.Text = "Tablas"
+        Me.TablasToolStripMenuItem1.Text = "Tipo Datos"
         '
         'ClientesToolStripMenuItem
         '

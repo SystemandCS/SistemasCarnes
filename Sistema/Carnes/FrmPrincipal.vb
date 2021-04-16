@@ -299,4 +299,12 @@ Public Class FrmPrincipal
         FRM.Show()
 
     End Sub
+
+    Private Sub TablasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TablasToolStripMenuItem1.Click
+
+        Dim FRM As New FrmTipo
+        FRM.MdiParent = Me
+        FRM.Show()
+
+    End Sub
 End Class

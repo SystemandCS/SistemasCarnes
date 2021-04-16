@@ -80,7 +80,7 @@ ErrLinea:
 #End Region
 
 
-#Region "Botones"
+#Region "Rutinas Botones"
 
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
@@ -256,6 +256,8 @@ ErrLinea:
 
 
     End Sub
+
+
 
 #End Region
 

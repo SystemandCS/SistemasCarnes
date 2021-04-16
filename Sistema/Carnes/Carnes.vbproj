@@ -288,6 +288,12 @@
     <Compile Include="FrmSubFamilias.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmTipoDato.Designer.vb">
+      <DependentUpon>FrmTipoDato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoDato.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmUsuarios.Designer.vb">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>
     </Compile>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSubFamilias.resx">
       <DependentUpon>FrmSubFamilias.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoDato.resx">
+      <DependentUpon>FrmTipoDato.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuarios.resx">
       <DependentUpon>FrmUsuarios.vb</DependentUpon>

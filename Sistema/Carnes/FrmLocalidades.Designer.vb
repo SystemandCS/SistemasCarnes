@@ -67,7 +67,7 @@ Partial Class FrmLocalidades
         'CmbIdProvincia
         '
         Me.CmbIdProvincia.FormattingEnabled = True
-        Me.CmbIdProvincia.Location = New System.Drawing.Point(103, 112)
+        Me.CmbIdProvincia.Location = New System.Drawing.Point(101, 117)
         Me.CmbIdProvincia.Name = "CmbIdProvincia"
         Me.CmbIdProvincia.Size = New System.Drawing.Size(166, 21)
         Me.CmbIdProvincia.TabIndex = 4
@@ -75,7 +75,7 @@ Partial Class FrmLocalidades
         'CmbIdPais
         '
         Me.CmbIdPais.FormattingEnabled = True
-        Me.CmbIdPais.Location = New System.Drawing.Point(103, 142)
+        Me.CmbIdPais.Location = New System.Drawing.Point(101, 146)
         Me.CmbIdPais.Name = "CmbIdPais"
         Me.CmbIdPais.Size = New System.Drawing.Size(166, 21)
         Me.CmbIdPais.TabIndex = 5
@@ -202,7 +202,7 @@ Partial Class FrmLocalidades
         'lblPais
         '
         Me.lblPais.AutoSize = True
-        Me.lblPais.Location = New System.Drawing.Point(13, 142)
+        Me.lblPais.Location = New System.Drawing.Point(11, 120)
         Me.lblPais.Name = "lblPais"
         Me.lblPais.Size = New System.Drawing.Size(27, 13)
         Me.lblPais.TabIndex = 267
@@ -211,7 +211,7 @@ Partial Class FrmLocalidades
         'idProvincia
         '
         Me.idProvincia.AutoSize = True
-        Me.idProvincia.Location = New System.Drawing.Point(13, 115)
+        Me.idProvincia.Location = New System.Drawing.Point(11, 149)
         Me.idProvincia.Name = "idProvincia"
         Me.idProvincia.Size = New System.Drawing.Size(51, 13)
         Me.idProvincia.TabIndex = 266
