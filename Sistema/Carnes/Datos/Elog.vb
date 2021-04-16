@@ -13,9 +13,6 @@ Imports System.Diagnostics
 Public Class ELog
 
 
-
-
-
     Public Shared Sub Grabar(ByVal obj As Object, ByVal ex As Exception)
 
         Dim REF As String

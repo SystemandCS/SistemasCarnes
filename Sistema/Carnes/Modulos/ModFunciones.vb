@@ -1,4 +1,4 @@
-﻿Module Module1
+﻿Module ModFunciones
 
     Public USUCOD As String
     Public USULOGIN As String

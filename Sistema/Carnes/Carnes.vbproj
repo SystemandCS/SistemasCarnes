@@ -101,26 +101,10 @@
   <ItemGroup>
     <Compile Include="Datos\ClsGrl_Proveedor .vb" />
     <Compile Include="Datos\Logger.vb" />
-    <Compile Include="Datos\ClsArticulos.vb" />
-    <Compile Include="Datos\ClsClientes.vb" />
-    <Compile Include="Datos\ClsCotizacionCab.vb" />
-    <Compile Include="Datos\ClsCotizacionDet.vb" />
-    <Compile Include="Datos\ClsFacturacionCab.vb" />
-    <Compile Include="Datos\ClsFacturacionDet.vb" />
-    <Compile Include="Datos\ClsFamilias.vb" />
-    <Compile Include="Datos\ClsFormadePago.vb" />
-    <Compile Include="Datos\ClsImpuestos.vb" />
-    <Compile Include="Datos\ClsMarcas.vb" />
     <Compile Include="Datos\ClsMonedaALetras.vb" />
-    <Compile Include="Datos\ClsOrdendeIngreso.vb" />
-    <Compile Include="Datos\ClsOrdendeIngresoDet.vb" />
-    <Compile Include="Datos\ClsProveedores.vb" />
-    <Compile Include="Datos\ClsSeries.vb" />
-    <Compile Include="Datos\ClsSubFamilias.vb" />
     <Compile Include="Datos\ClsGenerica.vb" />
     <Compile Include="Datos\ClsGrl_Modulo.vb" />
     <Compile Include="Datos\ClsVendedor.vb" />
-    <Compile Include="Datos\ClsUsuarios.vb" />
     <Compile Include="Datos\ClsUsuario.vb" />
     <Compile Include="Datos\Elog.vb" />
     <Compile Include="DstDATOS.Designer.vb">
@@ -131,82 +115,10 @@
     <Compile Include="DstDATOS.vb">
       <DependentUpon>DstDATOS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="FrmArticulos.Designer.vb">
-      <DependentUpon>FrmArticulos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmArticulos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarCotizacion.Designer.vb">
-      <DependentUpon>FrmBuscarCotizacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBuscarCotizacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarFacturacion.Designer.vb">
-      <DependentUpon>FrmBuscarFacturacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBuscarFacturacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarOrdendeIngreso.Designer.vb">
-      <DependentUpon>FrmBuscarOrdendeIngreso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBuscarOrdendeIngreso.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarProveedores.Designer.vb">
-      <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBuscarProveedores.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarArticulos.Designer.vb">
-      <DependentUpon>FrmBuscarArticulos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBuscarArticulos.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarClientes.Designer.vb">
-      <DependentUpon>FrmBuscarClientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBuscarClientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmCambiarPassword.Designer.vb">
       <DependentUpon>FrmCambiarPassword.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmCambiarPassword.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmClientes.Designer.vb">
-      <DependentUpon>FrmClientes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmClientes.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCotizacion.Designer.vb">
-      <DependentUpon>FrmCotizacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCotizacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFacturacion.Designer.vb">
-      <DependentUpon>FrmFacturacion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmFacturacion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmFamilias.Designer.vb">
-      <DependentUpon>FrmFamilias.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmFamilias.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmImpuesto.Designer.vb">
-      <DependentUpon>FrmImpuesto.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmImpuesto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmLocalidades.Designer.vb">
@@ -221,34 +133,16 @@
     <Compile Include="FrmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRptKardex.Designer.vb">
-      <DependentUpon>FrmRptKardex.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRptKardex.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmMarcas.Designer.vb">
       <DependentUpon>FrmMarcas.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmMarcas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOrdendeIngreso.Designer.vb">
-      <DependentUpon>FrmOrdendeIngreso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmOrdendeIngreso.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmPrincipal.Designer.vb">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmProveedores_bak.Designer.vb">
-      <DependentUpon>FrmProveedores_bak.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmProveedores_bak.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReportes.Designer.vb">
@@ -269,23 +163,11 @@
     <Compile Include="FrmRptVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSeries.Designer.vb">
-      <DependentUpon>FrmSeries.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSeries.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmSesion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSesion.Designer.vb">
       <DependentUpon>FrmSesion.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSubFamilias.Designer.vb">
-      <DependentUpon>FrmSubFamilias.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSubFamilias.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTipoDato.Designer.vb">
@@ -300,8 +182,7 @@
     <Compile Include="FrmUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\Module1.vb" />
-    <Compile Include="Modulos\ThemeColor.vb" />
+    <Compile Include="Modulos\ModFunciones.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -320,44 +201,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="FrmArticulos.resx">
-      <DependentUpon>FrmArticulos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarCotizacion.resx">
-      <DependentUpon>FrmBuscarCotizacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarFacturacion.resx">
-      <DependentUpon>FrmBuscarFacturacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarOrdendeIngreso.resx">
-      <DependentUpon>FrmBuscarOrdendeIngreso.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarProveedores.resx">
-      <DependentUpon>FrmBuscarProveedores.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarArticulos.resx">
-      <DependentUpon>FrmBuscarArticulos.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarClientes.resx">
-      <DependentUpon>FrmBuscarClientes.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmCambiarPassword.resx">
       <DependentUpon>FrmCambiarPassword.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmClientes.resx">
-      <DependentUpon>FrmClientes.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCotizacion.resx">
-      <DependentUpon>FrmCotizacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFacturacion.resx">
-      <DependentUpon>FrmFacturacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmFamilias.resx">
-      <DependentUpon>FrmFamilias.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmImpuesto.resx">
-      <DependentUpon>FrmImpuesto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalidades.resx">
       <DependentUpon>FrmLocalidades.vb</DependentUpon>
@@ -365,20 +210,11 @@
     <EmbeddedResource Include="FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRptKardex.resx">
-      <DependentUpon>FrmRptKardex.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMarcas.resx">
       <DependentUpon>FrmMarcas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOrdendeIngreso.resx">
-      <DependentUpon>FrmOrdendeIngreso.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmProveedores_bak.resx">
-      <DependentUpon>FrmProveedores_bak.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportes.resx">
       <DependentUpon>FrmReportes.vb</DependentUpon>
@@ -389,14 +225,8 @@
     <EmbeddedResource Include="FrmRptVentas.resx">
       <DependentUpon>FrmRptVentas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSeries.resx">
-      <DependentUpon>FrmSeries.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmSesion.resx">
       <DependentUpon>FrmSesion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSubFamilias.resx">
-      <DependentUpon>FrmSubFamilias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTipoDato.resx">
       <DependentUpon>FrmTipoDato.vb</DependentUpon>
