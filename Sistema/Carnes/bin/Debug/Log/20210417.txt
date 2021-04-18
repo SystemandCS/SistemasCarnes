@@ -1,0 +1,125 @@
+
+----------MENSAJE  REF:2001365435----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:47:25
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Índice fuera de los límites de la matriz.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 306
+TargetSite:Void BtnGrabar_Click(System.Object, System.EventArgs)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:20385082----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:47:30
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Índice fuera de los límites de la matriz.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 306
+TargetSite:Void BtnGrabar_Click(System.Object, System.EventArgs)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:618396424----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:47:59
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Error en la ejecucion del SP: Gen_proveedor_Abm - Cantidad de parametros pasados invalidos.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSP(String Nombre, Object[] Parametros) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 41
+   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 307
+TargetSite:Int32 EjecutarSP(System.String, System.Object[])
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:1349286250----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:48:09
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Error en la ejecucion del SP: Gen_proveedor_Abm - Cantidad de parametros pasados invalidos.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSP(String Nombre, Object[] Parametros) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 41
+   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 307
+TargetSite:Int32 EjecutarSP(System.String, System.Object[])
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:1300322171----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:48:16
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Error en la ejecucion del SP: Gen_proveedor_Abm - Cantidad de parametros pasados invalidos.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSP(String Nombre, Object[] Parametros) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 41
+   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 307
+TargetSite:Int32 EjecutarSP(System.String, System.Object[])
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:1351441532----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:49:15
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Error en la ejecucion del SP: Gen_proveedor_Abm1 - No existe el procedimiento almacenado 'Gen_proveedor_Abm1'.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSP(String Nombre, Object[] Parametros) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 41
+   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 307
+TargetSite:Int32 EjecutarSP(System.String, System.Object[])
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:1938113710----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:58:49
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Error en la ejecucion del SP: Gen_proveedor_Abm1 - Cantidad de parametros pasados invalidos.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSP(String Nombre, Object[] Parametros) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 41
+   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 307
+TargetSite:Int32 EjecutarSP(System.String, System.Object[])
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:690881104----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210417 23:59:24
+Formulario:Carnes.FrmProveedores
+Metodo:OProveedorCargar
+Mensaje:Índice fuera de los límites de la matriz.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.FrmProveedores.OProveedorCargar() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 75
+TargetSite:Void OProveedorCargar()
+Informacion Extra
+----------FIN MENSAJE-------------
+

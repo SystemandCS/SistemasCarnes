@@ -187,6 +187,16 @@ Carnes
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:Carnes.STK_liqui_Subdiario">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:Carnes.STK_liqui_SubdiarioTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
 <member name="T:Carnes.DstDATOS">
 <summary>
 Represents a strongly typed in-memory cache of data.

@@ -9,6 +9,7 @@ Public Class FrmProveedores
 
 
     Dim Modo As String
+    Dim OProveedor(47) As Object
 
     Public Sub New()
         InitializeComponent()
@@ -28,6 +29,8 @@ Public Class FrmProveedores
         ComboPais()
         ComboProvincia()
         ComboLocalidad()
+        CargarCondIva()
+        CargarTipoProveedor()
 
 
 
@@ -37,6 +40,139 @@ Public Class FrmProveedores
 
 
 #Region "Funciones "
+
+    Private Sub OProveedorCargar()
+
+
+        Try
+
+            '***************************************
+
+            OProveedor(0) = Val(TxtidProveedor.Text) '@idproveedor int = null ,
+            OProveedor(1) = Val(TxtProvNro.Text)   '@provNro int = NULL ,
+            OProveedor(2) = TxtRazonSocial.Text '@razonSocial varchar (100) = null ,
+            OProveedor(3) = TxtCuit.Text  '@CUIT varchar (20) = NULL ,
+            OProveedor(4) = Val(CmbcondIva.SelectedValue)  '@condIva int = NULL ,
+            OProveedor(5) = TxtCalle.Text '@calle varchar (100) = NULL ,
+            OProveedor(6) = TxtNumero.Text '@numero varchar (5) = NULL ,
+            OProveedor(7) = Txtpiso.Text '@piso varchar (5) = NULL ,
+            OProveedor(8) = Val(CmbLocalidad.SelectedValue) '@idLocalidad int = NULL ,
+            OProveedor(9) = Val(CmbProvincia.SelectedValue) '@idprovincia int = NULL ,
+
+            '@idproveedor int = null ,
+            '@provNro int = NULL ,
+            '@razonSocial varchar (100) = null ,
+            '@CUIT varchar (20) = NULL ,
+            '@condIva int = NULL ,
+            '@calle varchar (100) = NULL ,
+            '@numero varchar (5) = NULL ,
+            '@piso varchar (5) = NULL ,
+            '@idLocalidad int = NULL ,
+            '@idprovincia int = NULL ,
+
+            '***************************************
+
+            OProveedor(10) = Val(CmbPais.SelectedValue) '@idPais int = NULL ,
+            OProveedor(11) = txtTelPart.Text '@telPart varchar (50) = null ,
+            OProveedor(12) = TxtTelFax.Text '@telfax varchar (50) = null ,
+            OProveedor(13) = TxtTelCel.Text '@telCel varchar (50) = null ,
+            OProveedor(14) = TxtCPostal.Text '@cpostal varchar(12)=null,
+            OProveedor(15) = txtRsComercial.Text '@RSComercial varchar(100) = null,
+            OProveedor(16) = txtDomicom.Text '@DomiciCom varchar (100) = NULL ,
+            OProveedor(17) = Val(cmbIdLocaCom.Text) '@idLocaCom int = NULL ,
+            OProveedor(18) = txtTelCom.Text '@TelCom varchar (50) = null ,
+            OProveedor(19) = TxtTelFaxCom.Text '@TelFaxCom varchar (50) = null ,
+
+            '@idPais int = NULL ,
+            '@telPart varchar (50) = null ,
+            '@telfax varchar (50) = null ,
+            '@telCel varchar (50) = null ,
+            '@cpostal varchar(12)=null,
+            '@RSComercial varchar(100) = null,
+            '@DomiciCom varchar (100) = NULL ,
+            '@idLocaCom int = NULL ,
+            '@TelCom varchar (50) = null ,
+            '@TelFaxCom varchar (50) = null ,
+
+            '***************************************
+
+            OProveedor(20) = txtCPostalCom.Text '@cPostalCom varchar(12)=null,
+            OProveedor(21) = Convert.ToDecimal(TxtComision.Text) '@Comision decimal(15,2)=null,
+            OProveedor(22) = Convert.ToDecimal(TxtImpSellos.Text) '@ImpSellos decimal(15,2)=null,
+            OProveedor(23) = Convert.ToDecimal(txtDerRegistro.Text) '@DerRegistro decimal(15,2)=null,
+            OProveedor(24) = Convert.ToDecimal(TxtMbs.Text) '@mbs decimal(15,2)=null,
+            OProveedor(25) = Convert.ToDecimal(TxtRec.Text) '@Rec decimal(15,2)=null,
+            OProveedor(26) = Convert.ToDecimal(TxtComision2.Text) '@Comision2 decimal(15,2)=null,
+            OProveedor(27) = Convert.ToDecimal(TxtFGarantia.Text) '@FGarantia decimal(15,2)=null,
+            OProveedor(28) = Convert.ToDecimal(TxtGastoFrigor.Text) '@GastoFrigor decimal(15,2)=null,
+            OProveedor(29) = Convert.ToDecimal(txtGuia.Text) '@Guia decimal(15,2)=null, 
+
+            '@cPostalCom varchar(12)=null,
+            '@Comision decimal(15,2)=null,
+            '@ImpSellos decimal(15,2)=null,
+            '@DerRegistro decimal(15,2)=null,
+            '@mbs decimal(15,2)=null,
+            '@Rec decimal(15,2)=null,
+            '@Comision2 decimal(15,2)=null,
+            '@FGarantia decimal(15,2)=null,
+            '@GastoFrigor decimal(15,2)=null,
+            '@Guia decimal(15,2)=null,
+
+            '***************************************
+
+
+            OProveedor(30) = Convert.ToDecimal(txtotros.Text) '@Otros decimal(15,2)=null,
+            OProveedor(31) = Convert.ToDecimal(txtFlete.Text) '@Flete decimal(15,2)=null,
+            OProveedor(32) = If(ChkIngBrutos.Checked, "S", "N")   '@IngBrutos char(1)=null,
+
+            OProveedor(33) = TxtProcedencia.Text '@Procedencia varchar(100)=null,
+            OProveedor(34) = If(ChkGanancias.Checked, "S", "N") '@Ganancias char(1)=null,
+
+            OProveedor(35) = Convert.ToDecimal(IIf(TxtIBPorcen.Text = vbNullString, 0, TxtIBPorcen.Text))   '@IBPorcen decimal(9,3)=null,'@IngBrutos char(1)=null,
+
+            OProveedor(36) = TxtObservacion1.Text '@observacion1 nvarchar (50) = NULL ,
+            OProveedor(37) = TxtObservacion2.Text '@observacion2 nvarchar (50) = NULL ,
+            OProveedor(38) = IIf(TxtEmail1.Text = vbNullString, " ", TxtEmail1.Text) '@email1 varchar (50) = NULL ,
+            OProveedor(39) = IIf(TxtEmail2.Text = vbNullString, " ", TxtEmail2.Text) '@email2 varchar (50) = NULL ,
+
+
+            '@Otros decimal(15,2)=null,
+            '@Flete decimal(15,2)=null,
+            '@IngBrutos char(1)=null,
+            '@Procedencia varchar(100)=null,
+            '@Ganancias char(1)=null,
+            '@IBPorcen decimal(9,3)=null,
+            '@observacion1 nvarchar (50) = NULL ,
+            '@observacion2 nvarchar (50) = NULL ,
+            '@email1 varchar (50) = NULL ,        
+            '@email2 varchar (50) = NULL ,
+
+            ''***************************************
+            OProveedor(40) = USULOGIN '@usuario varchar(20) ,
+            OProveedor(41) = "" '@Modo char(1),
+            OProveedor(42) = Val(If(chktodosReg.Checked, "1", "0")) '@todosReg int=null, 
+            OProveedor(43) = Val(If(ChktodosSell.Checked, "1", "0")) '@todosSell int=null,
+            OProveedor(44) = TxtRuca.Text '@ruca varchar(50)=null,
+            OProveedor(45) = txtRenspa.Text '@renspa varchar(50)=null,
+            OProveedor(46) = Val(CmbTipoProveedor.SelectedValue) '@tipoCaracter int=3,
+            OProveedor(47) = Val(TxtPuntoVenta.Text)  '@puntoVenta int=16
+
+            ''@usuario varchar(20) ,
+            '@Modo char(1),
+            '@todosReg int=null,
+            '@todosSell int=null,
+            '@ruca varchar(50)=null,
+            '@renspa varchar(50)=null,
+            '@tipoCaracter int=3,
+            '@puntoVenta int=16
+
+            '***************************************
+
+        Catch ex As Exception
+            ELog.Grabar(Me, ex)
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
 
 
 
@@ -120,8 +256,8 @@ ErrLinea:
 
 
         Catch ex As Exception
-        ELog.Grabar(Me, ex)
-        MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            ELog.Grabar(Me, ex)
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
 
 
@@ -144,57 +280,10 @@ ErrLinea:
             Exit Sub
         End If
 
-        Dim OProveedor(48) As Object
 
-        '         @idproveedor int = null ,
-        '@provNro int = NULL ,
-        '@razonSocial varchar (100) = null ,
-        '@CUIT varchar (20) = NULL ,
-        '@condIva int = NULL ,
-        '@calle varchar (100) = NULL ,
-        '@numero varchar (5) = NULL ,
-        '@piso varchar (5) = NULL ,
-        '@idLocalidad int = NULL ,
-        '@idprovincia int = NULL ,
-        '@idPais int = NULL ,
-        '@telPart varchar (50) = null ,
-        '@telfax varchar (50) = null ,
-        '@telCel varchar (50) = null ,
-        '@cpostal varchar(12)=null,
-        '@RSComercial varchar(100) = null,
-        '@DomiciCom varchar (100) = NULL ,
-        '@idLocaCom int = NULL ,
-        '@TelCom varchar (50) = null ,
-        '@TelFaxCom varchar (50) = null ,
-        '@cPostalCom varchar(12)=null,
-        '@Comision decimal(15,2)=null,
-        '@ImpSellos decimal(15,2)=null,
-        '@DerRegistro decimal(15,2)=null,
-        '@mbs decimal(15,2)=null,
-        '@Rec decimal(15,2)=null,
-        '@Comision2 decimal(15,2)=null,
-        '@FGarantia decimal(15,2)=null,
-        '@GastoFrigor decimal(15,2)=null,
-        '@Guia decimal(15,2)=null,
-        '@Otros decimal(15,2)=null,
-        '@Flete decimal(15,2)=null,
-        '@IngBrutos char(1)=null,
-        '@Procedencia varchar(100)=null,
-        '@Ganancias char(1)=null,
-        '@IBPorcen decimal(9,3)=null,
-        '@observacion1 nvarchar (50) = NULL ,
-        '@observacion2 nvarchar (50) = NULL ,
-        '@email1 varchar (50) = NULL ,
-        '@email2 varchar (50) = NULL ,
-        '@usuario varchar(20) ,
-        '@Modo char(1),
-        '@todosReg int=null,
-        '@todosSell int=null,
-        '@ruca varchar(50)=null,
-        '@renspa varchar(50)=null,
-        '@tipoCaracter int=3,
-        '@puntoVenta int=16
 
+
+        OProveedorCargar()
 
 
 
@@ -204,9 +293,9 @@ ErrLinea:
         Try
             If TxtidProveedor.Text.Trim = "" Then
 
+                '  OProveedor(47) = "A"
+
                 Retorno = Cproveedor.EjecutarSP("Gen_proveedor_Abm", OProveedor)
-
-
 
 
                 If Val(Retorno) > 0 Then
@@ -214,16 +303,20 @@ ErrLinea:
                     Call BtnNuevo_Click(sender, e)
                 End If
             Else
-
-                Retorno = Cproveedor.EjecutarSP("Gen_proveedor_Abm", OProveedor)
+                'OProveedor(47) = "M"
+                Retorno = Cproveedor.EjecutarSP("Gen_proveedor_Abm1", OProveedor)
 
                 If Val(Retorno) > 0 Then
 
                     MessageBox.Show("Registro Actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
                     Call BtnNuevo_Click(sender, e)
                 End If
             End If
         Catch ex As Exception
+
+            ELog.Grabar(Me, ex)
             MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
 
@@ -233,7 +326,7 @@ ErrLinea:
         Modo = "A"
 
         RellenarLista()
-        LimpiarFormulario()
+        BuscarProveedor(OProveedor(0))
     End Sub
 
 
@@ -253,7 +346,6 @@ ErrLinea:
         End If
 
 
-
         If RdbCuit.Checked = True Then
 
             OProveedor(2) = TxtBuscarCuit.Text
@@ -261,7 +353,6 @@ ErrLinea:
             OProveedor(2) = ""
 
         End If
-
 
         Try
 
@@ -302,6 +393,7 @@ ErrLinea:
                 TxtCuit.Text = DT.Rows(0).Item("CUIT").ToString()
                 TxtProcedencia.Text = DT.Rows(0).Item("procedencia").ToString()
                 CmbcondIva.SelectedValue = DT.Rows(0).Item("condIva").ToString()
+                CmbTipoProveedor.SelectedValue = DT.Rows(0).Item("tipocaracter").ToString()
                 TxtProcedencia.Text = DT.Rows(0).Item("procedencia").ToString()
 
                 ' falta el chequed de ganancias 
@@ -348,7 +440,7 @@ ErrLinea:
                 txtGuia.Text = DT.Rows(0).Item("guia").ToString()
                 txtotros.Text = DT.Rows(0).Item("otros").ToString()
                 txtFlete.Text = DT.Rows(0).Item("flete").ToString()
-                TxtIngBrutos.Text = DT.Rows(0).Item("IngBrutos").ToString()
+                TxtIBPorcen.Text = DT.Rows(0).Item("IBPorcen").ToString()
 
                 Modo = "M"
 
@@ -453,6 +545,65 @@ ErrLinea:
         End Try
     End Sub
 
+
+    Private Sub CargarCondIva()
+
+
+        Try
+            Dim CLocalidad As New ClsGenerica
+            Dim DT As New DataTable
+            DT = CLocalidad.TraerDatos("condiva_ot").Tables(0)
+            With CmbcondIva
+                .DataSource = DT
+                .DisplayMember = "Descripcion"
+                .ValueMember = "IdcondIva"
+            End With
+        Catch ex As Exception
+
+
+            ' Logger.e("Error con excepción", ex)
+            'Logger.d("Debug con traza", New StackFrame(True))
+            ' Logger.i("Info sin traza", New StackFrame(True))
+            ' Logger.e("Error con excepción y traza", ex, New StackFrame(True))
+            'Logger.e(ex.Message, ex)
+            'Logger.w(ex.Message,)
+            'Logger.e(ex.Message, ex)
+            'Logger.e(ex.Message, ex)
+
+            ELog.Grabar(Me, ex)
+            MessageBox.Show(ex.Message, "Aviso- Pais", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
+    Private Sub CargarTipoProveedor()
+
+
+        Try
+            Dim CLocalidad As New ClsGenerica
+            Dim DT As New DataTable
+            DT = CLocalidad.TraerDatos("ProveedorTipo_Ot").Tables(0)
+            With CmbTipoProveedor
+                .DataSource = DT
+                .DisplayMember = "Descripcion"
+                .ValueMember = "IdProveedorTipo"
+            End With
+        Catch ex As Exception
+
+
+            ' Logger.e("Error con excepción", ex)
+            'Logger.d("Debug con traza", New StackFrame(True))
+            ' Logger.i("Info sin traza", New StackFrame(True))
+            ' Logger.e("Error con excepción y traza", ex, New StackFrame(True))
+            'Logger.e(ex.Message, ex)
+            'Logger.w(ex.Message,)
+            'Logger.e(ex.Message, ex)
+            'Logger.e(ex.Message, ex)
+
+            ELog.Grabar(Me, ex)
+            MessageBox.Show(ex.Message, "Aviso- Pais", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+    End Sub
+
 #End Region
 
 
@@ -489,6 +640,12 @@ ErrLinea:
 
         'txtusuario.Focus()
     End Sub
+
+    Private Sub PnlDetalle_Paint(sender As Object, e As PaintEventArgs) Handles PnlDetalle.Paint
+
+    End Sub
+
+
 
 
     'Dim txt As Object

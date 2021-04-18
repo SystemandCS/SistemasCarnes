@@ -180,7 +180,7 @@ Partial Class FrmPrincipal
         Me.ReporteDeVentasToolStripMenuItem.Image = Global.Carnes.My.Resources.Resources.reporte
         Me.ReporteDeVentasToolStripMenuItem.Name = "ReporteDeVentasToolStripMenuItem"
         Me.ReporteDeVentasToolStripMenuItem.Size = New System.Drawing.Size(200, 22)
-        Me.ReporteDeVentasToolStripMenuItem.Text = "Reporte de Ventas"
+        Me.ReporteDeVentasToolStripMenuItem.Text = "Reportes Crystal"
         '
         'ReporteDeIngresosToolStripMenuItem
         '

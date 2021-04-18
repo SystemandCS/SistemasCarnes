@@ -1,0 +1,16 @@
+
+----------MENSAJE  REF:1071683569----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210418 00:01:25
+Formulario:Carnes.FrmProveedores
+Metodo:BtnGrabar_Click
+Mensaje:Error en la ejecucion del SP: Gen_proveedor_Abm1 - Cantidad de parametros pasados invalidos.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSP(String Nombre, Object[] Parametros) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 41
+   en Carnes.FrmProveedores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 307
+TargetSite:Int32 EjecutarSP(System.String, System.Object[])
+Informacion Extra
+----------FIN MENSAJE-------------
+

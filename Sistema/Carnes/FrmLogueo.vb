@@ -57,7 +57,17 @@ Public Class FrmLogueo
 
     Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
 
-        MsgBox("alert")
+
+        ' Obtenemos el valor seleccionado.
+        '
+        Dim value As Object = ListBox1.SelectedValue
+
+        If (TypeOf value Is DataRowView) Then Return
+
+        ' Mostramos el valor
+        '
+        MessageBox.Show(CStr(value))
+
 
     End Sub
 End Class

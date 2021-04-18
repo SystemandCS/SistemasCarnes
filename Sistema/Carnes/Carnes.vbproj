@@ -61,6 +61,11 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
@@ -78,6 +83,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -99,6 +105,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dataset\STK_liqui_Subdiario.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STK_liqui_Subdiario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\STK_liqui_Subdiario.vb">
+      <DependentUpon>STK_liqui_Subdiario.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\ClsGrl_Proveedor .vb" />
     <Compile Include="Datos\Logger.vb" />
     <Compile Include="Datos\ClsArticulos.vb" />
@@ -227,6 +241,18 @@
     <Compile Include="FrmProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmRepControl.Designer.vb">
+      <DependentUpon>FrmRepControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRepControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.vb">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmRptKardex.Designer.vb">
       <DependentUpon>FrmRptKardex.vb</DependentUpon>
     </Compile>
@@ -257,16 +283,16 @@
     <Compile Include="FrmProveedores_bak.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReportes.Designer.vb">
-      <DependentUpon>FrmReportes.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReportes.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmRptIngresos.Designer.vb">
       <DependentUpon>FrmRptIngresos.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmRptIngresos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRptReportes.Designer.vb">
+      <DependentUpon>FrmRptReportes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRptReportes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRptVentas.Designer.vb">
@@ -324,6 +350,56 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Reportes\CrystalReport1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\REmitoExp3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REmitoExp3.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptLiquiMalefu.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLiquiMalefu.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptLiquiOtros.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLiquiOtros.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptProdFecha.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProdFecha.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptProdFecha2.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProdFecha2.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptProdFecha3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProdFecha3.rpt</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptRemitoCon.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptRemitoCon.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptRemitoExp.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptRemitoExp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmArticulos.resx">
@@ -374,6 +450,12 @@
     <EmbeddedResource Include="FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRepControl.resx">
+      <DependentUpon>FrmRepControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRptKardex.resx">
       <DependentUpon>FrmRptKardex.vb</DependentUpon>
     </EmbeddedResource>
@@ -389,11 +471,11 @@
     <EmbeddedResource Include="FrmProveedores_bak.resx">
       <DependentUpon>FrmProveedores_bak.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmReportes.resx">
-      <DependentUpon>FrmReportes.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmRptIngresos.resx">
       <DependentUpon>FrmRptIngresos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRptReportes.resx">
+      <DependentUpon>FrmRptReportes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRptVentas.resx">
       <DependentUpon>FrmRptVentas.vb</DependentUpon>
@@ -419,20 +501,67 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\RptArticulos.rdlc" />
-    <EmbeddedResource Include="Reportes\RptClientes.rdlc" />
-    <EmbeddedResource Include="Reportes\RptCotizacion.rdlc" />
-    <EmbeddedResource Include="Reportes\RptFacturacion.rdlc" />
-    <EmbeddedResource Include="Reportes\RptFamilias.rdlc" />
-    <EmbeddedResource Include="Reportes\RptIngresos.rdlc" />
-    <EmbeddedResource Include="Reportes\RptKardex.rdlc" />
-    <EmbeddedResource Include="Reportes\RptMarcas.rdlc" />
-    <EmbeddedResource Include="Reportes\RptOrdendeIngreso.rdlc" />
-    <EmbeddedResource Include="Reportes\RptProveedores.rdlc" />
-    <EmbeddedResource Include="Reportes\RptSubFamilias.rdlc" />
-    <EmbeddedResource Include="Reportes\RptVentas.rdlc" />
+    <EmbeddedResource Include="Reportes\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\REmitoExp3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REmitoExp3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptLiquiMalefu.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLiquiMalefu.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptLiquiOtros.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLiquiOtros.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptProdFecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProdFecha.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptProdFecha2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProdFecha2.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptProdFecha3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProdFecha3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptRemitoCon.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptRemitoCon.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptRemitoExp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptRemitoExp.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes_\RptArticulos.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptClientes.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptCotizacion.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptFacturacion.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptFamilias.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptIngresos.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptKardex.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptMarcas.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptOrdendeIngreso.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptProveedores.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptSubFamilias.rdlc" />
+    <EmbeddedResource Include="Reportes_\RptVentas.rdlc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Dataset\STK_liqui_Subdiario.xsc">
+      <DependentUpon>STK_liqui_Subdiario.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\STK_liqui_Subdiario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>STK_liqui_Subdiario.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Dataset\STK_liqui_Subdiario.xss">
+      <DependentUpon>STK_liqui_Subdiario.xsd</DependentUpon>
+    </None>
     <None Include="DstDATOS.xsc">
       <DependentUpon>DstDATOS.xsd</DependentUpon>
     </None>
@@ -576,6 +705,9 @@
     <Content Include="Resources\excel.png" />
     <Content Include="Resources\ICONO.ICO" />
     <Content Include="Resources\igv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

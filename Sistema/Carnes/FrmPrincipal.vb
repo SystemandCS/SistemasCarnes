@@ -267,7 +267,7 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub ReporteDeVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeVentasToolStripMenuItem.Click
-        Dim FRM As New FrmRptVentas
+        Dim FRM As New FrmRepControl
         FRM.MdiParent = Me
         FRM.Show()
     End Sub
