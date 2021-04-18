@@ -129,6 +129,12 @@
     <Compile Include="FrmLocalidades.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLogueo.Designer.vb">
+      <DependentUpon>FrmLogueo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogueo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmProveedores.Designer.vb">
       <DependentUpon>FrmProveedores.vb</DependentUpon>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalidades.resx">
       <DependentUpon>FrmLocalidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogueo.resx">
+      <DependentUpon>FrmLogueo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProveedores.resx">
       <DependentUpon>FrmProveedores.vb</DependentUpon>

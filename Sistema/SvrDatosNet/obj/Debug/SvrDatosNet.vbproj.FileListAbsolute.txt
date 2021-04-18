@@ -20,3 +20,14 @@ C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.vbproj.CoreCompileIn
 C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.dll
 C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.xml
 C:\SistemasCarnes\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.pdb
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.dll.config
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.dll
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.pdb
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\bin\Debug\SvrDatosNet.xml
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.vbprojAssemblyReference.cache
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.Resources.resources
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.vbproj.GenerateResource.cache
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.vbproj.CoreCompileInputs.cache
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.dll
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.xml
+C:\SistemasCarnes-Test\Sistema\SvrDatosNet\obj\Debug\SvrDatosNet.pdb

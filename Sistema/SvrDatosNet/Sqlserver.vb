@@ -71,6 +71,8 @@ Public Class SQLServer
             'Throw ex
             Throw New ApplicationException("Error en la ejecucion del SP: " + Nombre & " - " & ex.Message)
 
+
+
         Finally
 
             If Not EnTransaccion() Then

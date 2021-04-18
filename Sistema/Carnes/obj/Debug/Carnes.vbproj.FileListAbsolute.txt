@@ -174,3 +174,4 @@ C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\SvrDatosNet.pdb
 C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\SvrDatosNet.xml
 C:\SistemasCarnes-Test\Sistema\Carnes\bin\Debug\SvrDatosNet.dll.config
 C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.vbproj.CopyComplete
+C:\SistemasCarnes-Test\Sistema\Carnes\obj\Debug\Carnes.FrmLogueo.resources

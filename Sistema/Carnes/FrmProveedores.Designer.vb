@@ -35,7 +35,7 @@ Partial Class FrmProveedores
         Me.LblcondIva = New System.Windows.Forms.Label()
         Me.lblProcedencia = New System.Windows.Forms.Label()
         Me.TxtProcedencia = New System.Windows.Forms.TextBox()
-        Me.CmbTipoCaracter = New System.Windows.Forms.ComboBox()
+        Me.CmbTipoProveedor = New System.Windows.Forms.ComboBox()
         Me.ChkIngBrutos = New System.Windows.Forms.CheckBox()
         Me.lblProvNro = New System.Windows.Forms.Label()
         Me.ChkGanancias = New System.Windows.Forms.CheckBox()
@@ -65,10 +65,10 @@ Partial Class FrmProveedores
         Me.CmbProvincia = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtRuca = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtRenspa = New System.Windows.Forms.TextBox()
         Me.lblRuca = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TxtPuntoVenta = New System.Windows.Forms.TextBox()
+        Me.lblPuntoVenta = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.TxtEmail1 = New System.Windows.Forms.TextBox()
         Me.lblEmail2 = New System.Windows.Forms.Label()
@@ -77,7 +77,7 @@ Partial Class FrmProveedores
         Me.TxtObservacion1 = New System.Windows.Forms.TextBox()
         Me.LblObservacion2 = New System.Windows.Forms.Label()
         Me.TxtObservacion2 = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
+        Me.lblRenspa = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.TxtComision = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -99,9 +99,9 @@ Partial Class FrmProveedores
         Me.Label34 = New System.Windows.Forms.Label()
         Me.txtFlete = New System.Windows.Forms.TextBox()
         Me.Label35 = New System.Windows.Forms.Label()
-        Me.TxtIngBrutos = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.TxtIBPorcen = New System.Windows.Forms.TextBox()
+        Me.ChktodosSell = New System.Windows.Forms.CheckBox()
+        Me.chktodosReg = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtBuscarCuit = New System.Windows.Forms.TextBox()
@@ -219,7 +219,7 @@ Partial Class FrmProveedores
         Me.PnlDetalle.Controls.Add(Me.LblcondIva)
         Me.PnlDetalle.Controls.Add(Me.lblProcedencia)
         Me.PnlDetalle.Controls.Add(Me.TxtProcedencia)
-        Me.PnlDetalle.Controls.Add(Me.CmbTipoCaracter)
+        Me.PnlDetalle.Controls.Add(Me.CmbTipoProveedor)
         Me.PnlDetalle.Controls.Add(Me.ChkIngBrutos)
         Me.PnlDetalle.Controls.Add(Me.lblProvNro)
         Me.PnlDetalle.Controls.Add(Me.ChkGanancias)
@@ -277,18 +277,18 @@ Partial Class FrmProveedores
         Me.TxtProcedencia.Size = New System.Drawing.Size(200, 20)
         Me.TxtProcedencia.TabIndex = 315
         '
-        'CmbTipoCaracter
+        'CmbTipoProveedor
         '
-        Me.CmbTipoCaracter.FormattingEnabled = True
-        Me.CmbTipoCaracter.Location = New System.Drawing.Point(82, 170)
-        Me.CmbTipoCaracter.Name = "CmbTipoCaracter"
-        Me.CmbTipoCaracter.Size = New System.Drawing.Size(200, 21)
-        Me.CmbTipoCaracter.TabIndex = 313
+        Me.CmbTipoProveedor.FormattingEnabled = True
+        Me.CmbTipoProveedor.Location = New System.Drawing.Point(82, 170)
+        Me.CmbTipoProveedor.Name = "CmbTipoProveedor"
+        Me.CmbTipoProveedor.Size = New System.Drawing.Size(200, 21)
+        Me.CmbTipoProveedor.TabIndex = 313
         '
         'ChkIngBrutos
         '
         Me.ChkIngBrutos.AutoSize = True
-        Me.ChkIngBrutos.Location = New System.Drawing.Point(208, 210)
+        Me.ChkIngBrutos.Location = New System.Drawing.Point(198, 210)
         Me.ChkIngBrutos.Name = "ChkIngBrutos"
         Me.ChkIngBrutos.Size = New System.Drawing.Size(74, 17)
         Me.ChkIngBrutos.TabIndex = 280
@@ -307,7 +307,7 @@ Partial Class FrmProveedores
         'ChkGanancias
         '
         Me.ChkGanancias.AutoSize = True
-        Me.ChkGanancias.Location = New System.Drawing.Point(9, 210)
+        Me.ChkGanancias.Location = New System.Drawing.Point(26, 210)
         Me.ChkGanancias.Name = "ChkGanancias"
         Me.ChkGanancias.Size = New System.Drawing.Size(77, 17)
         Me.ChkGanancias.TabIndex = 279
@@ -535,39 +535,39 @@ Partial Class FrmProveedores
         Me.TxtRuca.Size = New System.Drawing.Size(86, 20)
         Me.TxtRuca.TabIndex = 279
         '
-        'TextBox2
+        'txtRenspa
         '
-        Me.TextBox2.Location = New System.Drawing.Point(581, 546)
-        Me.TextBox2.MaxLength = 100
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(53, 20)
-        Me.TextBox2.TabIndex = 281
+        Me.txtRenspa.Location = New System.Drawing.Point(568, 546)
+        Me.txtRenspa.MaxLength = 100
+        Me.txtRenspa.Name = "txtRenspa"
+        Me.txtRenspa.Size = New System.Drawing.Size(53, 20)
+        Me.txtRenspa.TabIndex = 281
         '
         'lblRuca
         '
         Me.lblRuca.AutoSize = True
         Me.lblRuca.Location = New System.Drawing.Point(382, 553)
         Me.lblRuca.Name = "lblRuca"
-        Me.lblRuca.Size = New System.Drawing.Size(37, 13)
+        Me.lblRuca.Size = New System.Drawing.Size(33, 13)
         Me.lblRuca.TabIndex = 280
-        Me.lblRuca.Text = "RUCA"
+        Me.lblRuca.Text = "Ruca"
         '
-        'TextBox3
+        'TxtPuntoVenta
         '
-        Me.TextBox3.Location = New System.Drawing.Point(685, 546)
-        Me.TextBox3.MaxLength = 100
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(45, 20)
-        Me.TextBox3.TabIndex = 283
+        Me.TxtPuntoVenta.Location = New System.Drawing.Point(701, 546)
+        Me.TxtPuntoVenta.MaxLength = 100
+        Me.TxtPuntoVenta.Name = "TxtPuntoVenta"
+        Me.TxtPuntoVenta.Size = New System.Drawing.Size(45, 20)
+        Me.TxtPuntoVenta.TabIndex = 283
         '
-        'Label8
+        'lblPuntoVenta
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(652, 553)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(27, 13)
-        Me.Label8.TabIndex = 282
-        Me.Label8.Text = "P.V."
+        Me.lblPuntoVenta.AutoSize = True
+        Me.lblPuntoVenta.Location = New System.Drawing.Point(629, 553)
+        Me.lblPuntoVenta.Name = "lblPuntoVenta"
+        Me.lblPuntoVenta.Size = New System.Drawing.Size(66, 13)
+        Me.lblPuntoVenta.TabIndex = 282
+        Me.lblPuntoVenta.Text = "Punto Venta"
         '
         'lblEmail
         '
@@ -618,7 +618,7 @@ Partial Class FrmProveedores
         Me.TxtObservacion1.MaxLength = 100
         Me.TxtObservacion1.Multiline = True
         Me.TxtObservacion1.Name = "TxtObservacion1"
-        Me.TxtObservacion1.Size = New System.Drawing.Size(267, 40)
+        Me.TxtObservacion1.Size = New System.Drawing.Size(283, 40)
         Me.TxtObservacion1.TabIndex = 295
         '
         'LblObservacion2
@@ -636,17 +636,17 @@ Partial Class FrmProveedores
         Me.TxtObservacion2.MaxLength = 100
         Me.TxtObservacion2.Multiline = True
         Me.TxtObservacion2.Name = "TxtObservacion2"
-        Me.TxtObservacion2.Size = New System.Drawing.Size(268, 41)
+        Me.TxtObservacion2.Size = New System.Drawing.Size(284, 41)
         Me.TxtObservacion2.TabIndex = 297
         '
-        'Label16
+        'lblRenspa
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(532, 553)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(27, 13)
-        Me.Label16.TabIndex = 299
-        Me.Label16.Text = "Rec"
+        Me.lblRenspa.AutoSize = True
+        Me.lblRenspa.Location = New System.Drawing.Point(518, 553)
+        Me.lblRenspa.Name = "lblRenspa"
+        Me.lblRenspa.Size = New System.Drawing.Size(44, 13)
+        Me.lblRenspa.TabIndex = 299
+        Me.lblRenspa.Text = "Renspa"
         '
         'Label25
         '
@@ -827,33 +827,33 @@ Partial Class FrmProveedores
         Me.Label35.TabIndex = 339
         Me.Label35.Text = "Ing Brutos"
         '
-        'TxtIngBrutos
+        'TxtIBPorcen
         '
-        Me.TxtIngBrutos.Location = New System.Drawing.Point(856, 306)
-        Me.TxtIngBrutos.MaxLength = 100
-        Me.TxtIngBrutos.Name = "TxtIngBrutos"
-        Me.TxtIngBrutos.Size = New System.Drawing.Size(45, 20)
-        Me.TxtIngBrutos.TabIndex = 340
+        Me.TxtIBPorcen.Location = New System.Drawing.Point(856, 306)
+        Me.TxtIBPorcen.MaxLength = 100
+        Me.TxtIBPorcen.Name = "TxtIBPorcen"
+        Me.TxtIBPorcen.Size = New System.Drawing.Size(45, 20)
+        Me.TxtIBPorcen.TabIndex = 340
         '
-        'CheckBox1
+        'ChktodosSell
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(918, 74)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(82, 17)
-        Me.CheckBox1.TabIndex = 319
-        Me.CheckBox1.Text = "Apl  a todos"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.ChktodosSell.AutoSize = True
+        Me.ChktodosSell.Location = New System.Drawing.Point(907, 73)
+        Me.ChktodosSell.Name = "ChktodosSell"
+        Me.ChktodosSell.Size = New System.Drawing.Size(97, 17)
+        Me.ChktodosSell.TabIndex = 319
+        Me.ChktodosSell.Text = "Aplica a Todos"
+        Me.ChktodosSell.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'chktodosReg
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(918, 113)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(79, 17)
-        Me.CheckBox2.TabIndex = 319
-        Me.CheckBox2.Text = "Apl a todos"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.chktodosReg.AutoSize = True
+        Me.chktodosReg.Location = New System.Drawing.Point(907, 101)
+        Me.chktodosReg.Name = "chktodosReg"
+        Me.chktodosReg.Size = New System.Drawing.Size(97, 17)
+        Me.chktodosReg.TabIndex = 319
+        Me.chktodosReg.Text = "Aplica a Todos"
+        Me.chktodosReg.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -1021,7 +1021,7 @@ Partial Class FrmProveedores
         Me.Panel2.Controls.Add(Me.txtRsComercial)
         Me.Panel2.Location = New System.Drawing.Point(397, 270)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(333, 175)
+        Me.Panel2.Size = New System.Drawing.Size(349, 175)
         Me.Panel2.TabIndex = 345
         '
         'TxtTelFaxCom
@@ -1130,18 +1130,18 @@ Partial Class FrmProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1010, 579)
+        Me.ClientSize = New System.Drawing.Size(1022, 579)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PnlDatosLegal)
         Me.Controls.Add(Me.txtGuia)
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.chktodosReg)
+        Me.Controls.Add(Me.ChktodosSell)
         Me.Controls.Add(Me.Label35)
-        Me.Controls.Add(Me.TxtIngBrutos)
+        Me.Controls.Add(Me.TxtIBPorcen)
         Me.Controls.Add(Me.Label34)
-        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.lblRenspa)
         Me.Controls.Add(Me.Label33)
         Me.Controls.Add(Me.txtFlete)
         Me.Controls.Add(Me.TxtFGarantia)
@@ -1166,12 +1166,12 @@ Partial Class FrmProveedores
         Me.Controls.Add(Me.Label26)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.TxtComision2)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TxtPuntoVenta)
         Me.Controls.Add(Me.Label25)
         Me.Controls.Add(Me.TxtComision)
-        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.lblPuntoVenta)
         Me.Controls.Add(Me.TxtEmail1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtRenspa)
         Me.Controls.Add(Me.PnlDetalle)
         Me.Controls.Add(Me.lblRuca)
         Me.Controls.Add(Me.BtnSalir)
@@ -1207,9 +1207,9 @@ Partial Class FrmProveedores
     Friend WithEvents ChkIngBrutos As CheckBox
     Friend WithEvents ChkGanancias As CheckBox
     Friend WithEvents TxtRuca As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtPuntoVenta As TextBox
+    Friend WithEvents lblPuntoVenta As Label
+    Friend WithEvents txtRenspa As TextBox
     Friend WithEvents lblRuca As Label
     Friend WithEvents TxtTelCel As TextBox
     Friend WithEvents lblTelCel As Label
@@ -1225,14 +1225,14 @@ Partial Class FrmProveedores
     Friend WithEvents TxtObservacion1 As TextBox
     Friend WithEvents LblObservacion2 As Label
     Friend WithEvents TxtObservacion2 As TextBox
-    Friend WithEvents Label16 As Label
+    Friend WithEvents lblRenspa As Label
     Friend WithEvents lblPiso As Label
     Friend WithEvents TxtCPostal As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Txtpiso As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents TxtNumero As TextBox
-    Friend WithEvents CmbTipoCaracter As ComboBox
+    Friend WithEvents CmbTipoProveedor As ComboBox
     Friend WithEvents lblProvNro As Label
     Friend WithEvents TxtProvNro As TextBox
     Friend WithEvents LblRazonSocial As Label
@@ -1273,9 +1273,9 @@ Partial Class FrmProveedores
     Friend WithEvents Label34 As Label
     Friend WithEvents txtFlete As TextBox
     Friend WithEvents Label35 As Label
-    Friend WithEvents TxtIngBrutos As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents TxtIBPorcen As TextBox
+    Friend WithEvents ChktodosSell As CheckBox
+    Friend WithEvents chktodosReg As CheckBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TxtBuscarCuit As TextBox
     Friend WithEvents txtBuscarRazonSocial As TextBox

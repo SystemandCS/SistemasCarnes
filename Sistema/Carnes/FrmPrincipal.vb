@@ -43,19 +43,6 @@ Public Class FrmPrincipal
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     Private Sub CambiarPasswordToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CambiarPasswordToolStripMenuItem.Click
         Dim FRM As New FrmCambiarPassword
         FRM.MdiParent = Me
@@ -68,172 +55,19 @@ Public Class FrmPrincipal
         FRM.Show()
     End Sub
 
-#Region "Reportes"
 
 
-    'Private Sub ReporteDeClientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeClientesToolStripMenuItem.Click
-    '    Dim FRM As New FrmReportes
-    '    Dim DT As New DataTable
-    '    Dim RD As New ReportDataSource()
-    '    Dim ClsProc As New ClsClientes
-
-    '    Try
-    '        FRM.MdiParent = Me
-    '        FRM.Text = "REPORTE DE CLIENTES"
-    '        FRM.ReportViewer1.LocalReport.ReportEmbeddedResource = "Carnes.RptClientes.rdlc"
-    '        DT = ClsProc.RptClientes()
-    '        RD.Value = DT
-    '        RD.Name = "DataSet1"
-
-    '        FRM.ReportViewer1.LocalReport.DataSources.Clear()
-    '        FRM.ReportViewer1.LocalReport.DataSources.Add(RD)
-    '        FRM.ReportViewer1.LocalReport.Refresh()
-    '        FRM.ReportViewer1.RefreshReport()
-
-    '        FRM.Show()
-    '    Catch EX As Exception
-    '        MessageBox.Show(EX.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '    End Try
-    'End Sub
-
-    'Private Sub ReporteDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeProveedoresToolStripMenuItem.Click
-    '    Dim FRM As New FrmReportes
-    '    Dim DT As New DataTable
-    '    Dim RD As New ReportDataSource()
-    '    Dim ClsProc As New ClsProveedores
-
-    '    Try
-    '        FRM.MdiParent = Me
-    '        FRM.Text = "REPORTE DE PROVEEDORES"
-    '        FRM.ReportViewer1.LocalReport.ReportEmbeddedResource = "Carnes.RptProveedores.rdlc"
-    '        DT = ClsProc.RptProveedores()
-    '        RD.Value = DT
-    '        RD.Name = "DataSet1"
-
-    '        FRM.ReportViewer1.LocalReport.DataSources.Clear()
-    '        FRM.ReportViewer1.LocalReport.DataSources.Add(RD)
-    '        FRM.ReportViewer1.LocalReport.Refresh()
-    '        FRM.ReportViewer1.RefreshReport()
-
-    '        FRM.Show()
-    '    Catch EX As Exception
-    '        MessageBox.Show(EX.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '    End Try
-    'End Sub
-
-    'Private Sub ReporteDeArticulosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeArticulosToolStripMenuItem.Click
-    '    Dim FRM As New FrmReportes
-    '    Dim DT As New DataTable
-    '    Dim RD As New ReportDataSource()
-    '    Dim ClsProc As New ClsArticulos
-
-    '    Try
-    '        FRM.MdiParent = Me
-    '        FRM.Text = "REPORTE DE ARTICULOS"
-    '        FRM.ReportViewer1.LocalReport.ReportEmbeddedResource = "Carnes.RptArticulos.rdlc"
-    '        DT = ClsProc.RptArticulos()
-    '        RD.Value = DT
-    '        RD.Name = "DataSet1"
-
-    '        FRM.ReportViewer1.LocalReport.DataSources.Clear()
-    '        FRM.ReportViewer1.LocalReport.DataSources.Add(RD)
-    '        FRM.ReportViewer1.LocalReport.Refresh()
-    '        FRM.ReportViewer1.RefreshReport()
-
-    '        FRM.Show()
-    '    Catch EX As Exception
-    '        MessageBox.Show(EX.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '    End Try
-    'End Sub
-
-    'Private Sub ReporteDeFamiliasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeFamiliasToolStripMenuItem.Click
-    '    Dim FRM As New FrmReportes
-    '    Dim DT As New DataTable
-    '    Dim RD As New ReportDataSource()
-    '    Dim ClsProc As New ClsFamilias
-
-    '    Try
-    '        FRM.MdiParent = Me
-    '        FRM.Text = "REPORTE DE FAMILIAS"
-    '        FRM.ReportViewer1.LocalReport.ReportEmbeddedResource = "Carnes.RptFamilias.rdlc"
-    '        DT = ClsProc.RptFamilias()
-    '        RD.Value = DT
-    '        RD.Name = "DataSet1"
-
-    '        FRM.ReportViewer1.LocalReport.DataSources.Clear()
-    '        FRM.ReportViewer1.LocalReport.DataSources.Add(RD)
-    '        FRM.ReportViewer1.LocalReport.Refresh()
-    '        FRM.ReportViewer1.RefreshReport()
-
-    '        FRM.Show()
-    '    Catch EX As Exception
-    '        MessageBox.Show(EX.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '    End Try
-    'End Sub
-
-    'Private Sub ReporteDeSubFamiliasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeSubFamiliasToolStripMenuItem.Click
-    '    Dim FRM As New FrmReportes
-    '    Dim DT As New DataTable
-    '    Dim RD As New ReportDataSource()
-    '    Dim ClsProc As New ClsSubFamilias
-
-    '    Try
-    '        FRM.MdiParent = Me
-    '        FRM.Text = "REPORTE DE SUBFAMILIAS"
-    '        FRM.ReportViewer1.LocalReport.ReportEmbeddedResource = "Carnes.RptSubFamilias.rdlc"
-    '        DT = ClsProc.RptSubFamilias()
-    '        RD.Value = DT
-    '        RD.Name = "DataSet1"
-
-    '        FRM.ReportViewer1.LocalReport.DataSources.Clear()
-    '        FRM.ReportViewer1.LocalReport.DataSources.Add(RD)
-    '        FRM.ReportViewer1.LocalReport.Refresh()
-    '        FRM.ReportViewer1.RefreshReport()
-
-    '        FRM.Show()
-    '    Catch EX As Exception
-    '        MessageBox.Show(EX.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '    End Try
-    'End Sub
-
-    'Private Sub ReporteDeMarcasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeMarcasToolStripMenuItem.Click
-    '    Dim FRM As New FrmReportes
-    '    Dim DT As New DataTable
-    '    Dim RD As New ReportDataSource()
-    '    Dim ClsProc As New ClsMarcas
-
-    '    Try
-    '        FRM.MdiParent = Me
-    '        FRM.Text = "REPORTE DE MARCAS"
-    '        FRM.ReportViewer1.LocalReport.ReportEmbeddedResource = "Carnes.RptMarcas.rdlc"
-    '        DT = ClsProc.RptMarcas()
-    '        RD.Value = DT
-    '        RD.Name = "DataSet1"
-
-    '        FRM.ReportViewer1.LocalReport.DataSources.Clear()
-    '        FRM.ReportViewer1.LocalReport.DataSources.Add(RD)
-    '        FRM.ReportViewer1.LocalReport.Refresh()
-    '        FRM.ReportViewer1.RefreshReport()
-
-    '        FRM.Show()
-    '    Catch EX As Exception
-    '        MessageBox.Show(EX.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-    '    End Try
-    'End Sub
 
 
-#End Region
-    Private Sub ReporteDeVentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeVentasToolStripMenuItem.Click
-        Dim FRM As New FrmRptVentas
-        FRM.MdiParent = Me
-        FRM.Show()
-    End Sub
 
-    Private Sub ReporteDeIngresosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDeIngresosToolStripMenuItem.Click
-        Dim FRM As New FrmRptIngresos
-        FRM.MdiParent = Me
-        FRM.Show()
-    End Sub
+
+
+
+
+
+
+
+
 
 
 
@@ -256,6 +90,14 @@ Public Class FrmPrincipal
     Private Sub TablasToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles TablasToolStripMenuItem1.Click
 
         Dim FRM As New FrmTipo
+        FRM.MdiParent = Me
+        FRM.Show()
+
+    End Sub
+
+    Private Sub LogueoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogueoToolStripMenuItem.Click
+
+        Dim FRM As New FrmLogueo
         FRM.MdiParent = Me
         FRM.Show()
 
