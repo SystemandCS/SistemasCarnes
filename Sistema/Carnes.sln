@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SvrDatosNet", "SvrDatosNet\SvrDatosNet.vbproj", "{DB0ED2DD-726E-4F25-8C37-BE3A24015A65}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Carnes", "Carnes\Carnes.vbproj", "{D44516C2-8644-4A4D-994A-BB909AC58DA7}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Carnes.Desarrollo", "Carnes\Carnes.Desarrollo.vbproj", "{D44516C2-8644-4A4D-994A-BB909AC58DA7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
