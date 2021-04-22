@@ -106,7 +106,7 @@ Partial Class FrmTipo
         Me.TxtDescripcion.MaxLength = 100
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(166, 20)
-        Me.TxtDescripcion.TabIndex = 269
+        Me.TxtDescripcion.TabIndex = 4
         '
         'Label7
         '
@@ -282,7 +282,7 @@ Partial Class FrmTipo
         Me.TxtDefault.MaxLength = 100
         Me.TxtDefault.Name = "TxtDefault"
         Me.TxtDefault.Size = New System.Drawing.Size(166, 20)
-        Me.TxtDefault.TabIndex = 283
+        Me.TxtDefault.TabIndex = 280
         '
         'LblDefault
         '

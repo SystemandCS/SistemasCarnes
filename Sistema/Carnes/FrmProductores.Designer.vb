@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmProveedores
+Partial Class FrmProductores
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -152,7 +152,7 @@ Partial Class FrmProveedores
         Me.TxtidProveedor.Name = "TxtidProveedor"
         Me.TxtidProveedor.ReadOnly = True
         Me.TxtidProveedor.Size = New System.Drawing.Size(100, 20)
-        Me.TxtidProveedor.TabIndex = 255
+        Me.TxtidProveedor.TabIndex = 1
         '
         'BtnSalir
         '
@@ -162,7 +162,7 @@ Partial Class FrmProveedores
         Me.BtnSalir.Location = New System.Drawing.Point(878, 534)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(92, 32)
-        Me.BtnSalir.TabIndex = 267
+        Me.BtnSalir.TabIndex = 320
         Me.BtnSalir.Text = "&Salir"
         Me.BtnSalir.UseVisualStyleBackColor = True
         '
@@ -174,7 +174,7 @@ Partial Class FrmProveedores
         Me.BtnEliminar.Location = New System.Drawing.Point(768, 537)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnEliminar.TabIndex = 266
+        Me.BtnEliminar.TabIndex = 313
         Me.BtnEliminar.Text = "&Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
@@ -186,7 +186,7 @@ Partial Class FrmProveedores
         Me.BtnGrabar.Location = New System.Drawing.Point(876, 499)
         Me.BtnGrabar.Name = "BtnGrabar"
         Me.BtnGrabar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnGrabar.TabIndex = 264
+        Me.BtnGrabar.TabIndex = 312
         Me.BtnGrabar.Text = "&Grabar"
         Me.BtnGrabar.UseVisualStyleBackColor = True
         '
@@ -198,7 +198,7 @@ Partial Class FrmProveedores
         Me.BtnNuevo.Location = New System.Drawing.Point(768, 499)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(92, 32)
-        Me.BtnNuevo.TabIndex = 263
+        Me.BtnNuevo.TabIndex = 311
         Me.BtnNuevo.Text = "&Nuevo"
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '
@@ -241,7 +241,7 @@ Partial Class FrmProveedores
         Me.TxtCuit.MaxLength = 100
         Me.TxtCuit.Name = "TxtCuit"
         Me.TxtCuit.Size = New System.Drawing.Size(200, 20)
-        Me.TxtCuit.TabIndex = 318
+        Me.TxtCuit.TabIndex = 4
         '
         'CmbcondIva
         '
@@ -249,7 +249,7 @@ Partial Class FrmProveedores
         Me.CmbcondIva.Location = New System.Drawing.Point(82, 110)
         Me.CmbcondIva.Name = "CmbcondIva"
         Me.CmbcondIva.Size = New System.Drawing.Size(200, 21)
-        Me.CmbcondIva.TabIndex = 316
+        Me.CmbcondIva.TabIndex = 5
         '
         'LblcondIva
         '
@@ -283,7 +283,7 @@ Partial Class FrmProveedores
         Me.CmbTipoProveedor.Location = New System.Drawing.Point(82, 170)
         Me.CmbTipoProveedor.Name = "CmbTipoProveedor"
         Me.CmbTipoProveedor.Size = New System.Drawing.Size(200, 21)
-        Me.CmbTipoProveedor.TabIndex = 313
+        Me.CmbTipoProveedor.TabIndex = 101
         '
         'ChkIngBrutos
         '
@@ -320,7 +320,7 @@ Partial Class FrmProveedores
         Me.TxtProvNro.MaxLength = 100
         Me.TxtProvNro.Name = "TxtProvNro"
         Me.TxtProvNro.Size = New System.Drawing.Size(200, 20)
-        Me.TxtProvNro.TabIndex = 306
+        Me.TxtProvNro.TabIndex = 2
         '
         'LblRazonSocial
         '
@@ -346,7 +346,7 @@ Partial Class FrmProveedores
         Me.TxtRazonSocial.MaxLength = 100
         Me.TxtRazonSocial.Name = "TxtRazonSocial"
         Me.TxtRazonSocial.Size = New System.Drawing.Size(200, 20)
-        Me.TxtRazonSocial.TabIndex = 311
+        Me.TxtRazonSocial.TabIndex = 3
         '
         'lblCuit
         '
@@ -363,7 +363,7 @@ Partial Class FrmProveedores
         Me.TxtCPostal.MaxLength = 100
         Me.TxtCPostal.Name = "TxtCPostal"
         Me.TxtCPostal.Size = New System.Drawing.Size(45, 20)
-        Me.TxtCPostal.TabIndex = 304
+        Me.TxtCPostal.TabIndex = 203
         '
         'CmbLocalidad
         '
@@ -371,7 +371,7 @@ Partial Class FrmProveedores
         Me.CmbLocalidad.Location = New System.Drawing.Point(72, 64)
         Me.CmbLocalidad.Name = "CmbLocalidad"
         Me.CmbLocalidad.Size = New System.Drawing.Size(226, 21)
-        Me.CmbLocalidad.TabIndex = 306
+        Me.CmbLocalidad.TabIndex = 204
         '
         'lblPiso
         '
@@ -388,7 +388,7 @@ Partial Class FrmProveedores
         Me.TxtTelCel.MaxLength = 100
         Me.TxtTelCel.Name = "TxtTelCel"
         Me.TxtTelCel.Size = New System.Drawing.Size(227, 20)
-        Me.TxtTelCel.TabIndex = 290
+        Me.TxtTelCel.TabIndex = 209
         '
         'lblTelCel
         '
@@ -414,7 +414,7 @@ Partial Class FrmProveedores
         Me.TxtTelFax.MaxLength = 100
         Me.TxtTelFax.Name = "TxtTelFax"
         Me.TxtTelFax.Size = New System.Drawing.Size(226, 20)
-        Me.TxtTelFax.TabIndex = 288
+        Me.TxtTelFax.TabIndex = 208
         '
         'Txtpiso
         '
@@ -422,7 +422,7 @@ Partial Class FrmProveedores
         Me.Txtpiso.MaxLength = 100
         Me.Txtpiso.Name = "Txtpiso"
         Me.Txtpiso.Size = New System.Drawing.Size(53, 20)
-        Me.Txtpiso.TabIndex = 302
+        Me.Txtpiso.TabIndex = 202
         '
         'Label18
         '
@@ -448,7 +448,7 @@ Partial Class FrmProveedores
         Me.TxtNumero.MaxLength = 100
         Me.TxtNumero.Name = "TxtNumero"
         Me.TxtNumero.Size = New System.Drawing.Size(42, 20)
-        Me.TxtNumero.TabIndex = 300
+        Me.TxtNumero.TabIndex = 201
         '
         'txtTelPart
         '
@@ -456,7 +456,7 @@ Partial Class FrmProveedores
         Me.txtTelPart.MaxLength = 100
         Me.txtTelPart.Name = "txtTelPart"
         Me.txtTelPart.Size = New System.Drawing.Size(226, 20)
-        Me.txtTelPart.TabIndex = 286
+        Me.txtTelPart.TabIndex = 207
         '
         'lblTelPart
         '
@@ -473,7 +473,7 @@ Partial Class FrmProveedores
         Me.CmbPais.Location = New System.Drawing.Point(72, 115)
         Me.CmbPais.Name = "CmbPais"
         Me.CmbPais.Size = New System.Drawing.Size(226, 21)
-        Me.CmbPais.TabIndex = 284
+        Me.CmbPais.TabIndex = 206
         '
         'Label3
         '
@@ -490,7 +490,7 @@ Partial Class FrmProveedores
         Me.TxtCalle.MaxLength = 100
         Me.TxtCalle.Name = "TxtCalle"
         Me.TxtCalle.Size = New System.Drawing.Size(226, 20)
-        Me.TxtCalle.TabIndex = 259
+        Me.TxtCalle.TabIndex = 200
         '
         'lblLocalidad
         '
@@ -516,7 +516,7 @@ Partial Class FrmProveedores
         Me.CmbProvincia.Location = New System.Drawing.Point(72, 90)
         Me.CmbProvincia.Name = "CmbProvincia"
         Me.CmbProvincia.Size = New System.Drawing.Size(226, 21)
-        Me.CmbProvincia.TabIndex = 271
+        Me.CmbProvincia.TabIndex = 205
         '
         'Label2
         '
@@ -533,7 +533,7 @@ Partial Class FrmProveedores
         Me.TxtRuca.MaxLength = 100
         Me.TxtRuca.Name = "TxtRuca"
         Me.TxtRuca.Size = New System.Drawing.Size(86, 20)
-        Me.TxtRuca.TabIndex = 279
+        Me.TxtRuca.TabIndex = 308
         '
         'txtRenspa
         '
@@ -541,7 +541,7 @@ Partial Class FrmProveedores
         Me.txtRenspa.MaxLength = 100
         Me.txtRenspa.Name = "txtRenspa"
         Me.txtRenspa.Size = New System.Drawing.Size(53, 20)
-        Me.txtRenspa.TabIndex = 281
+        Me.txtRenspa.TabIndex = 309
         '
         'lblRuca
         '
@@ -558,7 +558,7 @@ Partial Class FrmProveedores
         Me.TxtPuntoVenta.MaxLength = 100
         Me.TxtPuntoVenta.Name = "TxtPuntoVenta"
         Me.TxtPuntoVenta.Size = New System.Drawing.Size(45, 20)
-        Me.TxtPuntoVenta.TabIndex = 283
+        Me.TxtPuntoVenta.TabIndex = 310
         '
         'lblPuntoVenta
         '
@@ -584,7 +584,7 @@ Partial Class FrmProveedores
         Me.TxtEmail1.MaxLength = 100
         Me.TxtEmail1.Name = "TxtEmail1"
         Me.TxtEmail1.Size = New System.Drawing.Size(271, 20)
-        Me.TxtEmail1.TabIndex = 291
+        Me.TxtEmail1.TabIndex = 210
         '
         'lblEmail2
         '
@@ -601,7 +601,7 @@ Partial Class FrmProveedores
         Me.TxtEmail2.MaxLength = 100
         Me.TxtEmail2.Name = "TxtEmail2"
         Me.TxtEmail2.Size = New System.Drawing.Size(271, 20)
-        Me.TxtEmail2.TabIndex = 293
+        Me.TxtEmail2.TabIndex = 211
         '
         'lblObservacion1
         '
@@ -619,7 +619,7 @@ Partial Class FrmProveedores
         Me.TxtObservacion1.Multiline = True
         Me.TxtObservacion1.Name = "TxtObservacion1"
         Me.TxtObservacion1.Size = New System.Drawing.Size(283, 40)
-        Me.TxtObservacion1.TabIndex = 295
+        Me.TxtObservacion1.TabIndex = 306
         '
         'LblObservacion2
         '
@@ -637,7 +637,7 @@ Partial Class FrmProveedores
         Me.TxtObservacion2.Multiline = True
         Me.TxtObservacion2.Name = "TxtObservacion2"
         Me.TxtObservacion2.Size = New System.Drawing.Size(284, 41)
-        Me.TxtObservacion2.TabIndex = 297
+        Me.TxtObservacion2.TabIndex = 307
         '
         'lblRenspa
         '
@@ -663,7 +663,7 @@ Partial Class FrmProveedores
         Me.TxtComision.MaxLength = 100
         Me.TxtComision.Name = "TxtComision"
         Me.TxtComision.Size = New System.Drawing.Size(45, 20)
-        Me.TxtComision.TabIndex = 319
+        Me.TxtComision.TabIndex = 102
         '
         'Label26
         '
@@ -680,7 +680,7 @@ Partial Class FrmProveedores
         Me.TxtComision2.MaxLength = 100
         Me.TxtComision2.Name = "TxtComision2"
         Me.TxtComision2.Size = New System.Drawing.Size(45, 20)
-        Me.TxtComision2.TabIndex = 321
+        Me.TxtComision2.TabIndex = 103
         '
         'Label27
         '
@@ -697,7 +697,7 @@ Partial Class FrmProveedores
         Me.TxtImpSellos.MaxLength = 100
         Me.TxtImpSellos.Name = "TxtImpSellos"
         Me.TxtImpSellos.Size = New System.Drawing.Size(45, 20)
-        Me.TxtImpSellos.TabIndex = 323
+        Me.TxtImpSellos.TabIndex = 104
         '
         'Label28
         '
@@ -714,7 +714,7 @@ Partial Class FrmProveedores
         Me.txtDerRegistro.MaxLength = 100
         Me.txtDerRegistro.Name = "txtDerRegistro"
         Me.txtDerRegistro.Size = New System.Drawing.Size(45, 20)
-        Me.txtDerRegistro.TabIndex = 325
+        Me.txtDerRegistro.TabIndex = 105
         '
         'Label29
         '
@@ -731,7 +731,7 @@ Partial Class FrmProveedores
         Me.TxtMbs.MaxLength = 100
         Me.TxtMbs.Name = "TxtMbs"
         Me.TxtMbs.Size = New System.Drawing.Size(45, 20)
-        Me.TxtMbs.TabIndex = 327
+        Me.TxtMbs.TabIndex = 106
         '
         'Label30
         '
@@ -748,7 +748,7 @@ Partial Class FrmProveedores
         Me.TxtRec.MaxLength = 100
         Me.TxtRec.Name = "TxtRec"
         Me.TxtRec.Size = New System.Drawing.Size(45, 20)
-        Me.TxtRec.TabIndex = 329
+        Me.TxtRec.TabIndex = 107
         '
         'Label31
         '
@@ -765,7 +765,7 @@ Partial Class FrmProveedores
         Me.TxtGastoFrigor.MaxLength = 100
         Me.TxtGastoFrigor.Name = "TxtGastoFrigor"
         Me.TxtGastoFrigor.Size = New System.Drawing.Size(45, 20)
-        Me.TxtGastoFrigor.TabIndex = 331
+        Me.TxtGastoFrigor.TabIndex = 109
         '
         'Label32
         '
@@ -782,7 +782,7 @@ Partial Class FrmProveedores
         Me.TxtFGarantia.MaxLength = 100
         Me.TxtFGarantia.Name = "TxtFGarantia"
         Me.TxtFGarantia.Size = New System.Drawing.Size(45, 20)
-        Me.TxtFGarantia.TabIndex = 333
+        Me.TxtFGarantia.TabIndex = 108
         '
         'Label33
         '
@@ -799,7 +799,7 @@ Partial Class FrmProveedores
         Me.txtotros.MaxLength = 100
         Me.txtotros.Name = "txtotros"
         Me.txtotros.Size = New System.Drawing.Size(45, 20)
-        Me.txtotros.TabIndex = 335
+        Me.txtotros.TabIndex = 111
         '
         'Label34
         '
@@ -816,7 +816,7 @@ Partial Class FrmProveedores
         Me.txtFlete.MaxLength = 100
         Me.txtFlete.Name = "txtFlete"
         Me.txtFlete.Size = New System.Drawing.Size(45, 20)
-        Me.txtFlete.TabIndex = 337
+        Me.txtFlete.TabIndex = 112
         '
         'Label35
         '
@@ -833,7 +833,7 @@ Partial Class FrmProveedores
         Me.TxtIBPorcen.MaxLength = 100
         Me.TxtIBPorcen.Name = "TxtIBPorcen"
         Me.TxtIBPorcen.Size = New System.Drawing.Size(45, 20)
-        Me.TxtIBPorcen.TabIndex = 340
+        Me.TxtIBPorcen.TabIndex = 113
         '
         'ChktodosSell
         '
@@ -841,7 +841,7 @@ Partial Class FrmProveedores
         Me.ChktodosSell.Location = New System.Drawing.Point(907, 73)
         Me.ChktodosSell.Name = "ChktodosSell"
         Me.ChktodosSell.Size = New System.Drawing.Size(97, 17)
-        Me.ChktodosSell.TabIndex = 319
+        Me.ChktodosSell.TabIndex = 114
         Me.ChktodosSell.Text = "Aplica a Todos"
         Me.ChktodosSell.UseVisualStyleBackColor = True
         '
@@ -851,7 +851,7 @@ Partial Class FrmProveedores
         Me.chktodosReg.Location = New System.Drawing.Point(907, 101)
         Me.chktodosReg.Name = "chktodosReg"
         Me.chktodosReg.Size = New System.Drawing.Size(97, 17)
-        Me.chktodosReg.TabIndex = 319
+        Me.chktodosReg.TabIndex = 115
         Me.chktodosReg.Text = "Aplica a Todos"
         Me.chktodosReg.UseVisualStyleBackColor = True
         '
@@ -876,7 +876,7 @@ Partial Class FrmProveedores
         Me.BtnBuscar.Location = New System.Drawing.Point(68, 110)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(92, 32)
-        Me.BtnBuscar.TabIndex = 342
+        Me.BtnBuscar.TabIndex = 313
         Me.BtnBuscar.Text = "&Buscar"
         Me.BtnBuscar.UseVisualStyleBackColor = True
         '
@@ -886,7 +886,7 @@ Partial Class FrmProveedores
         Me.TxtBuscarCuit.MaxLength = 100
         Me.TxtBuscarCuit.Name = "TxtBuscarCuit"
         Me.TxtBuscarCuit.Size = New System.Drawing.Size(200, 20)
-        Me.TxtBuscarCuit.TabIndex = 320
+        Me.TxtBuscarCuit.TabIndex = 316
         '
         'txtBuscarRazonSocial
         '
@@ -894,7 +894,7 @@ Partial Class FrmProveedores
         Me.txtBuscarRazonSocial.MaxLength = 100
         Me.txtBuscarRazonSocial.Name = "txtBuscarRazonSocial"
         Me.txtBuscarRazonSocial.Size = New System.Drawing.Size(200, 20)
-        Me.txtBuscarRazonSocial.TabIndex = 319
+        Me.txtBuscarRazonSocial.TabIndex = 315
         '
         'RdbCuit
         '
@@ -933,7 +933,7 @@ Partial Class FrmProveedores
         Me.txtGuia.MaxLength = 100
         Me.txtGuia.Name = "txtGuia"
         Me.txtGuia.Size = New System.Drawing.Size(45, 20)
-        Me.txtGuia.TabIndex = 343
+        Me.txtGuia.TabIndex = 110
         '
         'PnlDatosLegal
         '
@@ -1030,7 +1030,7 @@ Partial Class FrmProveedores
         Me.TxtTelFaxCom.MaxLength = 100
         Me.TxtTelFaxCom.Name = "TxtTelFaxCom"
         Me.TxtTelFaxCom.Size = New System.Drawing.Size(226, 20)
-        Me.TxtTelFaxCom.TabIndex = 315
+        Me.TxtTelFaxCom.TabIndex = 305
         '
         'lblCPostalCom
         '
@@ -1056,7 +1056,7 @@ Partial Class FrmProveedores
         Me.cmbIdLocaCom.Location = New System.Drawing.Point(64, 60)
         Me.cmbIdLocaCom.Name = "cmbIdLocaCom"
         Me.cmbIdLocaCom.Size = New System.Drawing.Size(200, 21)
-        Me.cmbIdLocaCom.TabIndex = 311
+        Me.cmbIdLocaCom.TabIndex = 302
         '
         'LblTelFaxCom
         '
@@ -1073,7 +1073,7 @@ Partial Class FrmProveedores
         Me.txtCPostalCom.MaxLength = 100
         Me.txtCPostalCom.Name = "txtCPostalCom"
         Me.txtCPostalCom.Size = New System.Drawing.Size(45, 20)
-        Me.txtCPostalCom.TabIndex = 312
+        Me.txtCPostalCom.TabIndex = 303
         '
         'txtTelCom
         '
@@ -1081,7 +1081,7 @@ Partial Class FrmProveedores
         Me.txtTelCom.MaxLength = 100
         Me.txtTelCom.Name = "txtTelCom"
         Me.txtTelCom.Size = New System.Drawing.Size(226, 20)
-        Me.txtTelCom.TabIndex = 313
+        Me.txtTelCom.TabIndex = 304
         '
         'lblIdLocCom
         '
@@ -1107,7 +1107,7 @@ Partial Class FrmProveedores
         Me.txtDomicom.MaxLength = 100
         Me.txtDomicom.Name = "txtDomicom"
         Me.txtDomicom.Size = New System.Drawing.Size(200, 20)
-        Me.txtDomicom.TabIndex = 312
+        Me.txtDomicom.TabIndex = 301
         '
         'lblRsComercial
         '
@@ -1124,9 +1124,9 @@ Partial Class FrmProveedores
         Me.txtRsComercial.MaxLength = 100
         Me.txtRsComercial.Name = "txtRsComercial"
         Me.txtRsComercial.Size = New System.Drawing.Size(200, 20)
-        Me.txtRsComercial.TabIndex = 310
+        Me.txtRsComercial.TabIndex = 300
         '
-        'FrmProveedores
+        'FrmProductores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1180,7 +1180,7 @@ Partial Class FrmProveedores
         Me.Controls.Add(Me.BtnGrabar)
         Me.Controls.Add(Me.BtnNuevo)
         Me.Controls.Add(Me.DgProveedores)
-        Me.Name = "FrmProveedores"
+        Me.Name = "FrmProductores"
         Me.Text = "FrmProveedores"
         CType(Me.DgProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlDetalle.ResumeLayout(False)

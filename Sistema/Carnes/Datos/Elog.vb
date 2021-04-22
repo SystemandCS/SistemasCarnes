@@ -15,9 +15,6 @@ Public Class ELog
     Public FilePath As String
 
 
-
-
-
     Public Shared Sub Grabar(ByVal obj As Object, ByVal ex As Exception)
 
         Dim REF As String
@@ -87,6 +84,23 @@ Public Class ELog
     End Function
 
 
+    Public Shared Sub EliminarArchivo(ByVal ArchivoBorrar As String)
+
+        'comprobamos que el archivo existe
+
+        Try
+            If System.IO.File.Exists(ArchivoBorrar) = True Then
+                System.IO.File.Delete(ArchivoBorrar)
+            End If
+
+
+        Catch ex As Exception
+
+
+        End Try
+
+
+    End Sub
 
 
 

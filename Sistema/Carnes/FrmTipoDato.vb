@@ -10,7 +10,7 @@
     Private Sub FrmTipoDato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         CargarGrillaTipoDatos()
-        '  CargarGrillaTipo()
+
 
         PnlTipo.Visible = False
 
@@ -26,6 +26,7 @@
         Dim Fila As Integer
         If GdvTipoDato.Rows(GdvTipoDato.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
             Fila = GdvTipoDato.CurrentRow.Index
+
             BuscarTipoDato(GdvTipoDato.Rows(Fila).Cells(0).Value.ToString())
 
             CargarGrillaTipo(GdvTipoDato.Rows(Fila).Cells(0).Value.ToString())
@@ -43,6 +44,7 @@ ErrLinea:
 
     Private Sub GdvTipo_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles GdvTipo.CellDoubleClick
         On Error GoTo ErrLinea
+
         Dim Fila As Integer
         If GdvTipo.Rows(GdvTipo.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
             Fila = GdvTipo.CurrentRow.Index
@@ -89,6 +91,8 @@ ErrLinea:
     End Sub
     Private Sub BuscarTipo(Codigo As Integer)
         Try
+
+            ' MsgBox(Codigo)
 
             Dim CLocalidad As New ClsGenerica
             Dim DT As New DataTable
@@ -181,8 +185,10 @@ ErrLinea:
 
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
-        'Limpiar()
+
+        LimpiarFormulario()
         CargarGrillaTipo(VarIdTipoDato)
+
     End Sub
 
     Private Sub BtnGrabar_Click(sender As Object, e As EventArgs) Handles BtnGrabar.Click
@@ -289,7 +295,12 @@ ErrLinea:
             Retorno = CLocalidad.EjecutarSP("Gen_Tipos_Abm", Otipo)
             If Val(Retorno) > 0 Then
                 MessageBox.Show("Registro Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Call BtnNuevo_Click(sender, e)
+
+
+                LimpiarFormulario()
+                CargarGrillaTipo(Otipo(1))
+
+
             Else
                 MessageBox.Show("No se pudo Realizar la Operación", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
@@ -302,6 +313,24 @@ ErrLinea:
         Me.Close()
     End Sub
 #End Region
+
+
+
+    Private Sub LimpiarFormulario()
+
+        TxtIdTipo.Clear()
+        TxtCodigoTipo.Clear()
+        TxtNombre.Clear()
+        TxtAtributo.Clear()
+        TxtDefault.Clear()
+        TxtCodigoAfip.Clear()
+        TxtDescrAfip.Clear()
+
+
+    End Sub
+
+
+
 
 
 

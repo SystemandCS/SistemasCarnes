@@ -36,8 +36,6 @@ Partial Class FrmPrincipal
         Me.IngresoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrdenDeIngresoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CotizacióToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FacturaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeVentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReporteDeIngresosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -51,11 +49,8 @@ Partial Class FrmPrincipal
         Me.SeguridadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CambiarPasswordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistroDeUsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RolesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TablasToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LocalidadesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogueoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
@@ -73,6 +68,7 @@ Partial Class FrmPrincipal
         'TablasToolStripMenuItem
         '
         Me.TablasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistroDeClientesToolStripMenuItem, Me.RegistroDeProveedoresToolStripMenuItem, Me.RegistroDeFamiliarToolStripMenuItem, Me.RegistroDeSubFamiliasToolStripMenuItem, Me.RegistroDeMarcasToolStripMenuItem, Me.RegistroDeArticulosToolStripMenuItem, Me.ImpuestoToolStripMenuItem, Me.SeriesToolStripMenuItem})
+        Me.TablasToolStripMenuItem.Enabled = False
         Me.TablasToolStripMenuItem.Name = "TablasToolStripMenuItem"
         Me.TablasToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.TablasToolStripMenuItem.Text = "Registro"
@@ -136,6 +132,7 @@ Partial Class FrmPrincipal
         'IngresoToolStripMenuItem
         '
         Me.IngresoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrdenDeIngresoToolStripMenuItem})
+        Me.IngresoToolStripMenuItem.Enabled = False
         Me.IngresoToolStripMenuItem.Name = "IngresoToolStripMenuItem"
         Me.IngresoToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.IngresoToolStripMenuItem.Text = "Ingreso"
@@ -149,28 +146,15 @@ Partial Class FrmPrincipal
         '
         'VentasToolStripMenuItem
         '
-        Me.VentasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CotizacióToolStripMenuItem, Me.FacturaciónToolStripMenuItem})
+        Me.VentasToolStripMenuItem.Enabled = False
         Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
         Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.VentasToolStripMenuItem.Text = "Ventas"
         '
-        'CotizacióToolStripMenuItem
-        '
-        Me.CotizacióToolStripMenuItem.Image = Global.Carnes.My.Resources.Resources.cotizacion
-        Me.CotizacióToolStripMenuItem.Name = "CotizacióToolStripMenuItem"
-        Me.CotizacióToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
-        Me.CotizacióToolStripMenuItem.Text = "Cotización"
-        '
-        'FacturaciónToolStripMenuItem
-        '
-        Me.FacturaciónToolStripMenuItem.Image = Global.Carnes.My.Resources.Resources.factura
-        Me.FacturaciónToolStripMenuItem.Name = "FacturaciónToolStripMenuItem"
-        Me.FacturaciónToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
-        Me.FacturaciónToolStripMenuItem.Text = "Facturación"
-        '
         'ReportesToolStripMenuItem
         '
         Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDeVentasToolStripMenuItem, Me.ReporteDeIngresosToolStripMenuItem, Me.ReporteDeKardexToolStripMenuItem, Me.ReporteDeClientesToolStripMenuItem, Me.ReporteDeProveedoresToolStripMenuItem, Me.ReporteDeArticulosToolStripMenuItem, Me.ReporteDeFamiliasToolStripMenuItem, Me.ReporteDeSubFamiliasToolStripMenuItem, Me.ReporteDeMarcasToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Enabled = False
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -240,13 +224,14 @@ Partial Class FrmPrincipal
         '
         'SeguridadToolStripMenuItem
         '
-        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CambiarPasswordToolStripMenuItem, Me.RegistroDeUsuariosToolStripMenuItem, Me.RolesToolStripMenuItem, Me.CategoriasToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TablasToolStripMenuItem1, Me.ClientesToolStripMenuItem, Me.LocalidadesToolStripMenuItem, Me.LogueoToolStripMenuItem})
+        Me.SeguridadToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CambiarPasswordToolStripMenuItem, Me.RegistroDeUsuariosToolStripMenuItem, Me.ProveedoresToolStripMenuItem, Me.TablasToolStripMenuItem1, Me.LocalidadesToolStripMenuItem, Me.LogueoToolStripMenuItem})
         Me.SeguridadToolStripMenuItem.Name = "SeguridadToolStripMenuItem"
         Me.SeguridadToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
         Me.SeguridadToolStripMenuItem.Text = "Administracion"
         '
         'CambiarPasswordToolStripMenuItem
         '
+        Me.CambiarPasswordToolStripMenuItem.Enabled = False
         Me.CambiarPasswordToolStripMenuItem.Image = Global.Carnes.My.Resources.Resources.llave
         Me.CambiarPasswordToolStripMenuItem.Name = "CambiarPasswordToolStripMenuItem"
         Me.CambiarPasswordToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
@@ -259,37 +244,18 @@ Partial Class FrmPrincipal
         Me.RegistroDeUsuariosToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
         Me.RegistroDeUsuariosToolStripMenuItem.Text = "Registro de Usuarios"
         '
-        'RolesToolStripMenuItem
-        '
-        Me.RolesToolStripMenuItem.Name = "RolesToolStripMenuItem"
-        Me.RolesToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.RolesToolStripMenuItem.Text = "Roles"
-        '
-        'CategoriasToolStripMenuItem
-        '
-        Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.CategoriasToolStripMenuItem.Text = "Categorias"
-        '
         'ProveedoresToolStripMenuItem
         '
         Me.ProveedoresToolStripMenuItem.Image = Global.Carnes.My.Resources.Resources.proveedor
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
+        Me.ProveedoresToolStripMenuItem.Text = "Productores"
         '
         'TablasToolStripMenuItem1
         '
         Me.TablasToolStripMenuItem1.Name = "TablasToolStripMenuItem1"
         Me.TablasToolStripMenuItem1.Size = New System.Drawing.Size(181, 22)
         Me.TablasToolStripMenuItem1.Text = "Tipo Datos"
-        '
-        'ClientesToolStripMenuItem
-        '
-        Me.ClientesToolStripMenuItem.Image = Global.Carnes.My.Resources.Resources.clientes
-        Me.ClientesToolStripMenuItem.Name = "ClientesToolStripMenuItem"
-        Me.ClientesToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.ClientesToolStripMenuItem.Text = "Clientes"
         '
         'LocalidadesToolStripMenuItem
         '
@@ -337,8 +303,6 @@ Partial Class FrmPrincipal
     Friend WithEvents IngresoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OrdenDeIngresoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VentasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents CotizacióToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents FacturaciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SeguridadToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CambiarPasswordToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReportesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -352,11 +316,8 @@ Partial Class FrmPrincipal
     Friend WithEvents RegistroDeUsuariosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReporteDeIngresosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReporteDeKardexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents RolesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CategoriasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TablasToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ClientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LocalidadesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogueoToolStripMenuItem As ToolStripMenuItem
 End Class
