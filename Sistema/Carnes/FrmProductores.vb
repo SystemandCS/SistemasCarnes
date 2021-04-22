@@ -1,6 +1,6 @@
 ﻿
 Imports System.Runtime.InteropServices
-Public Class FrmProveedores
+Public Class FrmProductores
 
 
     Private currentButton As Button
@@ -322,7 +322,7 @@ ErrLinea:
                 End If
             Else
                 OProveedor(41) = "M"
-                Retorno = Cproveedor.EjecutarSP("Gen_proveedor_Abm1", OProveedor)
+                Retorno = Cproveedor.EjecutarSP("Gen_proveedor_Abm", OProveedor)
 
                 If Val(Retorno) > 0 Then
 
@@ -404,7 +404,7 @@ ErrLinea:
         Try
             Dim CProveedor As New ClsGenerica
             Dim DT As New DataTable
-            DT = CProveedor.TraerDatos("Gen_Proveedor_ou", Codigo).Tables(0)
+            DT = CProveedor.TraerDatos("Gen_Proveedor_Consul", Codigo, "", "").Tables(0)
 
 
             If DT.Rows.Count > 0 Then
@@ -651,6 +651,9 @@ ErrLinea:
         TxtTelFax.Clear()
         TxtTelCel.Clear()
         TxtCPostal.Clear()
+        TxtEmail1.Clear()
+        TxtEmail2.Clear()
+
 
 
 

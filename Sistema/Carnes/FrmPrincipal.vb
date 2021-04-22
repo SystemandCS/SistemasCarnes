@@ -286,7 +286,7 @@ Public Class FrmPrincipal
 
     Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
 
-        Dim FRM As New FrmProveedores
+        Dim FRM As New FrmProductores
         FRM.MdiParent = Me
         FRM.Show()
 

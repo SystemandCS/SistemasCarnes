@@ -1,0 +1,118 @@
+
+----------MENSAJE  REF:1781553779----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210422 10:01:11
+Formulario:Carnes.FrmProveedores
+Metodo:CargarCondIva
+Mensaje:No se puede enlazar con el nuevo miembro de valor.
+Nombre del parámetro: value
+HelpLink:
+Source:System.Windows.Forms
+StackTrace:   en System.Windows.Forms.ListControl.set_ValueMember(String value)
+   en Carnes.FrmProveedores.CargarCondIva() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 585
+TargetSite:Void set_ValueMember(System.String)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:278187632----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210422 10:01:13
+Formulario:Carnes.FrmProveedores
+Metodo:CargarTipoProveedor
+Mensaje:No se puede enlazar con el nuevo miembro de valor.
+Nombre del parámetro: value
+HelpLink:
+Source:System.Windows.Forms
+StackTrace:   en System.Windows.Forms.ListControl.set_ValueMember(String value)
+   en Carnes.FrmProveedores.CargarTipoProveedor() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 614
+TargetSite:Void set_ValueMember(System.String)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:597921882----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210422 10:01:55
+Formulario:Carnes.FrmProveedores
+Metodo:CargarCondIva
+Mensaje:No se puede enlazar con el nuevo miembro de valor.
+Nombre del parámetro: value
+HelpLink:
+Source:System.Windows.Forms
+StackTrace:   en System.Windows.Forms.ListControl.set_ValueMember(String value)
+   en Carnes.FrmProveedores.CargarCondIva() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 585
+TargetSite:Void set_ValueMember(System.String)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:282123194----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210422 10:02:07
+Formulario:Carnes.FrmProveedores
+Metodo:CargarTipoProveedor
+Mensaje:No se puede enlazar con el nuevo miembro de valor.
+Nombre del parámetro: value
+HelpLink:
+Source:System.Windows.Forms
+StackTrace:   en System.Windows.Forms.ListControl.set_ValueMember(String value)
+   en Carnes.FrmProveedores.CargarTipoProveedor() en C:\SistemasCarnes\Sistema\Carnes\FrmProveedores.vb:línea 614
+TargetSite:Void set_ValueMember(System.String)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:73201429----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210422 10:04:26
+Formulario:Carnes.FrmProductores
+Metodo:CargarCondIva
+Mensaje:No se puede enlazar con el nuevo miembro de valor.
+Nombre del parámetro: value
+HelpLink:
+Source:System.Windows.Forms
+StackTrace:   en System.Windows.Forms.ListControl.set_ValueMember(String value)
+   en Carnes.FrmProductores.CargarCondIva() en C:\SistemasCarnes\Sistema\Carnes\FrmProductores.vb:línea 585
+TargetSite:Void set_ValueMember(System.String)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:1705549274----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210422 10:04:28
+Formulario:Carnes.FrmProductores
+Metodo:CargarTipoProveedor
+Mensaje:No se puede enlazar con el nuevo miembro de valor.
+Nombre del parámetro: value
+HelpLink:
+Source:System.Windows.Forms
+StackTrace:   en System.Windows.Forms.ListControl.set_ValueMember(String value)
+   en Carnes.FrmProductores.CargarTipoProveedor() en C:\SistemasCarnes\Sistema\Carnes\FrmProductores.vb:línea 614
+TargetSite:Void set_ValueMember(System.String)
+Informacion Extra
+----------FIN MENSAJE-------------
+
+
+----------MENSAJE  REF:1118603203----------
+Usuario:EURIEN
+Equipo:urien
+Fecha Hora:20210422 10:06:09
+Formulario:Carnes.FrmProductores
+Metodo:BtnGrabar_Click
+Mensaje:Error en la ejecucion del SP: Gen_proveedor_Abm1 - No existe el procedimiento almacenado 'Gen_proveedor_Abm1'.
+HelpLink:
+Source:Carnes
+StackTrace:   en Carnes.ClsGenerica.EjecutarSP(String Nombre, Object[] Parametros) en C:\SistemasCarnes\Sistema\Carnes\Datos\ClsGenerica.vb:línea 41
+   en Carnes.FrmProductores.BtnGrabar_Click(Object sender, EventArgs e) en C:\SistemasCarnes\Sistema\Carnes\FrmProductores.vb:línea 325
+TargetSite:Int32 EjecutarSP(System.String, System.Object[])
+Informacion Extra
+----------FIN MENSAJE-------------
+

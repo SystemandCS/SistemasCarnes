@@ -3,8 +3,11 @@ Imports System.IO
 
 Public Class FrmLogueo
     Private Sub FrmLogueo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         CargarArchivos()
-        LeerArchivo()
+        'LeerArchivo()
+
+
 
     End Sub
 
@@ -12,27 +15,33 @@ Public Class FrmLogueo
 
 
         Try
+
+            ListArchivos.Items.Clear()
+
             ':::Contamos cuanto archivos de texto hay en la carpeta
             Dim Total = My.Computer.FileSystem.GetFiles(ELog.ObtenerUbicacion(), FileIO.SearchOption.SearchAllSubDirectories, "*.txt")
             ' LblTotal.Text = "Total Archivos de Texto: " + CStr(Total.Count)
 
             ':::Realizamos la búsqueda de la ruta de cada archivo de texto y los agregamos al ListBox
             For Each archivos As String In My.Computer.FileSystem.GetFiles(ELog.ObtenerUbicacion(), FileIO.SearchOption.SearchAllSubDirectories, "*.txt")
-                ListBox1.Items.Add(archivos)
+                ListArchivos.Items.Add(archivos)
             Next
         Catch ex As Exception
             MsgBox("No se realizó la operación por: " & ex.Message)
         End Try
 
+        GroupBoxResultado.Visible = False
+
+
     End Sub
 
 
-    Sub LeerArchivo()
+    Sub LeerArchivo(ByVal Archivo As String)
         ':::Creamos nuestro objeto de tipo StreamReader que nos permite leer archivos
-        Dim leer As New StreamReader(ELog.ObtenerUbicacion() & "/20210414.txt")
+        Dim leer As New StreamReader(Archivo) 'ELog.ObtenerUbicacion() & "/20210414.txt")
 
         ':::Limpiamos nuestro ListBox
-        ListBoxClientes.Items.Clear()
+        ListArchivosDatos.Items.Clear()
 
         Try
             ':::Indicamos mediante un While que mientras no sea el ultimo caracter repita el proceso
@@ -44,7 +53,7 @@ Public Class FrmLogueo
                     Continue While
                 End If
                 ':::Agregramos los registros encontrados
-                ListBoxClientes.Items.Add(linea)
+                ListArchivosDatos.Items.Add(linea)
             End While
 
             leer.Close()
@@ -55,19 +64,110 @@ Public Class FrmLogueo
         End Try
     End Sub
 
-    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
 
 
-        ' Obtenemos el valor seleccionado.
-        '
-        Dim value As Object = ListBox1.SelectedValue
+    Private Sub ListArchivos_Click(sender As Object, e As EventArgs) Handles ListArchivos.Click
 
-        If (TypeOf value Is DataRowView) Then Return
+        If ListArchivos.SelectedItem Is Nothing Then
+            MessageBox.Show("Please select a file.")
+            Exit Sub
+        End If
 
-        ' Mostramos el valor
-        '
-        MessageBox.Show(CStr(value))
+        ' Obtain the file path from the list box selection.
+        Dim filePath = ListArchivos.SelectedItem.ToString
 
+        ' Verify that the file was not removed since the
+        ' Browse button was clicked.
+        If My.Computer.FileSystem.FileExists(filePath) = False Then
+            MessageBox.Show("File Not Found: " & filePath)
+            Exit Sub
+        End If
+
+        ' Obtain file information in a string.
+        Dim fileInfoText As String = GetTextForOutput(filePath)
+
+        ' Show the file information.
+        'MessageBox.Show(fileInfoText)
+        lblArchivo.Text = filePath
+
+
+        GroupBoxResultado.Visible = True
+
+        LeerArchivo(filePath)
+
+
+    End Sub
+
+
+    Private Function GetTextForOutput(ByVal filePath As String) As String
+        ' Verify that the file exists.
+        If My.Computer.FileSystem.FileExists(filePath) = False Then
+            Throw New Exception("File Not Found: " & filePath)
+        End If
+
+        ' Create a new StringBuilder, which is used
+        ' to efficiently build strings.
+        Dim sb As New System.Text.StringBuilder()
+
+        ' Obtain file information.
+        Dim thisFile As System.IO.FileInfo = My.Computer.FileSystem.GetFileInfo(filePath)
+
+        ' Add file attributes.
+        sb.Append("File: " & thisFile.FullName)
+        sb.Append(vbCrLf)
+        sb.Append("Modified: " & thisFile.LastWriteTime.ToString)
+        sb.Append(vbCrLf)
+        sb.Append("Size: " & thisFile.Length.ToString & " bytes")
+        sb.Append(vbCrLf)
+
+        ' Open the text file.
+        Dim sr As System.IO.StreamReader =
+        My.Computer.FileSystem.OpenTextFileReader(filePath)
+
+        ' Add the first line from the file.
+        If sr.Peek() >= 0 Then
+            sb.Append("First Line: " & sr.ReadLine())
+        End If
+        sr.Close()
+
+        Return sb.ToString
+    End Function
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+
+
+        Try
+
+
+            If lblArchivo.Text.Trim = "" Then
+                MessageBox.Show("Debe seleccionar una Archivo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                Exit Sub
+            End If
+
+            ELog.EliminarArchivo(lblArchivo.Text)
+
+
+
+
+            MessageBox.Show("Registro Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            CargarArchivos()
+
+        Catch ex As Exception
+
+            ELog.Grabar(Me, ex)
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+        End Try
+
+
+
+
+    End Sub
+
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+
+        Me.Close()
 
     End Sub
 End Class

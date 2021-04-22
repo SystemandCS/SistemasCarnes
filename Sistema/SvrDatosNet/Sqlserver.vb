@@ -53,14 +53,7 @@ Public Class SQLServer
             oCmd.Parameters(i + 1).Value = Parametros(i)
          Next
 
-            'Ejecucion
-            '  cant = oCmd.ExecuteScalar
 
-            ''Devuelvo los parametros
-            'For i = 0 To Parametros.Length - 1
-
-            '    Parametros(i) = oCmd.Parameters(i + 1).Value
-            'Next
 
             Parametros(0) = oCmd.ExecuteScalar
             cant = Parametros(0)

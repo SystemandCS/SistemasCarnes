@@ -45,7 +45,6 @@ C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmFamilias.resources
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmImpuesto.resources
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmLocalidades.resources
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmLogueo.resources
-C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmProveedores.resources
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmRepControl.resources
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmReportes.resources
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmRptKardex.resources
@@ -70,3 +69,4 @@ C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.Desarrollo.vbproj.CopyComplete
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.exe
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.xml
 C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.pdb
+C:\SistemasCarnes\Sistema\Carnes\obj\Debug\Carnes.FrmProductores.resources
