@@ -12,20 +12,27 @@
 
     End Sub
 
-    Private Sub DgLocalidades_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgLocalidades.CellDoubleClick
+#Region "Grilla Localidad"
+
+
+    Private Sub DgLocalidades_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgLocalidades.CellClick
+
         On Error GoTo ErrLinea
         Dim Fila As Integer
         If DgLocalidades.Rows(DgLocalidades.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
             Fila = DgLocalidades.CurrentRow.Index
             BuscaLocalidad(DgLocalidades.Rows(Fila).Cells(0).Value.ToString())
 
-
-
         End If
         Return
 ErrLinea:
         MessageBox.Show("No hay registros en la lista de busqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+
+
     End Sub
+
+#End Region
+
 
 #Region "Rellenar Grilla Localidad"
 
@@ -41,6 +48,9 @@ ErrLinea:
             DgLocalidades.ReadOnly = True
             DgLocalidades.Columns("idprovincia").Visible = False
             DgLocalidades.Columns("idpais").Visible = False
+
+            'Assign Click event to the DataGridView Cell.
+            'AddHandler DgLocalidades.CellContentClick, AddressOf DgLocalidades_CellClick
 
 
         Catch ex As Exception
@@ -256,6 +266,8 @@ ErrLinea:
 
 
     End Sub
+
+
 
 
 

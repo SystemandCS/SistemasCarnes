@@ -25,8 +25,11 @@ Partial Class FrmTipo
         Me.GdvTipo = New System.Windows.Forms.DataGridView()
         Me.GdvTipoDato = New System.Windows.Forms.DataGridView()
         Me.PnlTipoDatos = New System.Windows.Forms.Panel()
+        Me.BtnEliminarDato = New System.Windows.Forms.Button()
         Me.TxtDescripcion = New System.Windows.Forms.TextBox()
+        Me.BtnGrabarDato = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.BtnNuevoDato = New System.Windows.Forms.Button()
         Me.TxtTipoDato = New System.Windows.Forms.TextBox()
         Me.lblDescripcion = New System.Windows.Forms.Label()
         Me.TxtIdTipoDato = New System.Windows.Forms.TextBox()
@@ -85,8 +88,11 @@ Partial Class FrmTipo
         '
         Me.PnlTipoDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PnlTipoDatos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PnlTipoDatos.Controls.Add(Me.BtnEliminarDato)
         Me.PnlTipoDatos.Controls.Add(Me.TxtDescripcion)
+        Me.PnlTipoDatos.Controls.Add(Me.BtnGrabarDato)
         Me.PnlTipoDatos.Controls.Add(Me.Label7)
+        Me.PnlTipoDatos.Controls.Add(Me.BtnNuevoDato)
         Me.PnlTipoDatos.Controls.Add(Me.TxtTipoDato)
         Me.PnlTipoDatos.Controls.Add(Me.GdvTipoDato)
         Me.PnlTipoDatos.Controls.Add(Me.lblDescripcion)
@@ -97,8 +103,20 @@ Partial Class FrmTipo
         Me.PnlTipoDatos.Controls.Add(Me.lblLocalidad)
         Me.PnlTipoDatos.Location = New System.Drawing.Point(12, 25)
         Me.PnlTipoDatos.Name = "PnlTipoDatos"
-        Me.PnlTipoDatos.Size = New System.Drawing.Size(848, 211)
+        Me.PnlTipoDatos.Size = New System.Drawing.Size(848, 230)
         Me.PnlTipoDatos.TabIndex = 271
+        '
+        'BtnEliminarDato
+        '
+        Me.BtnEliminarDato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnEliminarDato.Image = Global.Carnes.My.Resources.Resources.eliminar
+        Me.BtnEliminarDato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnEliminarDato.Location = New System.Drawing.Point(730, 140)
+        Me.BtnEliminarDato.Name = "BtnEliminarDato"
+        Me.BtnEliminarDato.Size = New System.Drawing.Size(94, 32)
+        Me.BtnEliminarDato.TabIndex = 292
+        Me.BtnEliminarDato.Text = "&Eliminar"
+        Me.BtnEliminarDato.UseVisualStyleBackColor = True
         '
         'TxtDescripcion
         '
@@ -107,6 +125,18 @@ Partial Class FrmTipo
         Me.TxtDescripcion.Name = "TxtDescripcion"
         Me.TxtDescripcion.Size = New System.Drawing.Size(166, 20)
         Me.TxtDescripcion.TabIndex = 4
+        '
+        'BtnGrabarDato
+        '
+        Me.BtnGrabarDato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnGrabarDato.Image = Global.Carnes.My.Resources.Resources.grabar
+        Me.BtnGrabarDato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnGrabarDato.Location = New System.Drawing.Point(732, 178)
+        Me.BtnGrabarDato.Name = "BtnGrabarDato"
+        Me.BtnGrabarDato.Size = New System.Drawing.Size(94, 32)
+        Me.BtnGrabarDato.TabIndex = 291
+        Me.BtnGrabarDato.Text = "&Grabar"
+        Me.BtnGrabarDato.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -118,6 +148,18 @@ Partial Class FrmTipo
         Me.Label7.Size = New System.Drawing.Size(116, 20)
         Me.Label7.TabIndex = 268
         Me.Label7.Text = "Tipos de Datos"
+        '
+        'BtnNuevoDato
+        '
+        Me.BtnNuevoDato.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnNuevoDato.Image = Global.Carnes.My.Resources.Resources.nuevo
+        Me.BtnNuevoDato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnNuevoDato.Location = New System.Drawing.Point(618, 140)
+        Me.BtnNuevoDato.Name = "BtnNuevoDato"
+        Me.BtnNuevoDato.Size = New System.Drawing.Size(92, 32)
+        Me.BtnNuevoDato.TabIndex = 290
+        Me.BtnNuevoDato.Text = "&Nuevo"
+        Me.BtnNuevoDato.UseVisualStyleBackColor = True
         '
         'TxtTipoDato
         '
@@ -454,4 +496,7 @@ Partial Class FrmTipo
     Friend WithEvents BtnEliminar As Button
     Friend WithEvents BtnGrabar As Button
     Friend WithEvents BtnNuevo As Button
+    Friend WithEvents BtnEliminarDato As Button
+    Friend WithEvents BtnGrabarDato As Button
+    Friend WithEvents BtnNuevoDato As Button
 End Class

@@ -23,8 +23,8 @@
 #Region "Rutinas de la Grillas"
 
 
+    Private Sub DgUsuarios_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgUsuarios.CellClick
 
-    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgUsuarios.CellDoubleClick
         On Error GoTo ErrLinea
         Dim Fila As Integer
         If DgUsuarios.Rows(DgUsuarios.CurrentRow.Index).Cells(0).Value.ToString <> "" Then

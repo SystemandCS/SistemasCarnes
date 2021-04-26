@@ -209,8 +209,11 @@ Public Class FrmProductores
         End Try
     End Sub
 
+#Region "Grilla Proveedores"
 
-    Private Sub DgProveedores_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgProveedores.CellDoubleClick
+
+    Private Sub DgProveedores_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgProveedores.CellClick
+
         On Error GoTo ErrLinea
         Dim Fila As Integer
         If DgProveedores.Rows(DgProveedores.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
@@ -226,6 +229,8 @@ ErrLinea:
         MessageBox.Show("No hay registros en la lista de busqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
     End Sub
 
+
+#End Region
     Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
         Me.Close()
 
