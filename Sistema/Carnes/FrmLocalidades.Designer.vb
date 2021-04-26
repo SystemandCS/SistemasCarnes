@@ -67,7 +67,7 @@ Partial Class FrmLocalidades
         'CmbIdProvincia
         '
         Me.CmbIdProvincia.FormattingEnabled = True
-        Me.CmbIdProvincia.Location = New System.Drawing.Point(101, 117)
+        Me.CmbIdProvincia.Location = New System.Drawing.Point(101, 149)
         Me.CmbIdProvincia.Name = "CmbIdProvincia"
         Me.CmbIdProvincia.Size = New System.Drawing.Size(166, 21)
         Me.CmbIdProvincia.TabIndex = 4
@@ -75,7 +75,7 @@ Partial Class FrmLocalidades
         'CmbIdPais
         '
         Me.CmbIdPais.FormattingEnabled = True
-        Me.CmbIdPais.Location = New System.Drawing.Point(101, 146)
+        Me.CmbIdPais.Location = New System.Drawing.Point(101, 117)
         Me.CmbIdPais.Name = "CmbIdPais"
         Me.CmbIdPais.Size = New System.Drawing.Size(166, 21)
         Me.CmbIdPais.TabIndex = 5
@@ -180,11 +180,11 @@ Partial Class FrmLocalidades
         Me.Panel1.Controls.Add(Me.lblPais)
         Me.Panel1.Controls.Add(Me.idProvincia)
         Me.Panel1.Controls.Add(Me.TxtIdLocalidad)
+        Me.Panel1.Controls.Add(Me.CmbIdPais)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.txtCodLoc)
         Me.Panel1.Controls.Add(Me.CmbIdProvincia)
         Me.Panel1.Controls.Add(Me.lblCodigo)
-        Me.Panel1.Controls.Add(Me.CmbIdPais)
         Me.Panel1.Controls.Add(Me.lblLocalidad)
         Me.Panel1.Location = New System.Drawing.Point(497, 34)
         Me.Panel1.Name = "Panel1"

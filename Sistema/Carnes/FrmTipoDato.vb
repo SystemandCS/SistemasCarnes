@@ -3,8 +3,13 @@
     Dim Modo As String = ""
 
     Dim Otipo(9) As Object
+    Dim OtipoDatos(5) As Object
+
+
+
 
     Dim VarIdTipoDato As Integer
+
 
 
     Private Sub FrmTipoDato_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,8 +25,8 @@
 #Region "Rutinas de Grillas"
 
     ' Grilla GdvTipoDato
+    Private Sub GdvTipoDato_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GdvTipoDato.CellClick
 
-    Private Sub GdvTipoDato_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles GdvTipoDato.CellDoubleClick
         On Error GoTo ErrLinea
         Dim Fila As Integer
         If GdvTipoDato.Rows(GdvTipoDato.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
@@ -40,9 +45,11 @@ ErrLinea:
     End Sub
 
 
-    ' Grilla GdvTipo
 
-    Private Sub GdvTipo_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles GdvTipo.CellDoubleClick
+
+
+    Private Sub GdvTipo_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles GdvTipo.CellClick
+
         On Error GoTo ErrLinea
 
         Dim Fila As Integer
@@ -326,8 +333,138 @@ ErrLinea:
         TxtCodigoAfip.Clear()
         TxtDescrAfip.Clear()
 
+        TxtTipoDato.Clear()
+        txtCodigo.Clear()
+        TxtDescripcion.Clear()
+
 
     End Sub
+
+    Private Sub BtnNuevoDato_Click(sender As Object, e As EventArgs) Handles BtnNuevoDato.Click
+
+        LimpiarFormulario()
+        CargarGrillaTipoDatos()
+
+
+
+    End Sub
+
+    Private Sub BtnEliminarDato_Click(sender As Object, e As EventArgs) Handles BtnEliminarDato.Click
+
+        CargarTipoDatos()
+
+        OtipoDatos(5) = "B"
+
+        If TxtTipoDato.Text.Trim = "" Then
+            MessageBox.Show("Buscar Registro de Tipo de Dato", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            TxtTipoDato.Focus()
+            Exit Sub
+        End If
+
+        If MessageBox.Show("¿Desea Eliminar el Registro Seleccionado?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.No Then
+            Exit Sub
+        End If
+
+        Dim Retorno As Integer
+        Dim CLocalidad As New ClsGenerica
+
+        Try
+            Retorno = CLocalidad.EjecutarSP("Gen_Tipodatos_Abm", OtipoDatos)
+            If Val(Retorno) > 0 Then
+                MessageBox.Show("Registro Eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+                LimpiarFormulario()
+
+
+                CargarGrillaTipoDatos()
+
+
+            Else
+                MessageBox.Show("No se pudo Realizar la Operación", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+
+    End Sub
+
+
+
+
+
+    Private Sub BtnGrabarDato_Click(sender As Object, e As EventArgs) Handles BtnGrabarDato.Click
+
+        If TxtTipoDato.Text.Trim = "" Then
+            MessageBox.Show("Ingrese el Tipo de Dato", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            TxtTipoDato.Focus()
+            Exit Sub
+        End If
+
+
+        CargarTipoDatos()
+
+
+
+
+        Dim Retorno As Integer
+
+
+
+        Dim Ctipo As New ClsGenerica
+        Dim DT As New DataTable
+
+        Try
+            If TxtIdTipoDato.Text.Trim = "" Then
+
+                OtipoDatos(5) = "A"
+
+
+                Retorno = Ctipo.EjecutarSP("Gen_Tipodatos_Abm", OtipoDatos)
+
+
+                If Val(Retorno) > 0 Then
+                    MessageBox.Show("Registro Agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Call BtnNuevo_Click(sender, e)
+                End If
+            Else
+                OtipoDatos(5) = "M"
+
+                Retorno = Ctipo.EjecutarSP("Gen_Tipodatos_Abm", OtipoDatos)
+
+                If Val(Retorno) > 0 Then
+
+                    MessageBox.Show("Registro Actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    Call BtnNuevoDato_Click(sender, e)
+                End If
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
+    End Sub
+
+
+    Private Sub CargarTipoDatos()
+
+        '@idTipodato 	int = null,
+        '@tipodato 		varchar(50) = null,
+        '@codigo 		varchar(50) = null,
+        '@descripcion 	varchar(250) = null,
+        '@usuario		varchar(20) = null,
+        '@Modo 			char(1)
+
+
+
+        OtipoDatos(0) = Val(TxtIdTipoDato.Text)
+        OtipoDatos(1) = TxtTipoDato.Text
+        OtipoDatos(2) = txtCodigo.Text
+        OtipoDatos(3) = TxtDescripcion.Text
+        OtipoDatos(4) = USULOGIN
+
+    End Sub
+
 
 
 

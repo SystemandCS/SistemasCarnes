@@ -113,6 +113,7 @@
     <Compile Include="Dataset\STK_liqui_Subdiario.vb">
       <DependentUpon>STK_liqui_Subdiario.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datos\ClsFormulario.vb" />
     <Compile Include="Datos\ClsGrl_Proveedor .vb" />
     <Compile Include="Datos\Logger.vb" />
     <Compile Include="Datos\ClsArticulos.vb" />
