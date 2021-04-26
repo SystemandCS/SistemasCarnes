@@ -49,9 +49,6 @@ ErrLinea:
             DgLocalidades.Columns("idprovincia").Visible = False
             DgLocalidades.Columns("idpais").Visible = False
 
-            'Assign Click event to the DataGridView Cell.
-            'AddHandler DgLocalidades.CellContentClick, AddressOf DgLocalidades_CellClick
-
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -266,8 +263,6 @@ ErrLinea:
 
 
     End Sub
-
-
 
 
 
