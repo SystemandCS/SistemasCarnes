@@ -8,7 +8,10 @@
 
         RellenarComboSuperior()
         RellenarComboFrigorifico()
+
+
         RellenarModulo()
+
         RellenarComboJerarquica()
 
         LblModulo.Text = "Modulos"
@@ -96,6 +99,7 @@ ErrLinea:
     End Sub
 
     Private Sub RellenarLista(Valor As Integer)
+
         Try
             Dim CUsuario As New ClsUsuario
             Dim DT As New DataTable
@@ -105,6 +109,7 @@ ErrLinea:
             DgUsuarios.Columns("idUsuario").Visible = False
             DgUsuarios.Columns("idfrigorifico").Visible = False
             DgUsuarios.Columns("idSuperior").Visible = False
+
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
@@ -142,11 +147,14 @@ ErrLinea:
             Dim CFacCab As New ClsUsuario
             Dim DT As New DataTable
             DT = CFacCab.ObtenerTodos.Tables(0)
+
             With CmbIdSuperior
                 .DataSource = DT
                 .DisplayMember = "Usuario"
                 .ValueMember = "idUsuario"
             End With
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
@@ -210,11 +218,14 @@ ErrLinea:
 
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
+
         Limpiar()
         RellenarLista(USUCOD)
+
     End Sub
 
     Private Sub BtnGrabar_Click(sender As Object, e As EventArgs) Handles BtnGrabar.Click
+
         If txtusuario.Text.Trim = "" Then
             MessageBox.Show("Ingrese Usuario", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
             txtusuario.Focus()
@@ -226,6 +237,22 @@ ErrLinea:
             txtusuario.Focus()
             Exit Sub
         End If
+
+
+        If txtnombres.Text.Trim = "" Then
+            MessageBox.Show("Ingrese Nombre", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            txtnombres.Focus()
+            Exit Sub
+        End If
+
+
+
+        If txtapellidos.Text.Trim = "" Then
+            MessageBox.Show("Ingrese Apellido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            txtnombres.Focus()
+            Exit Sub
+        End If
+
 
 
 
@@ -242,7 +269,9 @@ ErrLinea:
 
                 If Val(Retorno) > 0 Then
                     MessageBox.Show("Registro Agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                     Call BtnNuevo_Click(sender, e)
+
                 End If
             Else
 
@@ -252,7 +281,11 @@ ErrLinea:
                 If Val(Retorno) > 0 Then
 
                     MessageBox.Show("Registro Actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
                     Call BtnNuevo_Click(sender, e)
+                    'ClsFormularios.Blanquear(Me, BackColor, True)
+
+
                 End If
             End If
         Catch ex As Exception
@@ -421,8 +454,12 @@ ErrLinea:
 
     End Sub
 
-    Private Sub CmbIdFrigorifico_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CmbIdFrigorifico.SelectedIndexChanged
 
+    Private Sub txtusuario_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtusuario.Enter
+        txtusuario.BackColor = Color.AliceBlue
+    End Sub
+    Private Sub txtusuario_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtusuario.Leave
+        txtusuario.BackColor = Color.AliceBlue
     End Sub
 
 

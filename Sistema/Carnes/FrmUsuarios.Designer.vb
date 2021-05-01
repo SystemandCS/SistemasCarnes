@@ -189,7 +189,7 @@ Partial Class FrmUsuarios
         Me.CmbIdFrigorifico.Location = New System.Drawing.Point(784, 111)
         Me.CmbIdFrigorifico.Name = "CmbIdFrigorifico"
         Me.CmbIdFrigorifico.Size = New System.Drawing.Size(187, 21)
-        Me.CmbIdFrigorifico.TabIndex = 6
+        Me.CmbIdFrigorifico.TabIndex = 7
         '
         'Label4
         '
@@ -206,7 +206,7 @@ Partial Class FrmUsuarios
         Me.CheckActivo.Location = New System.Drawing.Point(468, 169)
         Me.CheckActivo.Name = "CheckActivo"
         Me.CheckActivo.Size = New System.Drawing.Size(56, 17)
-        Me.CheckActivo.TabIndex = 7
+        Me.CheckActivo.TabIndex = 8
         Me.CheckActivo.Text = "Activo"
         Me.CheckActivo.UseVisualStyleBackColor = True
         '
@@ -236,7 +236,7 @@ Partial Class FrmUsuarios
         Me.CmbJerarquia.Location = New System.Drawing.Point(803, 57)
         Me.CmbJerarquia.Name = "CmbJerarquia"
         Me.CmbJerarquia.Size = New System.Drawing.Size(142, 21)
-        Me.CmbJerarquia.TabIndex = 16
+        Me.CmbJerarquia.TabIndex = 17
         '
         'Label8
         '
@@ -254,7 +254,7 @@ Partial Class FrmUsuarios
         Me.BtnModuloAgregar.Location = New System.Drawing.Point(395, 27)
         Me.BtnModuloAgregar.Name = "BtnModuloAgregar"
         Me.BtnModuloAgregar.Size = New System.Drawing.Size(107, 37)
-        Me.BtnModuloAgregar.TabIndex = 13
+        Me.BtnModuloAgregar.TabIndex = 14
         Me.BtnModuloAgregar.Text = " << Agregar"
         Me.BtnModuloAgregar.UseVisualStyleBackColor = True
         '
@@ -265,7 +265,7 @@ Partial Class FrmUsuarios
         Me.BtnModuloEliminar.Location = New System.Drawing.Point(395, 153)
         Me.BtnModuloEliminar.Name = "BtnModuloEliminar"
         Me.BtnModuloEliminar.Size = New System.Drawing.Size(107, 29)
-        Me.BtnModuloEliminar.TabIndex = 14
+        Me.BtnModuloEliminar.TabIndex = 15
         Me.BtnModuloEliminar.Text = "Quitar >>"
         Me.BtnModuloEliminar.UseVisualStyleBackColor = True
         '
@@ -275,7 +275,7 @@ Partial Class FrmUsuarios
         Me.ChkDgModuloAsignado.Location = New System.Drawing.Point(9, 194)
         Me.ChkDgModuloAsignado.Name = "ChkDgModuloAsignado"
         Me.ChkDgModuloAsignado.Size = New System.Drawing.Size(89, 17)
-        Me.ChkDgModuloAsignado.TabIndex = 12
+        Me.ChkDgModuloAsignado.TabIndex = 13
         Me.ChkDgModuloAsignado.Text = "Marca Todos"
         Me.ChkDgModuloAsignado.UseVisualStyleBackColor = True
         '
@@ -285,7 +285,7 @@ Partial Class FrmUsuarios
         Me.chkDgModulo.Location = New System.Drawing.Point(517, 197)
         Me.chkDgModulo.Name = "chkDgModulo"
         Me.chkDgModulo.Size = New System.Drawing.Size(92, 17)
-        Me.chkDgModulo.TabIndex = 15
+        Me.chkDgModulo.TabIndex = 16
         Me.chkDgModulo.Text = "Marcar Todos"
         Me.chkDgModulo.UseVisualStyleBackColor = True
         '
@@ -324,7 +324,7 @@ Partial Class FrmUsuarios
         Me.BtnSalir.Location = New System.Drawing.Point(884, 154)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(87, 32)
-        Me.BtnSalir.TabIndex = 11
+        Me.BtnSalir.TabIndex = 12
         Me.BtnSalir.Text = "&Salir"
         Me.BtnSalir.UseVisualStyleBackColor = True
         '
@@ -336,7 +336,7 @@ Partial Class FrmUsuarios
         Me.BtnEliminar.Location = New System.Drawing.Point(784, 154)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnEliminar.TabIndex = 10
+        Me.BtnEliminar.TabIndex = 11
         Me.BtnEliminar.Text = "&Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
@@ -348,7 +348,7 @@ Partial Class FrmUsuarios
         Me.BtnGrabar.Location = New System.Drawing.Point(689, 154)
         Me.BtnGrabar.Name = "BtnGrabar"
         Me.BtnGrabar.Size = New System.Drawing.Size(94, 32)
-        Me.BtnGrabar.TabIndex = 9
+        Me.BtnGrabar.TabIndex = 10
         Me.BtnGrabar.Text = "&Grabar"
         Me.BtnGrabar.UseVisualStyleBackColor = True
         '
@@ -360,7 +360,7 @@ Partial Class FrmUsuarios
         Me.BtnNuevo.Location = New System.Drawing.Point(595, 154)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(92, 32)
-        Me.BtnNuevo.TabIndex = 8
+        Me.BtnNuevo.TabIndex = 9
         Me.BtnNuevo.Text = "&Nuevo"
         Me.BtnNuevo.UseVisualStyleBackColor = True
         '

@@ -44,26 +44,34 @@ Partial Class FrmProductores
         Me.lblTipoCaracter = New System.Windows.Forms.Label()
         Me.TxtRazonSocial = New System.Windows.Forms.TextBox()
         Me.lblCuit = New System.Windows.Forms.Label()
+        Me.TxtTelFaxCom = New System.Windows.Forms.TextBox()
+        Me.lblCPostalCom = New System.Windows.Forms.Label()
+        Me.LblTelCom = New System.Windows.Forms.Label()
+        Me.cmbIdLocaCom = New System.Windows.Forms.ComboBox()
+        Me.LblTelFaxCom = New System.Windows.Forms.Label()
+        Me.txtCPostalCom = New System.Windows.Forms.TextBox()
+        Me.txtTelCom = New System.Windows.Forms.TextBox()
+        Me.lblIdLocCom = New System.Windows.Forms.Label()
+        Me.lblDomiCom = New System.Windows.Forms.Label()
+        Me.txtDomicom = New System.Windows.Forms.TextBox()
+        Me.lblRsComercial = New System.Windows.Forms.Label()
+        Me.txtRsComercial = New System.Windows.Forms.TextBox()
         Me.TxtCPostal = New System.Windows.Forms.TextBox()
         Me.CmbLocalidad = New System.Windows.Forms.ComboBox()
         Me.lblPiso = New System.Windows.Forms.Label()
         Me.TxtTelCel = New System.Windows.Forms.TextBox()
         Me.lblTelCel = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
         Me.TxtTelFax = New System.Windows.Forms.TextBox()
         Me.Txtpiso = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
         Me.lblTelFax = New System.Windows.Forms.Label()
         Me.TxtNumero = New System.Windows.Forms.TextBox()
         Me.txtTelPart = New System.Windows.Forms.TextBox()
         Me.lblTelPart = New System.Windows.Forms.Label()
         Me.CmbPais = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtCalle = New System.Windows.Forms.TextBox()
         Me.lblLocalidad = New System.Windows.Forms.Label()
         Me.LblPais = New System.Windows.Forms.Label()
         Me.CmbProvincia = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.TxtRuca = New System.Windows.Forms.TextBox()
         Me.txtRenspa = New System.Windows.Forms.TextBox()
         Me.lblRuca = New System.Windows.Forms.Label()
@@ -102,7 +110,6 @@ Partial Class FrmProductores
         Me.TxtIBPorcen = New System.Windows.Forms.TextBox()
         Me.ChktodosSell = New System.Windows.Forms.CheckBox()
         Me.chktodosReg = New System.Windows.Forms.CheckBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtBuscarCuit = New System.Windows.Forms.TextBox()
         Me.txtBuscarRazonSocial = New System.Windows.Forms.TextBox()
@@ -110,29 +117,20 @@ Partial Class FrmProductores
         Me.RdbRazonSocial = New System.Windows.Forms.RadioButton()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.txtGuia = New System.Windows.Forms.TextBox()
-        Me.PnlDatosLegal = New System.Windows.Forms.Panel()
         Me.LblNumero = New System.Windows.Forms.Label()
         Me.LblCPostal = New System.Windows.Forms.Label()
         Me.lblProvincia = New System.Windows.Forms.Label()
         Me.LblCalle = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TxtTelFaxCom = New System.Windows.Forms.TextBox()
-        Me.lblCPostalCom = New System.Windows.Forms.Label()
-        Me.LblTelCom = New System.Windows.Forms.Label()
-        Me.cmbIdLocaCom = New System.Windows.Forms.ComboBox()
-        Me.LblTelFaxCom = New System.Windows.Forms.Label()
-        Me.txtCPostalCom = New System.Windows.Forms.TextBox()
-        Me.txtTelCom = New System.Windows.Forms.TextBox()
-        Me.lblIdLocCom = New System.Windows.Forms.Label()
-        Me.lblDomiCom = New System.Windows.Forms.Label()
-        Me.txtDomicom = New System.Windows.Forms.TextBox()
-        Me.lblRsComercial = New System.Windows.Forms.Label()
-        Me.txtRsComercial = New System.Windows.Forms.TextBox()
+        Me.GroupBoxDomLegal = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxContacto = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxBuscar = New System.Windows.Forms.GroupBox()
+        Me.GroupBoxBotones = New System.Windows.Forms.GroupBox()
         CType(Me.DgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PnlDetalle.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.PnlDatosLegal.SuspendLayout()
-        Me.Panel2.SuspendLayout()
+        Me.GroupBoxDomLegal.SuspendLayout()
+        Me.GroupBoxContacto.SuspendLayout()
+        Me.GroupBoxBuscar.SuspendLayout()
+        Me.GroupBoxBotones.SuspendLayout()
         Me.SuspendLayout()
         '
         'DgProveedores
@@ -159,7 +157,7 @@ Partial Class FrmProductores
         Me.BtnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnSalir.Image = Global.Carnes.My.Resources.Resources.salir
         Me.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnSalir.Location = New System.Drawing.Point(878, 534)
+        Me.BtnSalir.Location = New System.Drawing.Point(128, 50)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(92, 32)
         Me.BtnSalir.TabIndex = 320
@@ -171,7 +169,7 @@ Partial Class FrmProductores
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEliminar.Image = Global.Carnes.My.Resources.Resources.eliminar
         Me.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnEliminar.Location = New System.Drawing.Point(768, 537)
+        Me.BtnEliminar.Location = New System.Drawing.Point(18, 53)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(94, 32)
         Me.BtnEliminar.TabIndex = 313
@@ -183,7 +181,7 @@ Partial Class FrmProductores
         Me.BtnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnGrabar.Image = Global.Carnes.My.Resources.Resources.grabar
         Me.BtnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnGrabar.Location = New System.Drawing.Point(876, 499)
+        Me.BtnGrabar.Location = New System.Drawing.Point(126, 15)
         Me.BtnGrabar.Name = "BtnGrabar"
         Me.BtnGrabar.Size = New System.Drawing.Size(94, 32)
         Me.BtnGrabar.TabIndex = 312
@@ -195,7 +193,7 @@ Partial Class FrmProductores
         Me.BtnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnNuevo.Image = Global.Carnes.My.Resources.Resources.nuevo
         Me.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnNuevo.Location = New System.Drawing.Point(768, 499)
+        Me.BtnNuevo.Location = New System.Drawing.Point(18, 15)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(92, 32)
         Me.BtnNuevo.TabIndex = 311
@@ -357,9 +355,117 @@ Partial Class FrmProductores
         Me.lblCuit.TabIndex = 310
         Me.lblCuit.Text = "Cuit"
         '
+        'TxtTelFaxCom
+        '
+        Me.TxtTelFaxCom.Location = New System.Drawing.Point(67, 162)
+        Me.TxtTelFaxCom.MaxLength = 100
+        Me.TxtTelFaxCom.Name = "TxtTelFaxCom"
+        Me.TxtTelFaxCom.Size = New System.Drawing.Size(226, 20)
+        Me.TxtTelFaxCom.TabIndex = 305
+        '
+        'lblCPostalCom
+        '
+        Me.lblCPostalCom.AutoSize = True
+        Me.lblCPostalCom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCPostalCom.Location = New System.Drawing.Point(8, 109)
+        Me.lblCPostalCom.Name = "lblCPostalCom"
+        Me.lblCPostalCom.Size = New System.Drawing.Size(21, 13)
+        Me.lblCPostalCom.TabIndex = 313
+        Me.lblCPostalCom.Text = "CP"
+        '
+        'LblTelCom
+        '
+        Me.LblTelCom.AutoSize = True
+        Me.LblTelCom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTelCom.Location = New System.Drawing.Point(5, 134)
+        Me.LblTelCom.Name = "LblTelCom"
+        Me.LblTelCom.Size = New System.Drawing.Size(54, 13)
+        Me.LblTelCom.TabIndex = 312
+        Me.LblTelCom.Text = "Telefonos"
+        '
+        'cmbIdLocaCom
+        '
+        Me.cmbIdLocaCom.FormattingEnabled = True
+        Me.cmbIdLocaCom.Location = New System.Drawing.Point(67, 74)
+        Me.cmbIdLocaCom.Name = "cmbIdLocaCom"
+        Me.cmbIdLocaCom.Size = New System.Drawing.Size(288, 21)
+        Me.cmbIdLocaCom.TabIndex = 302
+        '
+        'LblTelFaxCom
+        '
+        Me.LblTelFaxCom.AutoSize = True
+        Me.LblTelFaxCom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblTelFaxCom.Location = New System.Drawing.Point(8, 166)
+        Me.LblTelFaxCom.Name = "LblTelFaxCom"
+        Me.LblTelFaxCom.Size = New System.Drawing.Size(42, 13)
+        Me.LblTelFaxCom.TabIndex = 314
+        Me.LblTelFaxCom.Text = "Tel Fax"
+        '
+        'txtCPostalCom
+        '
+        Me.txtCPostalCom.Location = New System.Drawing.Point(67, 101)
+        Me.txtCPostalCom.MaxLength = 100
+        Me.txtCPostalCom.Name = "txtCPostalCom"
+        Me.txtCPostalCom.Size = New System.Drawing.Size(68, 20)
+        Me.txtCPostalCom.TabIndex = 303
+        '
+        'txtTelCom
+        '
+        Me.txtTelCom.Location = New System.Drawing.Point(67, 125)
+        Me.txtTelCom.MaxLength = 100
+        Me.txtTelCom.Name = "txtTelCom"
+        Me.txtTelCom.Size = New System.Drawing.Size(226, 20)
+        Me.txtTelCom.TabIndex = 304
+        '
+        'lblIdLocCom
+        '
+        Me.lblIdLocCom.AutoSize = True
+        Me.lblIdLocCom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblIdLocCom.Location = New System.Drawing.Point(8, 84)
+        Me.lblIdLocCom.Name = "lblIdLocCom"
+        Me.lblIdLocCom.Size = New System.Drawing.Size(53, 13)
+        Me.lblIdLocCom.TabIndex = 310
+        Me.lblIdLocCom.Text = "Localidad"
+        '
+        'lblDomiCom
+        '
+        Me.lblDomiCom.AutoSize = True
+        Me.lblDomiCom.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDomiCom.Location = New System.Drawing.Point(6, 55)
+        Me.lblDomiCom.Name = "lblDomiCom"
+        Me.lblDomiCom.Size = New System.Drawing.Size(49, 13)
+        Me.lblDomiCom.TabIndex = 313
+        Me.lblDomiCom.Text = "Domicilio"
+        '
+        'txtDomicom
+        '
+        Me.txtDomicom.Location = New System.Drawing.Point(67, 48)
+        Me.txtDomicom.MaxLength = 100
+        Me.txtDomicom.Name = "txtDomicom"
+        Me.txtDomicom.Size = New System.Drawing.Size(288, 20)
+        Me.txtDomicom.TabIndex = 301
+        '
+        'lblRsComercial
+        '
+        Me.lblRsComercial.AutoSize = True
+        Me.lblRsComercial.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRsComercial.Location = New System.Drawing.Point(6, 25)
+        Me.lblRsComercial.Name = "lblRsComercial"
+        Me.lblRsComercial.Size = New System.Drawing.Size(44, 13)
+        Me.lblRsComercial.TabIndex = 311
+        Me.lblRsComercial.Text = "Nombre"
+        '
+        'txtRsComercial
+        '
+        Me.txtRsComercial.Location = New System.Drawing.Point(67, 22)
+        Me.txtRsComercial.MaxLength = 100
+        Me.txtRsComercial.Name = "txtRsComercial"
+        Me.txtRsComercial.Size = New System.Drawing.Size(288, 20)
+        Me.txtRsComercial.TabIndex = 300
+        '
         'TxtCPostal
         '
-        Me.TxtCPostal.Location = New System.Drawing.Point(253, 36)
+        Me.TxtCPostal.Location = New System.Drawing.Point(256, 45)
         Me.TxtCPostal.MaxLength = 100
         Me.TxtCPostal.Name = "TxtCPostal"
         Me.TxtCPostal.Size = New System.Drawing.Size(45, 20)
@@ -368,7 +474,7 @@ Partial Class FrmProductores
         'CmbLocalidad
         '
         Me.CmbLocalidad.FormattingEnabled = True
-        Me.CmbLocalidad.Location = New System.Drawing.Point(72, 64)
+        Me.CmbLocalidad.Location = New System.Drawing.Point(75, 73)
         Me.CmbLocalidad.Name = "CmbLocalidad"
         Me.CmbLocalidad.Size = New System.Drawing.Size(226, 21)
         Me.CmbLocalidad.TabIndex = 204
@@ -376,7 +482,8 @@ Partial Class FrmProductores
         'lblPiso
         '
         Me.lblPiso.AutoSize = True
-        Me.lblPiso.Location = New System.Drawing.Point(124, 43)
+        Me.lblPiso.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPiso.Location = New System.Drawing.Point(127, 52)
         Me.lblPiso.Name = "lblPiso"
         Me.lblPiso.Size = New System.Drawing.Size(27, 13)
         Me.lblPiso.TabIndex = 305
@@ -384,7 +491,7 @@ Partial Class FrmProductores
         '
         'TxtTelCel
         '
-        Me.TxtTelCel.Location = New System.Drawing.Point(71, 193)
+        Me.TxtTelCel.Location = New System.Drawing.Point(74, 202)
         Me.TxtTelCel.MaxLength = 100
         Me.TxtTelCel.Name = "TxtTelCel"
         Me.TxtTelCel.Size = New System.Drawing.Size(227, 20)
@@ -393,24 +500,16 @@ Partial Class FrmProductores
         'lblTelCel
         '
         Me.lblTelCel.AutoSize = True
-        Me.lblTelCel.Location = New System.Drawing.Point(3, 200)
+        Me.lblTelCel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelCel.Location = New System.Drawing.Point(11, 205)
         Me.lblTelCel.Name = "lblTelCel"
         Me.lblTelCel.Size = New System.Drawing.Size(57, 13)
         Me.lblTelCel.TabIndex = 289
         Me.lblTelCel.Text = "Tel Celular"
         '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(481, -14)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(58, 13)
-        Me.Label17.TabIndex = 303
-        Me.Label17.Text = "Cod Postal"
-        '
         'TxtTelFax
         '
-        Me.TxtTelFax.Location = New System.Drawing.Point(72, 167)
+        Me.TxtTelFax.Location = New System.Drawing.Point(75, 176)
         Me.TxtTelFax.MaxLength = 100
         Me.TxtTelFax.Name = "TxtTelFax"
         Me.TxtTelFax.Size = New System.Drawing.Size(226, 20)
@@ -418,25 +517,17 @@ Partial Class FrmProductores
         '
         'Txtpiso
         '
-        Me.Txtpiso.Location = New System.Drawing.Point(157, 36)
+        Me.Txtpiso.Location = New System.Drawing.Point(160, 45)
         Me.Txtpiso.MaxLength = 100
         Me.Txtpiso.Name = "Txtpiso"
         Me.Txtpiso.Size = New System.Drawing.Size(53, 20)
         Me.Txtpiso.TabIndex = 202
         '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(242, -13)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(27, 13)
-        Me.Label18.TabIndex = 301
-        Me.Label18.Text = "Nro."
-        '
         'lblTelFax
         '
         Me.lblTelFax.AutoSize = True
-        Me.lblTelFax.Location = New System.Drawing.Point(6, 173)
+        Me.lblTelFax.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelFax.Location = New System.Drawing.Point(9, 182)
         Me.lblTelFax.Name = "lblTelFax"
         Me.lblTelFax.Size = New System.Drawing.Size(42, 13)
         Me.lblTelFax.TabIndex = 287
@@ -444,7 +535,7 @@ Partial Class FrmProductores
         '
         'TxtNumero
         '
-        Me.TxtNumero.Location = New System.Drawing.Point(72, 36)
+        Me.TxtNumero.Location = New System.Drawing.Point(75, 45)
         Me.TxtNumero.MaxLength = 100
         Me.TxtNumero.Name = "TxtNumero"
         Me.TxtNumero.Size = New System.Drawing.Size(42, 20)
@@ -452,7 +543,7 @@ Partial Class FrmProductores
         '
         'txtTelPart
         '
-        Me.txtTelPart.Location = New System.Drawing.Point(72, 141)
+        Me.txtTelPart.Location = New System.Drawing.Point(75, 150)
         Me.txtTelPart.MaxLength = 100
         Me.txtTelPart.Name = "txtTelPart"
         Me.txtTelPart.Size = New System.Drawing.Size(226, 20)
@@ -461,7 +552,8 @@ Partial Class FrmProductores
         'lblTelPart
         '
         Me.lblTelPart.AutoSize = True
-        Me.lblTelPart.Location = New System.Drawing.Point(6, 148)
+        Me.lblTelPart.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTelPart.Location = New System.Drawing.Point(9, 157)
         Me.lblTelPart.Name = "lblTelPart"
         Me.lblTelPart.Size = New System.Drawing.Size(54, 13)
         Me.lblTelPart.TabIndex = 285
@@ -470,23 +562,14 @@ Partial Class FrmProductores
         'CmbPais
         '
         Me.CmbPais.FormattingEnabled = True
-        Me.CmbPais.Location = New System.Drawing.Point(72, 115)
+        Me.CmbPais.Location = New System.Drawing.Point(75, 124)
         Me.CmbPais.Name = "CmbPais"
         Me.CmbPais.Size = New System.Drawing.Size(226, 21)
         Me.CmbPais.TabIndex = 206
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(-81, -17)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 13)
-        Me.Label3.TabIndex = 261
-        Me.Label3.Text = "Calle"
-        '
         'TxtCalle
         '
-        Me.TxtCalle.Location = New System.Drawing.Point(72, 10)
+        Me.TxtCalle.Location = New System.Drawing.Point(75, 19)
         Me.TxtCalle.MaxLength = 100
         Me.TxtCalle.Name = "TxtCalle"
         Me.TxtCalle.Size = New System.Drawing.Size(226, 20)
@@ -495,7 +578,8 @@ Partial Class FrmProductores
         'lblLocalidad
         '
         Me.lblLocalidad.AutoSize = True
-        Me.lblLocalidad.Location = New System.Drawing.Point(4, 72)
+        Me.lblLocalidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLocalidad.Location = New System.Drawing.Point(7, 81)
         Me.lblLocalidad.Name = "lblLocalidad"
         Me.lblLocalidad.Size = New System.Drawing.Size(53, 13)
         Me.lblLocalidad.TabIndex = 269
@@ -504,7 +588,8 @@ Partial Class FrmProductores
         'LblPais
         '
         Me.LblPais.AutoSize = True
-        Me.LblPais.Location = New System.Drawing.Point(6, 123)
+        Me.LblPais.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblPais.Location = New System.Drawing.Point(9, 132)
         Me.LblPais.Name = "LblPais"
         Me.LblPais.Size = New System.Drawing.Size(27, 13)
         Me.LblPais.TabIndex = 275
@@ -513,23 +598,14 @@ Partial Class FrmProductores
         'CmbProvincia
         '
         Me.CmbProvincia.FormattingEnabled = True
-        Me.CmbProvincia.Location = New System.Drawing.Point(72, 90)
+        Me.CmbProvincia.Location = New System.Drawing.Point(75, 99)
         Me.CmbProvincia.Name = "CmbProvincia"
         Me.CmbProvincia.Size = New System.Drawing.Size(226, 21)
         Me.CmbProvincia.TabIndex = 205
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(-81, 50)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 13)
-        Me.Label2.TabIndex = 273
-        Me.Label2.Text = "Provincia"
-        '
         'TxtRuca
         '
-        Me.TxtRuca.Location = New System.Drawing.Point(431, 546)
+        Me.TxtRuca.Location = New System.Drawing.Point(431, 580)
         Me.TxtRuca.MaxLength = 100
         Me.TxtRuca.Name = "TxtRuca"
         Me.TxtRuca.Size = New System.Drawing.Size(86, 20)
@@ -537,7 +613,7 @@ Partial Class FrmProductores
         '
         'txtRenspa
         '
-        Me.txtRenspa.Location = New System.Drawing.Point(568, 546)
+        Me.txtRenspa.Location = New System.Drawing.Point(568, 580)
         Me.txtRenspa.MaxLength = 100
         Me.txtRenspa.Name = "txtRenspa"
         Me.txtRenspa.Size = New System.Drawing.Size(53, 20)
@@ -546,7 +622,7 @@ Partial Class FrmProductores
         'lblRuca
         '
         Me.lblRuca.AutoSize = True
-        Me.lblRuca.Location = New System.Drawing.Point(382, 553)
+        Me.lblRuca.Location = New System.Drawing.Point(387, 587)
         Me.lblRuca.Name = "lblRuca"
         Me.lblRuca.Size = New System.Drawing.Size(33, 13)
         Me.lblRuca.TabIndex = 280
@@ -554,7 +630,7 @@ Partial Class FrmProductores
         '
         'TxtPuntoVenta
         '
-        Me.TxtPuntoVenta.Location = New System.Drawing.Point(701, 546)
+        Me.TxtPuntoVenta.Location = New System.Drawing.Point(701, 580)
         Me.TxtPuntoVenta.MaxLength = 100
         Me.TxtPuntoVenta.Name = "TxtPuntoVenta"
         Me.TxtPuntoVenta.Size = New System.Drawing.Size(45, 20)
@@ -563,7 +639,7 @@ Partial Class FrmProductores
         'lblPuntoVenta
         '
         Me.lblPuntoVenta.AutoSize = True
-        Me.lblPuntoVenta.Location = New System.Drawing.Point(629, 553)
+        Me.lblPuntoVenta.Location = New System.Drawing.Point(629, 587)
         Me.lblPuntoVenta.Name = "lblPuntoVenta"
         Me.lblPuntoVenta.Size = New System.Drawing.Size(66, 13)
         Me.lblPuntoVenta.TabIndex = 282
@@ -580,10 +656,10 @@ Partial Class FrmProductores
         '
         'TxtEmail1
         '
-        Me.TxtEmail1.Location = New System.Drawing.Point(100, 511)
+        Me.TxtEmail1.Location = New System.Drawing.Point(100, 515)
         Me.TxtEmail1.MaxLength = 100
         Me.TxtEmail1.Name = "TxtEmail1"
-        Me.TxtEmail1.Size = New System.Drawing.Size(271, 20)
+        Me.TxtEmail1.Size = New System.Drawing.Size(228, 20)
         Me.TxtEmail1.TabIndex = 210
         '
         'lblEmail2
@@ -600,13 +676,13 @@ Partial Class FrmProductores
         Me.TxtEmail2.Location = New System.Drawing.Point(100, 546)
         Me.TxtEmail2.MaxLength = 100
         Me.TxtEmail2.Name = "TxtEmail2"
-        Me.TxtEmail2.Size = New System.Drawing.Size(271, 20)
+        Me.TxtEmail2.Size = New System.Drawing.Size(228, 20)
         Me.TxtEmail2.TabIndex = 211
         '
         'lblObservacion1
         '
         Me.lblObservacion1.AutoSize = True
-        Me.lblObservacion1.Location = New System.Drawing.Point(382, 478)
+        Me.lblObservacion1.Location = New System.Drawing.Point(390, 474)
         Me.lblObservacion1.Name = "lblObservacion1"
         Me.lblObservacion1.Size = New System.Drawing.Size(78, 13)
         Me.lblObservacion1.TabIndex = 296
@@ -614,17 +690,17 @@ Partial Class FrmProductores
         '
         'TxtObservacion1
         '
-        Me.TxtObservacion1.Location = New System.Drawing.Point(463, 451)
+        Me.TxtObservacion1.Location = New System.Drawing.Point(452, 490)
         Me.TxtObservacion1.MaxLength = 100
         Me.TxtObservacion1.Multiline = True
         Me.TxtObservacion1.Name = "TxtObservacion1"
-        Me.TxtObservacion1.Size = New System.Drawing.Size(283, 40)
+        Me.TxtObservacion1.Size = New System.Drawing.Size(294, 40)
         Me.TxtObservacion1.TabIndex = 306
         '
         'LblObservacion2
         '
         Me.LblObservacion2.AutoSize = True
-        Me.LblObservacion2.Location = New System.Drawing.Point(379, 523)
+        Me.LblObservacion2.Location = New System.Drawing.Point(382, 530)
         Me.LblObservacion2.Name = "LblObservacion2"
         Me.LblObservacion2.Size = New System.Drawing.Size(78, 13)
         Me.LblObservacion2.TabIndex = 298
@@ -632,17 +708,17 @@ Partial Class FrmProductores
         '
         'TxtObservacion2
         '
-        Me.TxtObservacion2.Location = New System.Drawing.Point(462, 497)
+        Me.TxtObservacion2.Location = New System.Drawing.Point(452, 549)
         Me.TxtObservacion2.MaxLength = 100
         Me.TxtObservacion2.Multiline = True
         Me.TxtObservacion2.Name = "TxtObservacion2"
-        Me.TxtObservacion2.Size = New System.Drawing.Size(284, 41)
+        Me.TxtObservacion2.Size = New System.Drawing.Size(294, 25)
         Me.TxtObservacion2.TabIndex = 307
         '
         'lblRenspa
         '
         Me.lblRenspa.AutoSize = True
-        Me.lblRenspa.Location = New System.Drawing.Point(518, 553)
+        Me.lblRenspa.Location = New System.Drawing.Point(518, 587)
         Me.lblRenspa.Name = "lblRenspa"
         Me.lblRenspa.Size = New System.Drawing.Size(44, 13)
         Me.lblRenspa.TabIndex = 299
@@ -855,25 +931,12 @@ Partial Class FrmProductores
         Me.chktodosReg.Text = "Aplica a Todos"
         Me.chktodosReg.UseVisualStyleBackColor = True
         '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.BtnBuscar)
-        Me.Panel1.Controls.Add(Me.TxtBuscarCuit)
-        Me.Panel1.Controls.Add(Me.txtBuscarRazonSocial)
-        Me.Panel1.Controls.Add(Me.RdbCuit)
-        Me.Panel1.Controls.Add(Me.RdbRazonSocial)
-        Me.Panel1.Location = New System.Drawing.Point(768, 349)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(234, 144)
-        Me.Panel1.TabIndex = 341
-        '
         'BtnBuscar
         '
         Me.BtnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnBuscar.Image = Global.Carnes.My.Resources.Resources.buscar
         Me.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnBuscar.Location = New System.Drawing.Point(68, 110)
+        Me.BtnBuscar.Location = New System.Drawing.Point(79, 118)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(92, 32)
         Me.BtnBuscar.TabIndex = 313
@@ -882,7 +945,7 @@ Partial Class FrmProductores
         '
         'TxtBuscarCuit
         '
-        Me.TxtBuscarCuit.Location = New System.Drawing.Point(26, 84)
+        Me.TxtBuscarCuit.Location = New System.Drawing.Point(27, 89)
         Me.TxtBuscarCuit.MaxLength = 100
         Me.TxtBuscarCuit.Name = "TxtBuscarCuit"
         Me.TxtBuscarCuit.Size = New System.Drawing.Size(200, 20)
@@ -890,7 +953,7 @@ Partial Class FrmProductores
         '
         'txtBuscarRazonSocial
         '
-        Me.txtBuscarRazonSocial.Location = New System.Drawing.Point(24, 34)
+        Me.txtBuscarRazonSocial.Location = New System.Drawing.Point(27, 36)
         Me.txtBuscarRazonSocial.MaxLength = 100
         Me.txtBuscarRazonSocial.Name = "txtBuscarRazonSocial"
         Me.txtBuscarRazonSocial.Size = New System.Drawing.Size(200, 20)
@@ -899,7 +962,7 @@ Partial Class FrmProductores
         'RdbCuit
         '
         Me.RdbCuit.AutoSize = True
-        Me.RdbCuit.Location = New System.Drawing.Point(24, 60)
+        Me.RdbCuit.Location = New System.Drawing.Point(10, 66)
         Me.RdbCuit.Name = "RdbCuit"
         Me.RdbCuit.Size = New System.Drawing.Size(50, 17)
         Me.RdbCuit.TabIndex = 1
@@ -910,7 +973,7 @@ Partial Class FrmProductores
         'RdbRazonSocial
         '
         Me.RdbRazonSocial.AutoSize = True
-        Me.RdbRazonSocial.Location = New System.Drawing.Point(27, 10)
+        Me.RdbRazonSocial.Location = New System.Drawing.Point(10, 19)
         Me.RdbRazonSocial.Name = "RdbRazonSocial"
         Me.RdbRazonSocial.Size = New System.Drawing.Size(88, 17)
         Me.RdbRazonSocial.TabIndex = 0
@@ -935,43 +998,11 @@ Partial Class FrmProductores
         Me.txtGuia.Size = New System.Drawing.Size(45, 20)
         Me.txtGuia.TabIndex = 110
         '
-        'PnlDatosLegal
-        '
-        Me.PnlDatosLegal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PnlDatosLegal.Controls.Add(Me.LblNumero)
-        Me.PnlDatosLegal.Controls.Add(Me.LblCPostal)
-        Me.PnlDatosLegal.Controls.Add(Me.lblProvincia)
-        Me.PnlDatosLegal.Controls.Add(Me.LblCalle)
-        Me.PnlDatosLegal.Controls.Add(Me.TxtCalle)
-        Me.PnlDatosLegal.Controls.Add(Me.CmbPais)
-        Me.PnlDatosLegal.Controls.Add(Me.CmbLocalidad)
-        Me.PnlDatosLegal.Controls.Add(Me.TxtCPostal)
-        Me.PnlDatosLegal.Controls.Add(Me.lblPiso)
-        Me.PnlDatosLegal.Controls.Add(Me.Label2)
-        Me.PnlDatosLegal.Controls.Add(Me.TxtTelCel)
-        Me.PnlDatosLegal.Controls.Add(Me.CmbProvincia)
-        Me.PnlDatosLegal.Controls.Add(Me.LblPais)
-        Me.PnlDatosLegal.Controls.Add(Me.lblTelCel)
-        Me.PnlDatosLegal.Controls.Add(Me.lblLocalidad)
-        Me.PnlDatosLegal.Controls.Add(Me.Label17)
-        Me.PnlDatosLegal.Controls.Add(Me.TxtTelFax)
-        Me.PnlDatosLegal.Controls.Add(Me.Label3)
-        Me.PnlDatosLegal.Controls.Add(Me.Txtpiso)
-        Me.PnlDatosLegal.Controls.Add(Me.Label18)
-        Me.PnlDatosLegal.Controls.Add(Me.lblTelPart)
-        Me.PnlDatosLegal.Controls.Add(Me.lblTelFax)
-        Me.PnlDatosLegal.Controls.Add(Me.txtTelPart)
-        Me.PnlDatosLegal.Controls.Add(Me.TxtNumero)
-        Me.PnlDatosLegal.ForeColor = System.Drawing.SystemColors.MenuText
-        Me.PnlDatosLegal.Location = New System.Drawing.Point(27, 267)
-        Me.PnlDatosLegal.Name = "PnlDatosLegal"
-        Me.PnlDatosLegal.Size = New System.Drawing.Size(343, 224)
-        Me.PnlDatosLegal.TabIndex = 344
-        '
         'LblNumero
         '
         Me.LblNumero.AutoSize = True
-        Me.LblNumero.Location = New System.Drawing.Point(3, 42)
+        Me.LblNumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNumero.Location = New System.Drawing.Point(6, 51)
         Me.LblNumero.Name = "LblNumero"
         Me.LblNumero.Size = New System.Drawing.Size(44, 13)
         Me.LblNumero.TabIndex = 311
@@ -980,7 +1011,8 @@ Partial Class FrmProductores
         'LblCPostal
         '
         Me.LblCPostal.AutoSize = True
-        Me.LblCPostal.Location = New System.Drawing.Point(216, 43)
+        Me.LblCPostal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCPostal.Location = New System.Drawing.Point(219, 52)
         Me.LblCPostal.Name = "LblCPostal"
         Me.LblCPostal.Size = New System.Drawing.Size(21, 13)
         Me.LblCPostal.TabIndex = 310
@@ -989,7 +1021,8 @@ Partial Class FrmProductores
         'lblProvincia
         '
         Me.lblProvincia.AutoSize = True
-        Me.lblProvincia.Location = New System.Drawing.Point(3, 98)
+        Me.lblProvincia.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProvincia.Location = New System.Drawing.Point(6, 107)
         Me.lblProvincia.Name = "lblProvincia"
         Me.lblProvincia.Size = New System.Drawing.Size(51, 13)
         Me.lblProvincia.TabIndex = 309
@@ -998,144 +1031,106 @@ Partial Class FrmProductores
         'LblCalle
         '
         Me.LblCalle.AutoSize = True
-        Me.LblCalle.Location = New System.Drawing.Point(3, 21)
+        Me.LblCalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCalle.Location = New System.Drawing.Point(6, 30)
         Me.LblCalle.Name = "LblCalle"
         Me.LblCalle.Size = New System.Drawing.Size(30, 13)
         Me.LblCalle.TabIndex = 308
         Me.LblCalle.Text = "Calle"
         '
-        'Panel2
+        'GroupBoxDomLegal
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel2.Controls.Add(Me.TxtTelFaxCom)
-        Me.Panel2.Controls.Add(Me.lblCPostalCom)
-        Me.Panel2.Controls.Add(Me.LblTelCom)
-        Me.Panel2.Controls.Add(Me.cmbIdLocaCom)
-        Me.Panel2.Controls.Add(Me.LblTelFaxCom)
-        Me.Panel2.Controls.Add(Me.txtCPostalCom)
-        Me.Panel2.Controls.Add(Me.txtTelCom)
-        Me.Panel2.Controls.Add(Me.lblIdLocCom)
-        Me.Panel2.Controls.Add(Me.lblDomiCom)
-        Me.Panel2.Controls.Add(Me.txtDomicom)
-        Me.Panel2.Controls.Add(Me.lblRsComercial)
-        Me.Panel2.Controls.Add(Me.txtRsComercial)
-        Me.Panel2.Location = New System.Drawing.Point(397, 270)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(349, 175)
-        Me.Panel2.TabIndex = 345
+        Me.GroupBoxDomLegal.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxDomLegal.Controls.Add(Me.LblNumero)
+        Me.GroupBoxDomLegal.Controls.Add(Me.lblTelCel)
+        Me.GroupBoxDomLegal.Controls.Add(Me.lblProvincia)
+        Me.GroupBoxDomLegal.Controls.Add(Me.LblCPostal)
+        Me.GroupBoxDomLegal.Controls.Add(Me.TxtNumero)
+        Me.GroupBoxDomLegal.Controls.Add(Me.txtTelPart)
+        Me.GroupBoxDomLegal.Controls.Add(Me.LblCalle)
+        Me.GroupBoxDomLegal.Controls.Add(Me.lblTelFax)
+        Me.GroupBoxDomLegal.Controls.Add(Me.TxtCalle)
+        Me.GroupBoxDomLegal.Controls.Add(Me.lblTelPart)
+        Me.GroupBoxDomLegal.Controls.Add(Me.CmbPais)
+        Me.GroupBoxDomLegal.Controls.Add(Me.Txtpiso)
+        Me.GroupBoxDomLegal.Controls.Add(Me.CmbLocalidad)
+        Me.GroupBoxDomLegal.Controls.Add(Me.TxtTelFax)
+        Me.GroupBoxDomLegal.Controls.Add(Me.TxtCPostal)
+        Me.GroupBoxDomLegal.Controls.Add(Me.lblLocalidad)
+        Me.GroupBoxDomLegal.Controls.Add(Me.lblPiso)
+        Me.GroupBoxDomLegal.Controls.Add(Me.LblPais)
+        Me.GroupBoxDomLegal.Controls.Add(Me.CmbProvincia)
+        Me.GroupBoxDomLegal.Controls.Add(Me.TxtTelCel)
+        Me.GroupBoxDomLegal.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxDomLegal.Location = New System.Drawing.Point(27, 277)
+        Me.GroupBoxDomLegal.Name = "GroupBoxDomLegal"
+        Me.GroupBoxDomLegal.Size = New System.Drawing.Size(328, 228)
+        Me.GroupBoxDomLegal.TabIndex = 312
+        Me.GroupBoxDomLegal.TabStop = False
+        Me.GroupBoxDomLegal.Text = "Domicilio Legal"
         '
-        'TxtTelFaxCom
+        'GroupBoxContacto
         '
-        Me.TxtTelFaxCom.Location = New System.Drawing.Point(64, 142)
-        Me.TxtTelFaxCom.MaxLength = 100
-        Me.TxtTelFaxCom.Name = "TxtTelFaxCom"
-        Me.TxtTelFaxCom.Size = New System.Drawing.Size(226, 20)
-        Me.TxtTelFaxCom.TabIndex = 305
+        Me.GroupBoxContacto.Controls.Add(Me.TxtTelFaxCom)
+        Me.GroupBoxContacto.Controls.Add(Me.LblTelFaxCom)
+        Me.GroupBoxContacto.Controls.Add(Me.lblRsComercial)
+        Me.GroupBoxContacto.Controls.Add(Me.LblTelCom)
+        Me.GroupBoxContacto.Controls.Add(Me.lblCPostalCom)
+        Me.GroupBoxContacto.Controls.Add(Me.txtRsComercial)
+        Me.GroupBoxContacto.Controls.Add(Me.txtTelCom)
+        Me.GroupBoxContacto.Controls.Add(Me.txtDomicom)
+        Me.GroupBoxContacto.Controls.Add(Me.cmbIdLocaCom)
+        Me.GroupBoxContacto.Controls.Add(Me.lblDomiCom)
+        Me.GroupBoxContacto.Controls.Add(Me.lblIdLocCom)
+        Me.GroupBoxContacto.Controls.Add(Me.txtCPostalCom)
+        Me.GroupBoxContacto.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxContacto.Location = New System.Drawing.Point(385, 277)
+        Me.GroupBoxContacto.Name = "GroupBoxContacto"
+        Me.GroupBoxContacto.Size = New System.Drawing.Size(361, 195)
+        Me.GroupBoxContacto.TabIndex = 343
+        Me.GroupBoxContacto.TabStop = False
+        Me.GroupBoxContacto.Text = "Contacto"
         '
-        'lblCPostalCom
+        'GroupBoxBuscar
         '
-        Me.lblCPostalCom.AutoSize = True
-        Me.lblCPostalCom.Location = New System.Drawing.Point(5, 95)
-        Me.lblCPostalCom.Name = "lblCPostalCom"
-        Me.lblCPostalCom.Size = New System.Drawing.Size(21, 13)
-        Me.lblCPostalCom.TabIndex = 313
-        Me.lblCPostalCom.Text = "CP"
+        Me.GroupBoxBuscar.AutoSize = True
+        Me.GroupBoxBuscar.Controls.Add(Me.BtnBuscar)
+        Me.GroupBoxBuscar.Controls.Add(Me.RdbRazonSocial)
+        Me.GroupBoxBuscar.Controls.Add(Me.TxtBuscarCuit)
+        Me.GroupBoxBuscar.Controls.Add(Me.RdbCuit)
+        Me.GroupBoxBuscar.Controls.Add(Me.txtBuscarRazonSocial)
+        Me.GroupBoxBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.GroupBoxBuscar.Location = New System.Drawing.Point(777, 341)
+        Me.GroupBoxBuscar.Name = "GroupBoxBuscar"
+        Me.GroupBoxBuscar.Size = New System.Drawing.Size(253, 169)
+        Me.GroupBoxBuscar.TabIndex = 346
+        Me.GroupBoxBuscar.TabStop = False
+        Me.GroupBoxBuscar.Text = "Busqueda"
         '
-        'LblTelCom
+        'GroupBoxBotones
         '
-        Me.LblTelCom.AutoSize = True
-        Me.LblTelCom.Location = New System.Drawing.Point(2, 123)
-        Me.LblTelCom.Name = "LblTelCom"
-        Me.LblTelCom.Size = New System.Drawing.Size(54, 13)
-        Me.LblTelCom.TabIndex = 312
-        Me.LblTelCom.Text = "Telefonos"
-        '
-        'cmbIdLocaCom
-        '
-        Me.cmbIdLocaCom.FormattingEnabled = True
-        Me.cmbIdLocaCom.Location = New System.Drawing.Point(64, 60)
-        Me.cmbIdLocaCom.Name = "cmbIdLocaCom"
-        Me.cmbIdLocaCom.Size = New System.Drawing.Size(200, 21)
-        Me.cmbIdLocaCom.TabIndex = 302
-        '
-        'LblTelFaxCom
-        '
-        Me.LblTelFaxCom.AutoSize = True
-        Me.LblTelFaxCom.Location = New System.Drawing.Point(5, 146)
-        Me.LblTelFaxCom.Name = "LblTelFaxCom"
-        Me.LblTelFaxCom.Size = New System.Drawing.Size(42, 13)
-        Me.LblTelFaxCom.TabIndex = 314
-        Me.LblTelFaxCom.Text = "Tel Fax"
-        '
-        'txtCPostalCom
-        '
-        Me.txtCPostalCom.Location = New System.Drawing.Point(64, 87)
-        Me.txtCPostalCom.MaxLength = 100
-        Me.txtCPostalCom.Name = "txtCPostalCom"
-        Me.txtCPostalCom.Size = New System.Drawing.Size(45, 20)
-        Me.txtCPostalCom.TabIndex = 303
-        '
-        'txtTelCom
-        '
-        Me.txtTelCom.Location = New System.Drawing.Point(64, 114)
-        Me.txtTelCom.MaxLength = 100
-        Me.txtTelCom.Name = "txtTelCom"
-        Me.txtTelCom.Size = New System.Drawing.Size(226, 20)
-        Me.txtTelCom.TabIndex = 304
-        '
-        'lblIdLocCom
-        '
-        Me.lblIdLocCom.AutoSize = True
-        Me.lblIdLocCom.Location = New System.Drawing.Point(5, 70)
-        Me.lblIdLocCom.Name = "lblIdLocCom"
-        Me.lblIdLocCom.Size = New System.Drawing.Size(53, 13)
-        Me.lblIdLocCom.TabIndex = 310
-        Me.lblIdLocCom.Text = "Localidad"
-        '
-        'lblDomiCom
-        '
-        Me.lblDomiCom.AutoSize = True
-        Me.lblDomiCom.Location = New System.Drawing.Point(3, 41)
-        Me.lblDomiCom.Name = "lblDomiCom"
-        Me.lblDomiCom.Size = New System.Drawing.Size(49, 13)
-        Me.lblDomiCom.TabIndex = 313
-        Me.lblDomiCom.Text = "Domicilio"
-        '
-        'txtDomicom
-        '
-        Me.txtDomicom.Location = New System.Drawing.Point(64, 34)
-        Me.txtDomicom.MaxLength = 100
-        Me.txtDomicom.Name = "txtDomicom"
-        Me.txtDomicom.Size = New System.Drawing.Size(200, 20)
-        Me.txtDomicom.TabIndex = 301
-        '
-        'lblRsComercial
-        '
-        Me.lblRsComercial.AutoSize = True
-        Me.lblRsComercial.Location = New System.Drawing.Point(3, 10)
-        Me.lblRsComercial.Name = "lblRsComercial"
-        Me.lblRsComercial.Size = New System.Drawing.Size(44, 13)
-        Me.lblRsComercial.TabIndex = 311
-        Me.lblRsComercial.Text = "Nombre"
-        '
-        'txtRsComercial
-        '
-        Me.txtRsComercial.Location = New System.Drawing.Point(64, 7)
-        Me.txtRsComercial.MaxLength = 100
-        Me.txtRsComercial.Name = "txtRsComercial"
-        Me.txtRsComercial.Size = New System.Drawing.Size(200, 20)
-        Me.txtRsComercial.TabIndex = 300
+        Me.GroupBoxBotones.Controls.Add(Me.BtnNuevo)
+        Me.GroupBoxBotones.Controls.Add(Me.BtnGrabar)
+        Me.GroupBoxBotones.Controls.Add(Me.BtnEliminar)
+        Me.GroupBoxBotones.Controls.Add(Me.BtnSalir)
+        Me.GroupBoxBotones.Location = New System.Drawing.Point(777, 515)
+        Me.GroupBoxBotones.Name = "GroupBoxBotones"
+        Me.GroupBoxBotones.Size = New System.Drawing.Size(253, 100)
+        Me.GroupBoxBotones.TabIndex = 347
+        Me.GroupBoxBotones.TabStop = False
         '
         'FrmProductores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1022, 579)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.PnlDatosLegal)
+        Me.ClientSize = New System.Drawing.Size(1057, 648)
+        Me.Controls.Add(Me.GroupBoxBotones)
+        Me.Controls.Add(Me.GroupBoxBuscar)
+        Me.Controls.Add(Me.GroupBoxContacto)
+        Me.Controls.Add(Me.GroupBoxDomLegal)
         Me.Controls.Add(Me.txtGuia)
         Me.Controls.Add(Me.Label36)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.chktodosReg)
         Me.Controls.Add(Me.ChktodosSell)
         Me.Controls.Add(Me.Label35)
@@ -1174,23 +1169,20 @@ Partial Class FrmProductores
         Me.Controls.Add(Me.txtRenspa)
         Me.Controls.Add(Me.PnlDetalle)
         Me.Controls.Add(Me.lblRuca)
-        Me.Controls.Add(Me.BtnSalir)
         Me.Controls.Add(Me.TxtRuca)
-        Me.Controls.Add(Me.BtnEliminar)
-        Me.Controls.Add(Me.BtnGrabar)
-        Me.Controls.Add(Me.BtnNuevo)
         Me.Controls.Add(Me.DgProveedores)
         Me.Name = "FrmProductores"
         Me.Text = "FrmProveedores"
         CType(Me.DgProveedores, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PnlDetalle.ResumeLayout(False)
         Me.PnlDetalle.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.PnlDatosLegal.ResumeLayout(False)
-        Me.PnlDatosLegal.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
+        Me.GroupBoxDomLegal.ResumeLayout(False)
+        Me.GroupBoxDomLegal.PerformLayout()
+        Me.GroupBoxContacto.ResumeLayout(False)
+        Me.GroupBoxContacto.PerformLayout()
+        Me.GroupBoxBuscar.ResumeLayout(False)
+        Me.GroupBoxBuscar.PerformLayout()
+        Me.GroupBoxBotones.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1228,9 +1220,7 @@ Partial Class FrmProductores
     Friend WithEvents lblRenspa As Label
     Friend WithEvents lblPiso As Label
     Friend WithEvents TxtCPostal As TextBox
-    Friend WithEvents Label17 As Label
     Friend WithEvents Txtpiso As TextBox
-    Friend WithEvents Label18 As Label
     Friend WithEvents TxtNumero As TextBox
     Friend WithEvents CmbTipoProveedor As ComboBox
     Friend WithEvents lblProvNro As Label
@@ -1240,12 +1230,10 @@ Partial Class FrmProductores
     Friend WithEvents TxtRazonSocial As TextBox
     Friend WithEvents lblCuit As Label
     Friend WithEvents CmbPais As ComboBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents TxtCalle As TextBox
     Friend WithEvents lblLocalidad As Label
     Friend WithEvents LblPais As Label
     Friend WithEvents CmbProvincia As ComboBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents lblProcedencia As Label
     Friend WithEvents TxtProcedencia As TextBox
     Friend WithEvents CmbcondIva As ComboBox
@@ -1276,7 +1264,6 @@ Partial Class FrmProductores
     Friend WithEvents TxtIBPorcen As TextBox
     Friend WithEvents ChktodosSell As CheckBox
     Friend WithEvents chktodosReg As CheckBox
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents TxtBuscarCuit As TextBox
     Friend WithEvents txtBuscarRazonSocial As TextBox
     Friend WithEvents RdbCuit As RadioButton
@@ -1284,10 +1271,8 @@ Partial Class FrmProductores
     Friend WithEvents BtnBuscar As Button
     Friend WithEvents Label36 As Label
     Friend WithEvents txtGuia As TextBox
-    Friend WithEvents PnlDatosLegal As Panel
     Friend WithEvents LblCalle As Label
     Friend WithEvents lblProvincia As Label
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents lblRsComercial As Label
     Friend WithEvents txtRsComercial As TextBox
     Friend WithEvents lblDomiCom As Label
@@ -1302,4 +1287,8 @@ Partial Class FrmProductores
     Friend WithEvents LblTelCom As Label
     Friend WithEvents LblTelFaxCom As Label
     Friend WithEvents txtTelCom As TextBox
+    Friend WithEvents GroupBoxDomLegal As GroupBox
+    Friend WithEvents GroupBoxContacto As GroupBox
+    Friend WithEvents GroupBoxBuscar As GroupBox
+    Friend WithEvents GroupBoxBotones As GroupBox
 End Class

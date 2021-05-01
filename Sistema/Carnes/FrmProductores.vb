@@ -220,7 +220,9 @@ Public Class FrmProductores
             Fila = DgProveedores.CurrentRow.Index
             BuscarProveedor(DgProveedores.Rows(Fila).Cells(0).Value.ToString())
 
-
+            ClsFormularios.Bloquear(Me)
+            ClsFormularios.Bloquear(GroupBoxContacto)
+            ClsFormularios.Bloquear(GroupBoxDomLegal)
 
 
         End If
@@ -348,8 +350,12 @@ ErrLinea:
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
 
         Modo = "A"
-        LimpiarFormulario()
+        '  LimpiarFormulario()
         RellenarLista()
+
+        ClsFormularios.Limpiar(Me)
+        ClsFormularios.Limpiar(GroupBoxContacto)
+        ClsFormularios.Limpiar(GroupBoxDomLegal)
 
 
 
@@ -501,6 +507,8 @@ ErrLinea:
             MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End Try
     End Sub
+
+
 
 
 #Region "CARGAR COMBOS"
@@ -675,9 +683,10 @@ ErrLinea:
         'txtusuario.Focus()
     End Sub
 
-    Private Sub PnlDetalle_Paint(sender As Object, e As PaintEventArgs) Handles PnlDetalle.Paint
 
-    End Sub
+
+
+
 
 
 

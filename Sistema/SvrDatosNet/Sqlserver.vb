@@ -146,6 +146,8 @@ Public Class SQLServer
     End Function
 
     Public Overrides Function EjecutarSql(ByVal StrSql As String) As System.Data.DataSet
+
+
         'Dim cant As Integer
         Dim ds As New Data.DataSet()
         Dim oConTemp As SqlConnection

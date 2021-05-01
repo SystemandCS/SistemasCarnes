@@ -54,13 +54,71 @@ Public Class ClsFormularios
         For Each texto In formulario.Controls
             If TypeOf texto Is System.Windows.Forms.TextBox Then
                 texto.Text = ""
-            End If
 
+                CType(texto, TextBox).ReadOnly = False
+
+            End If
 
 
 
         Next
     End Sub
+
+
+
+
+    Public Shared Sub Limpiar(ByVal GroupBox As System.Windows.Forms.GroupBox)
+        ' Defino variables
+
+
+
+        Dim obj As Control
+        ' Recorro la colección de objetos y si es textbox lo pongo en blanco (blanqueo)
+
+        For Each obj In GroupBox.Controls
+            If TypeOf (obj) Is TextBox Then
+                obj.Text = ""
+                CType(obj, TextBox).ReadOnly = False
+            End If
+        Next
+
+
+    End Sub
+
+    Public Shared Sub Bloquear(ByVal formulario As System.Windows.Forms.Form)
+        ' Defino variables
+        Dim texto As System.Windows.Forms.Control
+
+        ' Recorro la colección de objetos y si es textbox lo pongo en readonly
+        For Each texto In formulario.Controls
+            If TypeOf texto Is System.Windows.Forms.TextBox Then
+
+                CType(texto, TextBox).ReadOnly = True
+            End If
+
+
+
+        Next
+    End Sub
+
+    Public Shared Sub Bloquear(ByVal GroupBox As System.Windows.Forms.GroupBox)
+        ' Defino variables
+
+
+
+        Dim obj As Control
+        ' Recorro la colección de objetos y si es textbox lo pongo en blanco (blanqueo)
+
+        For Each obj In GroupBox.Controls
+            If TypeOf (obj) Is TextBox Then
+                obj.Text = ""
+                CType(obj, TextBox).ReadOnly = True
+            End If
+        Next
+
+
+    End Sub
+
 
 
 
