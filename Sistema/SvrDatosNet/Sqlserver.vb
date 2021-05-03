@@ -19,7 +19,6 @@ Public Class SQLServer
 
         Dim cant As Integer
         Dim oConTemp As SqlConnection
-        oConTemp = New SqlConnection(m_Conexion)
 
         Try
             'Valido
@@ -27,7 +26,7 @@ Public Class SQLServer
                 Throw New ApplicationException("Nombre de SP invalido")
             End If
 
-         oConTemp = New SqlConnection(m_Conexion)
+            oConTemp = New SqlConnection(m_Conexion)
 
             'Creo el objeto comando
             Dim oCmd As New SqlCommand(Nombre, oConTemp)
@@ -54,23 +53,26 @@ Public Class SQLServer
                 oCmd.Parameters(i + 1).Value = Parametros(i)
             Next
 
-            'Ejecucion
-            cant = oCmd.ExecuteNonQuery()
 
-            'Devuelvo los parametros
-            For i = 0 To Parametros.Length - 1
-                Parametros(i) = oCmd.Parameters(i + 1).Value
-            Next
+
+            Parametros(0) = oCmd.ExecuteScalar
+            cant = Parametros(0)
+
+
 
         Catch ex As Exception
             'Throw ex
-            Throw New ApplicationException("Error en la ejecucion del SP: " + Nombre & "-" & ex.Message)
+            Throw New ApplicationException("Error en la ejecucion del SP: " + Nombre & " - " & ex.Message)
+
 
 
         Finally
+
             If Not EnTransaccion() Then
-                If oConTemp.State = Data.ConnectionState.Open Then
-                    oConTemp.Close()
+                If Not EnTransaccion() Then
+                    'If oConTemp.State.ToString = Data.ConnectionState.Open Then
+                    '    oConTemp.Close()
+                    'End If
                 End If
             End If
         End Try
@@ -83,7 +85,7 @@ Public Class SQLServer
         'Dim cant As Integer
         Dim ds As New Data.DataSet()
         Dim oConTemp As SqlConnection
-        oConTemp = New SqlConnection(m_Conexion)
+
 
         Try
             'Valido
@@ -91,7 +93,7 @@ Public Class SQLServer
                 Throw New ApplicationException("Nombre de SP invalido")
             End If
 
-
+            oConTemp = New SqlConnection(m_Conexion)
 
             'Creo el objeto comando
             Dim oCmd As New SqlCommand(Nombre, oConTemp)
@@ -131,23 +133,21 @@ Public Class SQLServer
 
         Catch ex As Exception
             'Throw ex
-            Throw New ApplicationException("Error en la ejecucion del SP: " + Nombre & "-" & ex.Message)
+            Throw New ApplicationException("Error en la ejecucion del SP: " + Nombre & " -" & ex.Message)
 
         Finally
             If Not EnTransaccion() Then
-                If oConTemp.State = Data.ConnectionState.Open Then
-                    oConTemp.Close()
-                End If
+                'If oConTemp.State = Data.ConnectionState.Open Then
+                '    oConTemp.Close()
+                'End If
             End If
         End Try
 
         Return ds
-
     End Function
 
+
     Public Overrides Function EjecutarSql(ByVal StrSql As String) As System.Data.DataSet
-
-
         'Dim cant As Integer
         Dim ds As New Data.DataSet()
         Dim oConTemp As SqlConnection
@@ -197,6 +197,9 @@ Public Class SQLServer
         Return ds
     End Function
 
+
+
+
     Public Overrides Function EnTransaccion() As Boolean
         Return Not (oTrx Is Nothing)
     End Function
@@ -214,7 +217,6 @@ Public Class SQLServer
         oTrx.Commit()
         oTrx = Nothing
         oCon.Close()
-        oCon = Nothing
     End Sub
 
     Public Overrides Sub RollBack()
@@ -225,7 +227,6 @@ Public Class SQLServer
         oTrx.Rollback()
         oTrx = Nothing
         oCon.Close()
-        oCon = Nothing
 
     End Sub
 End Class

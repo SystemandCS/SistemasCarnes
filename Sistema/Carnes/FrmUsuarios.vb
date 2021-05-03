@@ -271,6 +271,7 @@ ErrLinea:
                     MessageBox.Show("Registro Agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                     Call BtnNuevo_Click(sender, e)
+                    BuscaRegistro(Retorno)
 
                 End If
             Else
@@ -283,6 +284,7 @@ ErrLinea:
                     MessageBox.Show("Registro Actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
                     Call BtnNuevo_Click(sender, e)
+                    BuscaRegistro(Retorno)
                     'ClsFormularios.Blanquear(Me, BackColor, True)
 
 

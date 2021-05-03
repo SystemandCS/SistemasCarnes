@@ -209,34 +209,46 @@ Public Class FrmProductores
         End Try
     End Sub
 
+#End Region
 #Region "Grilla Proveedores"
 
 
     Private Sub DgProveedores_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgProveedores.CellClick
 
-        On Error GoTo ErrLinea
-        Dim Fila As Integer
-        If DgProveedores.Rows(DgProveedores.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
-            Fila = DgProveedores.CurrentRow.Index
-            BuscarProveedor(DgProveedores.Rows(Fila).Cells(0).Value.ToString())
-
-            ClsFormularios.Bloquear(Me)
-            ClsFormularios.Bloquear(GroupBoxContacto)
-            ClsFormularios.Bloquear(GroupBoxDomLegal)
+        Try
 
 
-        End If
-        Return
-ErrLinea:
-        MessageBox.Show("No hay registros en la lista de busqueda", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1)
+            Dim Fila As Integer
+            If DgProveedores.Rows(DgProveedores.CurrentRow.Index).Cells(0).Value.ToString <> "" Then
+
+                Fila = DgProveedores.CurrentRow.Index
+
+                BuscarProveedor(DgProveedores.Rows(Fila).Cells(0).Value.ToString())
+
+                GroupBoxGrilla.Enabled = False
+                DgProveedores.Enabled = False
+
+                ClsFormularios.Bloquear(Me)
+                ClsFormularios.Bloquear(GroupBoxContacto)
+                ClsFormularios.Bloquear(GroupBoxDomLegal)
+                ClsFormularios.Bloquear(GroupBoxDatos)
+
+
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Busqueda", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End Try
+
     End Sub
 
 
 #End Region
-    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
-        Me.Close()
 
-    End Sub
+
+
+#Region "Rutinas de los Botones "
+
+
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
 
@@ -316,9 +328,9 @@ ErrLinea:
         Dim Cproveedor As New ClsGenerica
         Dim CVendedor As New ClsVendedor
         Try
-            If TxtidProveedor.Text.Trim = "" Then
+            If TxtidProveedor.Text.Trim = "" And Modo = "A" Then
 
-                OProductor(41) = "A"
+                OProductor(41) = Modo
 
                 Retorno = Cproveedor.EjecutarSP("Gen_proveedor_Abm", OProductor)
 
@@ -326,9 +338,11 @@ ErrLinea:
                 If Val(Retorno) > 0 Then
                     MessageBox.Show("Registro Agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Call BtnNuevo_Click(sender, e)
+                    BuscarProveedor(Retorno)
+
                 End If
             Else
-                OProductor(41) = "M"
+                OProductor(41) = Modo
                 Retorno = Cproveedor.EjecutarSP("Gen_proveedor_Abm", OProductor)
 
                 If Val(Retorno) > 0 Then
@@ -337,8 +351,11 @@ ErrLinea:
 
 
                     Call BtnNuevo_Click(sender, e)
+                    BuscarProveedor(Retorno)
                 End If
             End If
+
+
         Catch ex As Exception
 
             ELog.Grabar(Me, ex)
@@ -349,21 +366,31 @@ ErrLinea:
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
 
+        'OPCION NUEVO SE LIMPIA EL FORMULARIO Y SE 
+        'COLOCA OPCION MODO ="A"  QUE ES EL ALTA
+
         Modo = "A"
         '  LimpiarFormulario()
         RellenarLista()
+        GroupBoxGrilla.Enabled = True
+        DgProveedores.Enabled = True
 
         ClsFormularios.Limpiar(Me)
         ClsFormularios.Limpiar(GroupBoxContacto)
         ClsFormularios.Limpiar(GroupBoxDomLegal)
+        ClsFormularios.Limpiar(GroupBoxDatos)
+
+
+
 
 
 
     End Sub
 
+    Private Sub BtnSalir_Click(sender As Object, e As EventArgs) Handles BtnSalir.Click
+        Me.Close()
 
-
-
+    End Sub
 
     Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
 
@@ -407,7 +434,36 @@ ErrLinea:
     End Sub
 
 
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+
+        'OPCION NUEVO SE LIMPIA EL FORMULARIO Y SE 
+        'COLOCA OPCION MODO ="A"  QUE ES EL ALTA
+
+        Modo = "M"
+
+        ClsFormularios.Habilitar(Me)
+        ClsFormularios.Habilitar(GroupBoxContacto)
+        ClsFormularios.Habilitar(GroupBoxDomLegal)
+        ClsFormularios.Habilitar(GroupBoxDatos)
+
+
+
+
+    End Sub
+
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles BtnCancelar.Click
+
+        GroupBoxGrilla.Enabled = True
+        DgProveedores.Enabled = True
+
+
+    End Sub
+
+
+
 #End Region
+
 
 #Region "Funciones y Rutinas para el Formulario"
 
@@ -476,24 +532,7 @@ ErrLinea:
                 txtFlete.Text = DT.Rows(0).Item("flete").ToString()
                 TxtIBPorcen.Text = DT.Rows(0).Item("IBPorcen").ToString()
 
-                Modo = "M"
 
-                '            isnull(idLocalidad, 0) idLocalidad,
-                'isnull(idprovincia, 0) idprovincia,
-                'isnull(idPais, 0) idPais,
-                'isnull(telPart,' ') telPart ,
-                '            isnull(telfax,' ') telfax,
-                '            isnull(telCel,' ') telCel,
-                '            isnull(cpostal, ' ') cpostal,
-                '            isnull(RSComercial,' ' ) RSComercial,
-                '            isnull(DomiciCom, ' ' ) DomiciCom,
-                '            isnull(idLocaCom, 0) idLocaCom,
-                '            isnull(TelCom, ' ') TelCom,
-                '            isnull(TelFaxCom, ' ') TelFaxCom,
-                '            isnull(cPostalCom, ' ') cPostalCom,
-                '            isnull(Comision, 0) Comision,
-                '            isnull(ImpSellos, 0) ImpSellos,
-                'isnull(DerRegistro, 0) DerRegistro,
 
 
             Else
@@ -682,77 +721,6 @@ ErrLinea:
 
         'txtusuario.Focus()
     End Sub
-
-
-
-
-
-
-
-
-
-    'Dim txt As Object
-    '    Dim txtTemporal As TextBox
-    '    Dim Cmbtemporal As ComboBox
-
-    '    For Each txt In control.Controls
-
-    '        If TypeOf txt Is TextBox Then
-
-    '            txtTemporal = CType(txt, TextBox)
-
-    '            txtTemporal.Clear()
-
-
-    '        ElseIf TypeOf txt Is ComboBox Then
-
-    '            Cmbtemporal = CType(txt, ComboBox)
-    '            Cmbtemporal.SelectedIndex = 0
-    '        End If
-
-    '    Next
-
-
-
-    'Dim obj As Control
-    '    For Each obj In
-    '    control.Controls
-    '        If TypeOf (obj) Is TextBox Then
-    '            obj.Text = ""
-    '            CType(obj, TextBox).ReadOnly = False
-    '        End If
-    '    Next
-
-
-
-
-    ' End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

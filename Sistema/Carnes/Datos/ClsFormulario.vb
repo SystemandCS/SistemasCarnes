@@ -45,17 +45,26 @@ Public Class ClsFormularios
         End If
     End Sub
 
+#Region "Rutina de Bloquear Habilitar los textbox del Formulario"
+
     ' Limpia el contenido de los casilleros de texto de un formulario.
     Public Shared Sub Limpiar(ByVal formulario As System.Windows.Forms.Form)
-        ' Defino variables
-        Dim texto As System.Windows.Forms.Control
+
+        ' Limpiar los objetos del Formulario
+
+        Dim obj As System.Windows.Forms.Control
 
         ' Recorro la colección de objetos y si es textbox lo pongo en blanco (blanqueo)
-        For Each texto In formulario.Controls
-            If TypeOf texto Is System.Windows.Forms.TextBox Then
-                texto.Text = ""
+        For Each obj In formulario.Controls
+            If TypeOf obj Is System.Windows.Forms.TextBox Then
+                obj.Text = ""
+                CType(obj, TextBox).ReadOnly = False
 
-                CType(texto, TextBox).ReadOnly = False
+                If TypeOf obj Is System.Windows.Forms.ComboBox Then
+                    CType(obj, ComboBox).SelectedItem = 0
+
+                    CType(obj, ComboBox).Enabled = True
+                End If
 
             End If
 
@@ -67,8 +76,10 @@ Public Class ClsFormularios
 
 
 
+
+
     Public Shared Sub Limpiar(ByVal GroupBox As System.Windows.Forms.GroupBox)
-        ' Defino variables
+        ' Limpiar los objetos del GroupBox
 
 
 
@@ -80,20 +91,45 @@ Public Class ClsFormularios
                 obj.Text = ""
                 CType(obj, TextBox).ReadOnly = False
             End If
+
+
+            If TypeOf obj Is System.Windows.Forms.ComboBox Then
+                CType(obj, ComboBox).SelectedItem = 0
+                CType(obj, ComboBox).Enabled = True
+
+            End If
         Next
 
 
     End Sub
 
+
+
+#End Region
+#Region "Rutina de Bloquear Habilitar los textbox del Formulario"
+
+
+
     Public Shared Sub Bloquear(ByVal formulario As System.Windows.Forms.Form)
-        ' Defino variables
-        Dim texto As System.Windows.Forms.Control
+
+
+        ' bloquear los objetos del GroupBox
+
+        Dim obj As Control
 
         ' Recorro la colección de objetos y si es textbox lo pongo en readonly
-        For Each texto In formulario.Controls
-            If TypeOf texto Is System.Windows.Forms.TextBox Then
+        For Each obj In formulario.Controls
+            If TypeOf obj Is System.Windows.Forms.TextBox Then
+                CType(obj, TextBox).ReadOnly = True
+            End If
 
-                CType(texto, TextBox).ReadOnly = True
+
+            If TypeOf obj Is System.Windows.Forms.ComboBox Then
+                CType(obj, ComboBox).Enabled = False
+            End If
+
+            If TypeOf obj Is System.Windows.Forms.CheckBox Then
+                CType(obj, CheckBox).Enabled = False
             End If
 
 
@@ -102,8 +138,66 @@ Public Class ClsFormularios
     End Sub
 
     Public Shared Sub Bloquear(ByVal GroupBox As System.Windows.Forms.GroupBox)
-        ' Defino variables
 
+
+        ' bloquear los objetos del GroupBox
+
+        Dim obj As Control
+        ' Recorro la colección de objetos y si es textbox lo pongo en blanco (blanqueo)
+
+        For Each obj In GroupBox.Controls
+            If TypeOf (obj) Is TextBox Then
+                CType(obj, TextBox).ReadOnly = True
+            End If
+
+
+            If TypeOf obj Is System.Windows.Forms.ComboBox Then
+                CType(obj, ComboBox).Enabled = False
+            End If
+
+
+            If TypeOf obj Is System.Windows.Forms.CheckBox Then
+                CType(obj, CheckBox).Enabled = False
+            End If
+
+
+        Next
+
+
+    End Sub
+
+#End Region
+#Region "Rutina de Habilitar Habilitar los textbox del Formulario"
+
+    ' habilitar los objetos del formulario
+
+    Public Shared Sub Habilitar(ByVal formulario As System.Windows.Forms.Form)
+        ' Defino variables
+        Dim obj As Control
+
+        ' Recorro la colección de objetos y si es textbox lo pongo en readonly
+        For Each obj In formulario.Controls
+
+            If TypeOf obj Is System.Windows.Forms.TextBox Then
+                CType(obj, TextBox).ReadOnly = False
+            End If
+
+            If TypeOf obj Is System.Windows.Forms.ComboBox Then
+                CType(obj, ComboBox).Enabled = True
+            End If
+
+            If TypeOf obj Is System.Windows.Forms.CheckBox Then
+                CType(obj, CheckBox).Enabled = True
+            End If
+
+
+
+        Next
+    End Sub
+
+    ' habilitar los objetos dentro de un GroupBox
+
+    Public Shared Sub Habilitar(ByVal GroupBox As System.Windows.Forms.GroupBox)
 
 
         Dim obj As Control
@@ -111,16 +205,26 @@ Public Class ClsFormularios
 
         For Each obj In GroupBox.Controls
             If TypeOf (obj) Is TextBox Then
-                obj.Text = ""
-                CType(obj, TextBox).ReadOnly = True
+
+                CType(obj, TextBox).ReadOnly = False
             End If
+
+            If TypeOf obj Is System.Windows.Forms.ComboBox Then
+                CType(obj, ComboBox).Enabled = True
+            End If
+
+            If TypeOf obj Is System.Windows.Forms.CheckBox Then
+                CType(obj, CheckBox).Enabled = True
+            End If
+
+
         Next
 
 
     End Sub
 
 
-
+#End Region
 
 End Class
 
