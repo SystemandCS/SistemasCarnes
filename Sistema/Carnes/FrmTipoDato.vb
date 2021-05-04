@@ -80,7 +80,9 @@ ErrLinea:
 
             If DT.Rows.Count > 0 Then
 
+
                 TxtIdTipoDato.Text = DT.Rows(0).Item("IdTipodato").ToString()
+                TxtIdTipoDato.Enabled = False
                 TxtTipoDato.Text = DT.Rows(0).Item("tipoDato").ToString()
                 txtCodigo.Text = DT.Rows(0).Item("codigo").ToString()
 
@@ -174,6 +176,14 @@ ErrLinea:
             GdvTipo.Columns("UsuarioCreacion").Visible = False
             GdvTipo.Columns("UsuarioModificacion").Visible = False
 
+            If DT.Rows.Count > 0 Then
+
+                BuscarTipo(DT.Rows(0)("idtipo"))
+
+            End If
+
+
+
 
             'DgModuloAsignado.Columns("idUsuario").Visible = False
             ' DgModuloAsignado.Columns("jerarquia").Visible = False
@@ -193,8 +203,8 @@ ErrLinea:
 
     Private Sub BtnNuevo_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
 
-        LimpiarFormulario()
-        CargarGrillaTipo(VarIdTipoDato)
+        LimpiarFormularioTipo()
+
 
     End Sub
 
@@ -206,16 +216,6 @@ ErrLinea:
             Exit Sub
         End If
 
-        '@idTipo                 int = null,
-        '@idTipodato     int = null,
-        '@codigo                 varchar(20) = null,
-        '@nombre                 varchar(50) = null,
-        '@atributo               varchar(100) = null,
-        '@defaultTipo    char(2) = null,
-        '@usuario                varchar(20) = null,
-        '@Modo                   char(1),
-        '@codigoAfip             varchar(50)='',
-        '@descrAfip              varchar(50)=''
 
 
         Otipo(0) = TxtIdTipo.Text
@@ -252,6 +252,8 @@ ErrLinea:
                 If Val(Retorno) > 0 Then
                     MessageBox.Show("Registro Agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Call BtnNuevo_Click(sender, e)
+                    CargarGrillaTipo(Otipo(1))
+                    BuscarTipo(Retorno)
                 End If
             Else
 
@@ -262,6 +264,10 @@ ErrLinea:
 
                     MessageBox.Show("Registro Actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Call BtnNuevo_Click(sender, e)
+
+
+                    CargarGrillaTipo(Otipo(1))
+                    BuscarTipo(Retorno)
                 End If
             End If
         Catch ex As Exception
@@ -325,6 +331,18 @@ ErrLinea:
 
     Private Sub LimpiarFormulario()
 
+        TxtIdTipoDato.Clear()
+        TxtTipoDato.Clear()
+        txtCodigo.Clear()
+        TxtDescripcion.Clear()
+
+
+    End Sub
+
+
+    Private Sub LimpiarFormularioTipo()
+
+
         TxtIdTipo.Clear()
         TxtCodigoTipo.Clear()
         TxtNombre.Clear()
@@ -333,9 +351,8 @@ ErrLinea:
         TxtCodigoAfip.Clear()
         TxtDescrAfip.Clear()
 
-        TxtTipoDato.Clear()
-        txtCodigo.Clear()
-        TxtDescripcion.Clear()
+
+
 
 
     End Sub
@@ -343,6 +360,7 @@ ErrLinea:
     Private Sub BtnNuevoDato_Click(sender As Object, e As EventArgs) Handles BtnNuevoDato.Click
 
         LimpiarFormulario()
+        LimpiarFormularioTipo()
         CargarGrillaTipoDatos()
 
 
@@ -426,7 +444,10 @@ ErrLinea:
 
                 If Val(Retorno) > 0 Then
                     MessageBox.Show("Registro Agregado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    Call BtnNuevo_Click(sender, e)
+                    Call BtnNuevoDato_Click(sender, e)
+                    BuscarTipoDato(Retorno)
+
+
                 End If
             Else
                 OtipoDatos(5) = "M"
@@ -437,6 +458,8 @@ ErrLinea:
 
                     MessageBox.Show("Registro Actualizado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Call BtnNuevoDato_Click(sender, e)
+
+                    BuscarTipoDato(Retorno)
                 End If
             End If
         Catch ex As Exception
@@ -448,12 +471,6 @@ ErrLinea:
 
     Private Sub CargarTipoDatos()
 
-        '@idTipodato 	int = null,
-        '@tipodato 		varchar(50) = null,
-        '@codigo 		varchar(50) = null,
-        '@descripcion 	varchar(250) = null,
-        '@usuario		varchar(20) = null,
-        '@Modo 			char(1)
 
 
 
@@ -464,6 +481,8 @@ ErrLinea:
         OtipoDatos(4) = USULOGIN
 
     End Sub
+
+
 
 
 

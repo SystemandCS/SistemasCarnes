@@ -56,7 +56,9 @@ $ git push origin master
 
 
 Usuario:SystemandCS@gmail.com
-Clave:  SystemandCS.2021
+Clave:  SystemandCS.2022
+
+
 
 
 https://www.sqlshack.com/es/como-poder-implementar-el-manejo-de-errores-en-sql-server/
